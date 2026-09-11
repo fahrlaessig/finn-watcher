@@ -1,20 +1,16 @@
 name: FINN Angebots-Watcher
 
 on:
-  # Re-Registrierungs-Hinweis: falls der Schedule-Trigger nach einer Aenderung
-  # zunaechst nicht feuert (bekannte GitHub-Eigenheit), hilft oft ein weiterer
-  # kleiner Commit an dieser Datei, um den internen Cron neu zu registrieren.
-  schedule:
-    # Laeuft stuendlich (Minute :07, nicht :00 - siehe Hinweis unten), aber
-    # NUR zwischen 07:00 und 19:00 UTC (entspricht ca. 08:00-20:00 Uhr
-    # deutscher Zeit im Winter, 09:00-21:00 im Sommer durch die
-    # Zeitumstellung - GitHub-Cron kennt keine Zeitzonen).
-    # Minute :07 statt :00, weil GitHub geplante Workflows zur vollen Stunde
-    # (:00) oft verzoegert ausfuehrt (hoechste Serverlast weltweit).
-    # So bleibt der monatliche Minutenverbrauch sicher unter dem kostenlosen
-    # GitHub-Actions-Kontingent (2.000 Min/Monat).
-    - cron: "7 7-19 * * *"
-  workflow_dispatch: {}   # erlaubt manuelles Starten ueber die GitHub-Oberflaeche
+  # HINWEIS: Der interne GitHub-'schedule'-Trigger wurde deaktiviert, da er
+  # bei diesem Repo trotz korrekter Konfiguration nicht zuverlaessig feuerte
+  # (bekannte GitHub-Plattform-Eigenheit). Stattdessen wird dieser Workflow
+  # jetzt von AUSSEN ueber einen externen Cron-Dienst (cron-job.org) per
+  # 'workflow_dispatch' (GitHub-API) ausgeloest - siehe README.
+  #
+  # Frueherer interner Trigger (aktuell auskommentiert):
+  # schedule:
+  #   - cron: "7 7-19 * * *"
+  workflow_dispatch: {}   # wird vom externen Cron-Dienst UND manuell genutzt
 
 permissions:
   contents: write   # noetig, damit der Workflow state.json zurueck committen kann
