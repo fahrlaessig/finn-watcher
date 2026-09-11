@@ -8,7 +8,7 @@
     "power": "65 kW (88 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 21.09.2026 - 05.10.2026",
-    "price": "120"
+    "price": "298"
   },
   "e41a21c38e6fef42": {
     "id": "e41a21c38e6fef42",
@@ -19,7 +19,7 @@
     "power": "115 kW (156 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 21.09.2026 - 05.10.2026",
-    "price": "120"
+    "price": "322"
   },
   "ee071273a91b8bc7": {
     "id": "ee071273a91b8bc7",
@@ -63,7 +63,7 @@
     "power": "150 kW (204 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 21.09.2026 - 05.10.2026",
-    "price": "120"
+    "price": "373"
   },
   "cc980fa4ce04e33a": {
     "id": "cc980fa4ce04e33a",
@@ -74,7 +74,7 @@
     "power": "85 kW (116 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 23.10.2026 - 25.12.2026",
-    "price": "120"
+    "price": "373"
   },
   "2c12e189d71d0450": {
     "id": "2c12e189d71d0450",
@@ -85,7 +85,7 @@
     "power": "85 kW (116 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 23.10.2026 - 01.01.2027",
-    "price": "120"
+    "price": "340"
   },
   "65ce36093b5018d0": {
     "id": "65ce36093b5018d0",
@@ -96,7 +96,7 @@
     "power": "83 kW (113 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 29.09.2026 - 13.10.2026",
-    "price": "120"
+    "price": "331"
   },
   "b86f8aa5c0994b7d": {
     "id": "b86f8aa5c0994b7d",
@@ -118,7 +118,7 @@
     "power": "118 kW (160 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 21.09.2026 - 05.10.2026",
-    "price": "120"
+    "price": "356"
   },
   "f2ab15b189250ce3": {
     "id": "f2ab15b189250ce3",
@@ -139,8 +139,8 @@
     "fuel": "Elektro",
     "power": "150 kW (204 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 17.09.2026 - 24.09.2026",
-    "price": "240"
+    "availability": "Vsl. Übergabe 21.09.2026 - 05.10.2026",
+    "price": "375"
   },
   "5bf7bccecafaf9fb": {
     "id": "5bf7bccecafaf9fb",
@@ -151,7 +151,7 @@
     "power": "180 kW (245 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 21.09.2026 - 05.10.2026",
-    "price": "120"
+    "price": "415"
   },
   "3cdd08a7c18f29c7": {
     "id": "3cdd08a7c18f29c7",
@@ -195,7 +195,7 @@
     "power": "180 kW (245 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 22.10.2026 - 19.11.2026",
-    "price": "120"
+    "price": "448"
   },
   "bb6d404865fb11f2": {
     "id": "bb6d404865fb11f2",
@@ -206,7 +206,7 @@
     "power": "128 kW (174 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 29.09.2026 - 13.10.2026",
-    "price": "120"
+    "price": "432"
   },
   "ddb214f6b5a6b920": {
     "id": "ddb214f6b5a6b920",
@@ -272,7 +272,7 @@
     "power": "210 kW (286 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 16.09.2026 - 23.09.2026",
-    "price": "120"
+    "price": "499"
   },
   "a7c01257354511b1": {
     "id": "a7c01257354511b1",
@@ -294,7 +294,7 @@
     "power": "210 kW (286 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 23.10.2026 - 25.12.2026",
-    "price": "120"
+    "price": "566"
   },
   "088ec5c4a8baa60b": {
     "id": "088ec5c4a8baa60b",
@@ -305,7 +305,7 @@
     "power": "210 kW (286 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 16.09.2026 - 23.09.2026",
-    "price": "120"
+    "price": "498"
   },
   "c1890423715c70d2": {
     "id": "c1890423715c70d2",
@@ -316,7 +316,7 @@
     "power": "250 kW (340 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 16.09.2026 - 23.09.2026",
-    "price": "120"
+    "price": "507"
   },
   "a7a53d349d67b3f1": {
     "id": "a7a53d349d67b3f1",
@@ -360,7 +360,7 @@
     "power": "150 kW (204 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 29.09.2026 - 13.10.2026",
-    "price": "120"
+    "price": "507"
   },
   "57c37d277438d561": {
     "id": "57c37d277438d561",
@@ -393,7 +393,7 @@
     "power": "210 kW (286 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 16.09.2026 - 23.09.2026",
-    "price": "120"
+    "price": "541"
   },
   "281f76407818d69b": {
     "id": "281f76407818d69b",
@@ -415,7 +415,7 @@
     "power": "150 kW (204 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 02.10.2026 - 30.10.2026",
-    "price": "120"
+    "price": "558"
   },
   "89d27db3bdaaf059": {
     "id": "89d27db3bdaaf059",
