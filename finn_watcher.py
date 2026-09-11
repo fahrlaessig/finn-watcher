@@ -409,9 +409,13 @@ def diff_and_notify(old_state: dict, new_state: dict):
     added = new_ids - old_ids
     common = old_ids & new_ids
 
-    notifications = 0
+    # Alle zu verschickenden Nachrichten zuerst sammeln (mit Modellname/Ausstattung
+    # als Sortierschluessel), statt sie sofort zu senden. So koennen wir sie vor
+    # dem eigentlichen Versand nach Modell gruppieren, statt sie in der
+    # zufaelligen internen Reihenfolge (neu/weg/geaendert getrennt) zu schicken.
+    events = []  # Liste von (model_name, trim, text)
 
-    for cid in sorted(added):
+    for cid in added:
         c = new_state[cid]
         text = (
             f"🆕 Neues Angebot verfügbar\n\n"
@@ -421,10 +425,9 @@ def diff_and_notify(old_state: dict, new_state: dict):
             f"📅 Verfügbarkeit: {c['availability']}\n\n"
             f"{c['model_url']}"
         )
-        send_telegram_message(text)
-        notifications += 1
+        events.append((c["model_name"], c["trim"], text))
 
-    for cid in sorted(removed):
+    for cid in removed:
         c = old_state[cid]
         text = (
             f"❌ Angebot nicht mehr verfügbar\n\n"
@@ -433,10 +436,9 @@ def diff_and_notify(old_state: dict, new_state: dict):
             f"💶 Letzter bekannter Preis: {fmt_price(c['price'])}\n\n"
             f"{c['model_url']}"
         )
-        send_telegram_message(text)
-        notifications += 1
+        events.append((c["model_name"], c["trim"], text))
 
-    for cid in sorted(common):
+    for cid in common:
         old_c = old_state[cid]
         new_c = new_state[cid]
 
@@ -456,10 +458,17 @@ def diff_and_notify(old_state: dict, new_state: dict):
                 + "\n".join(changes)
                 + f"\n\n{new_c['model_url']}"
             )
-            send_telegram_message(text)
-            notifications += 1
+            events.append((new_c["model_name"], new_c["trim"], text))
 
-    return notifications
+    # Nach Modellname (und innerhalb eines Modells nach Ausstattungslinie)
+    # sortieren, damit alle Nachrichten zu einem Fahrzeugmodell hintereinander
+    # ankommen, statt durcheinander.
+    events.sort(key=lambda e: (e[0], e[1]))
+
+    for _, _, text in events:
+        send_telegram_message(text)
+
+    return len(events)
 
 
 def main():
