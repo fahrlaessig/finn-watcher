@@ -148,6 +148,19 @@ AVAILABILITY_RE = re.compile(
     r"(Vsl\.\s*Übergabe\s*[\d.]+\s*-\s*[\d.]+|Schnell verfügbar|Sofort verfügbar)"
 )
 
+RANGE_RE = re.compile(r"(\d{2,4})\s*km Reichweite")
+CONSUMPTION_RE = re.compile(
+    r"(?:Energieverbrauch|Kraftstoffverbrauch)\s*\(kombiniert\):\s*([\d.,]+)\s*(kWh|l)/100\s*km",
+    re.IGNORECASE,
+)
+DRIVE_RE = re.compile(
+    r"(Frontantrieb|Heckantrieb|Allradantrieb|All-Wheel Drive|Front-Wheel Drive|Rear-Wheel Drive)",
+    re.IGNORECASE,
+)
+INTERIOR_COLOR_RE = re.compile(r"Innenfarbe:?\s*([A-Za-zÄÖÜäöüß][A-Za-zÄÖÜäöüß\-/ ]{2,40})")
+HITCH_RE = re.compile(r"Anhängerkupplung", re.IGNORECASE)
+HUD_RE = re.compile(r"Head[-\s]?up[-\s]?Display", re.IGNORECASE)
+
 
 def parse_model_configs(model_name: str, model_url: str, full_text: str):
     """Parst den sichtbaren Text einer Modell-Detailseite in einzelne
@@ -188,6 +201,23 @@ def parse_model_configs(model_name: str, model_url: str, full_text: str):
         price_match = PRICE_RE.search(window)
         price = price_match.group(1).replace(".", "") if price_match else None
 
+        range_match = RANGE_RE.search(window)
+        range_km = range_match.group(1) if range_match else None
+
+        cons_match = CONSUMPTION_RE.search(window)
+        consumption = f"{cons_match.group(1)} {cons_match.group(2)}/100km" if cons_match else None
+
+        # Antriebsart als Fallback direkt aus dem Konfigurationsnamen ableiten
+        # (z.B. "... RWD Premium" oder "... AWD Select"); die genauere Variante
+        # kommt spaeter ggf. von der individuellen Auto-Detailseite.
+        drive = None
+        if re.search(r"\bAWD\b", trim, re.IGNORECASE):
+            drive = "Allradantrieb (AWD)"
+        elif re.search(r"\bRWD\b", trim, re.IGNORECASE):
+            drive = "Heckantrieb (RWD)"
+        elif re.search(r"\bFWD\b", trim, re.IGNORECASE):
+            drive = "Frontantrieb (FWD)"
+
         key_raw = f"{model_url.split('?')[0]}|{trim}|{fuel}|{power}|{transmission}"
         config_id = hashlib.sha1(key_raw.encode("utf-8")).hexdigest()[:16]
 
@@ -202,10 +232,70 @@ def parse_model_configs(model_name: str, model_url: str, full_text: str):
                 "transmission": transmission,
                 "availability": availability,
                 "price": price,  # als String in Euro, z.B. "269", oder None wenn nicht gefunden
+                "range_km": range_km,
+                "consumption": consumption,
+                "drive": drive,
+                "interior_color": None,
+                "hitch": None,
+                "hud": None,
             }
         )
 
     return configs
+
+
+def collect_car_detail_urls(page):
+    """Versucht, fuer jede Konfiguration den Link zur individuellen
+    Auto-Detailseite (hinter dem 'Abo konfigurieren'-Button) zu ermitteln.
+    Gibt eine Liste mit einem Eintrag pro gefundenem Button zurueck
+    (None, wenn kein Link ermittelbar war)."""
+    buttons = page.get_by_text("Abo konfigurieren")
+    n = buttons.count()
+    urls = []
+    for i in range(n):
+        href = None
+        try:
+            btn = buttons.nth(i)
+            href = btn.get_attribute("href")
+            if not href:
+                anchor = btn.locator("xpath=ancestor::a[1]")
+                if anchor.count() > 0:
+                    href = anchor.first.get_attribute("href")
+        except Exception:
+            href = None
+        urls.append(urljoin(BASE_URL, href) if href else None)
+    return urls
+
+
+def fetch_car_detail(page, url: str) -> dict:
+    """Besucht die individuelle Konfigurations-/Checkout-Seite eines
+    einzelnen Autos und sucht dort nach Innenfarbe, Antriebsart,
+    Anhaengerkupplung und Head-up-Display. Liefert ein (ggf. leeres)
+    Dictionary mit den gefundenen Werten zurueck."""
+    details = {}
+    try:
+        page.goto(url, wait_until="domcontentloaded", timeout=30000)
+        page.wait_for_timeout(2000)
+        text = page.inner_text("body")
+    except Exception as e:
+        log(f"      Konnte Auto-Detailseite nicht laden ({url}): {e}")
+        return details
+
+    drive_match = DRIVE_RE.search(text)
+    if drive_match:
+        details["drive"] = drive_match.group(1)
+
+    interior_match = INTERIOR_COLOR_RE.search(text)
+    if interior_match:
+        details["interior_color"] = interior_match.group(1).strip()
+
+    if HITCH_RE.search(text):
+        details["hitch"] = "Ja"
+
+    if HUD_RE.search(text):
+        details["hud"] = "Ja"
+
+    return details
 
 
 def fetch_current_offers(playwright, finn_url: str):
@@ -255,10 +345,29 @@ def fetch_current_offers(playwright, finn_url: str):
 
             configs = parse_model_configs(model_name, model_url, body_text)
             log(f"  -> {len(configs)} Konfiguration(en) erkannt")
+
+            # Versuchen, fuer jede Konfiguration die individuelle
+            # Auto-Detailseite zu finden und dort Zusatzinfos zu holen.
+            car_urls = collect_car_detail_urls(page)
+            if len(car_urls) == len(configs) and car_urls:
+                for c, car_url in zip(configs, car_urls):
+                    if not car_url:
+                        continue
+                    extra = fetch_car_detail(page, car_url)
+                    c.update(extra)
+            else:
+                log(
+                    f"     Hinweis: {len(configs)} Konfiguration(en) aber "
+                    f"{len(car_urls)} 'Abo konfigurieren'-Links gefunden - "
+                    f"Zuordnung uebersprungen, Zusatzinfos fehlen fuer dieses Modell."
+                )
+
             for c in configs:
                 log(
                     f"     - {c['trim']} | {c['fuel']} | {c['transmission']} "
-                    f"| Preis: {c['price']} | Verfuegbarkeit: {c['availability']}"
+                    f"| Preis: {c['price']} | Verfuegbarkeit: {c['availability']} "
+                    f"| Antrieb: {c.get('drive')} | Innenfarbe: {c.get('interior_color')} "
+                    f"| Kupplung: {c.get('hitch')} | HUD: {c.get('hud')}"
                 )
                 all_configs[c["id"]] = c
         except Exception as e:
@@ -310,8 +419,61 @@ def fmt_price(p):
     return f"{p} €/Monat" if p else "Preis unbekannt"
 
 
+def fmt_price_change(old_p, new_p):
+    """Formatiert eine Preisaenderung inkl. Richtung (Pfeil) und Prozent."""
+    if old_p is None or new_p is None:
+        return f"💶 Preis: {fmt_price(old_p)} → {fmt_price(new_p)}"
+    try:
+        old_i = int(old_p)
+        new_i = int(new_p)
+    except ValueError:
+        return f"💶 Preis: {fmt_price(old_p)} → {fmt_price(new_p)}"
+
+    diff = new_i - old_i
+    pct = (diff / old_i * 100) if old_i else 0.0
+
+    if diff > 0:
+        arrow, sign = "📈", "+"
+    elif diff < 0:
+        arrow, sign = "📉", ""
+    else:
+        arrow, sign = "➡️", ""
+
+    return (
+        f"💶 Preis: {old_i}€ → {new_i}€ {arrow} "
+        f"({sign}{diff}€, {sign}{pct:.1f}%)"
+    )
+
+
 def format_car_label(c: dict) -> str:
-    return f"{c['model_name']} – {c['trim']} ({c['fuel']}, {c['transmission']})"
+    return f"{c['model_name']} – {c['trim']}"
+
+
+def format_details_block(c: dict) -> str:
+    """Baut den ausfuehrlichen Detail-Block (Leistung, Getriebe, Verbrauch,
+    Reichweite, Antrieb, Innenfarbe, Kupplung, HUD) - laesst fehlende
+    Werte weg, statt falsche/unsichere Angaben zu machen."""
+    lines = [f"🔧 {c['power']} · {c['transmission']} · {c['fuel']}"]
+
+    if c.get("drive"):
+        lines.append(f"⚙️ Antriebsart: {c['drive']}")
+
+    if c.get("range_km"):
+        lines.append(f"🔋 Reichweite (WLTP): {c['range_km']} km")
+
+    if c.get("consumption"):
+        lines.append(f"⚡ Verbrauch (kombiniert): {c['consumption']}")
+
+    if c.get("interior_color"):
+        lines.append(f"🎨 Innenfarbe: {c['interior_color']}")
+
+    if c.get("hitch"):
+        lines.append("🚗 Anhängerkupplung: Ja")
+
+    if c.get("hud"):
+        lines.append("🖥️ Head-up-Display: Ja")
+
+    return "\n".join(lines)
 
 
 def diff_and_notify(old_state: dict, new_state: dict):
@@ -329,8 +491,9 @@ def diff_and_notify(old_state: dict, new_state: dict):
         text = (
             f"🆕 Neues Angebot verfügbar\n\n"
             f"{format_car_label(c)}\n"
-            f"Preis: {fmt_price(c['price'])}\n"
-            f"Verfügbarkeit: {c['availability']}\n"
+            f"{format_details_block(c)}\n\n"
+            f"💶 Preis: {fmt_price(c['price'])}\n"
+            f"📅 Verfügbarkeit: {c['availability']}\n\n"
             f"{c['model_url']}"
         )
         send_telegram_message(text)
@@ -341,7 +504,8 @@ def diff_and_notify(old_state: dict, new_state: dict):
         text = (
             f"❌ Angebot nicht mehr verfügbar\n\n"
             f"{format_car_label(c)}\n"
-            f"Letzter bekannter Preis: {fmt_price(c['price'])}\n"
+            f"{format_details_block(c)}\n\n"
+            f"💶 Letzter bekannter Preis: {fmt_price(c['price'])}\n\n"
             f"{c['model_url']}"
         )
         send_telegram_message(text)
@@ -353,20 +517,19 @@ def diff_and_notify(old_state: dict, new_state: dict):
 
         changes = []
         if old_c.get("price") != new_c.get("price"):
-            changes.append(
-                f"Preis: {fmt_price(old_c.get('price'))} → {fmt_price(new_c.get('price'))}"
-            )
+            changes.append(fmt_price_change(old_c.get("price"), new_c.get("price")))
         if old_c.get("availability") != new_c.get("availability"):
             changes.append(
-                f"Verfügbarkeit: {old_c.get('availability')} → {new_c.get('availability')}"
+                f"📅 Verfügbarkeit: {old_c.get('availability')} → {new_c.get('availability')}"
             )
 
         if changes:
             text = (
                 f"🔄 Angebot geändert\n\n"
                 f"{format_car_label(new_c)}\n"
+                f"{format_details_block(new_c)}\n\n"
                 + "\n".join(changes)
-                + f"\n{new_c['model_url']}"
+                + f"\n\n{new_c['model_url']}"
             )
             send_telegram_message(text)
             notifications += 1
