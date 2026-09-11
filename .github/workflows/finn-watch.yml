@@ -2,9 +2,12 @@ name: FINN Angebots-Watcher
 
 on:
   schedule:
-    # Laeuft stuendlich zur vollen Stunde, aber NUR zwischen 07:00 und 18:00 UTC
-    # (entspricht ca. 08:00-19:00 Uhr deutscher Zeit im Winter, 09:00-20:00 im
-    # Sommer durch die Zeitumstellung - GitHub-Cron kennt keine Zeitzonen).
+    # Laeuft stuendlich (Minute :07, nicht :00 - siehe Hinweis unten), aber
+    # NUR zwischen 07:00 und 19:00 UTC (entspricht ca. 08:00-20:00 Uhr
+    # deutscher Zeit im Winter, 09:00-21:00 im Sommer durch die
+    # Zeitumstellung - GitHub-Cron kennt keine Zeitzonen).
+    # Minute :07 statt :00, weil GitHub geplante Workflows zur vollen Stunde
+    # (:00) oft verzoegert ausfuehrt (hoechste Serverlast weltweit).
     # So bleibt der monatliche Minutenverbrauch sicher unter dem kostenlosen
     # GitHub-Actions-Kontingent (2.000 Min/Monat).
     - cron: "7 7-19 * * *"
