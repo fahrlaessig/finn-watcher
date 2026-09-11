@@ -149,33 +149,40 @@ AVAILABILITY_RE = re.compile(
 def parse_model_configs(model_name: str, model_url: str, full_text: str):
     """Parst den sichtbaren Text einer Modell-Detailseite in einzelne
     Fahrzeug-Konfigurationen. Arbeitet bewusst text-basiert (statt ueber
-    CSS-Klassen), da diese sich bei finn.com aendern koennen."""
+    CSS-Klassen), da diese sich bei finn.com aendern koennen.
 
-    blocks = full_text.split(CONFIG_BLOCK_SPLIT_MARKER)
+    Wichtig: Es wird NICHT mehr auf den "Vergleichen"-Button als Trenner
+    zwischen Konfigurationen gesetzt, da dieser bei Modellen mit nur EINER
+    Konfiguration gar nicht angezeigt wird. Stattdessen wird direkt nach
+    dem Muster "Kraftstoff + Leistung + Getriebe" gesucht, das bei jeder
+    Konfiguration vorkommt - das ist zuverlaessiger."""
+
+    matches = list(FUEL_POWER_RE.finditer(full_text))
     configs = []
 
-    for block in blocks[1:]:  # erstes Element ist Text vor der ersten Config
-        fp_match = FUEL_POWER_RE.search(block)
-        if not fp_match:
-            continue
-
+    for i, fp_match in enumerate(matches):
         fuel = fp_match.group("fuel")
         power = re.sub(r"\s+", " ", fp_match.group("power")).strip()
         transmission = fp_match.group("transmission")
 
-        # Trim-Name: die Zeile direkt vor dem Fuel/Power-Match
-        before = block[: fp_match.start()]
+        # Trim-Name: die letzte nicht-leere Zeile VOR diesem Match
+        before = full_text[: fp_match.start()]
         lines = [l.strip() for l in before.splitlines() if l.strip()]
         trim = lines[-1] if lines else "Unbekannte Ausstattung"
-        # Trim-Zeile taucht in manchen Extraktionen doppelt auf (Bild-Alt-Text) -> saeubern
         trim = re.sub(r"^\d+\s*$", "", trim).strip()
+        if not trim and len(lines) > 1:
+            trim = lines[-2]
         if not trim:
-            trim = lines[-2] if len(lines) > 1 else "Unbekannte Ausstattung"
+            trim = "Unbekannte Ausstattung"
 
-        avail_match = AVAILABILITY_RE.search(block)
+        # Suchfenster NACH diesem Match bis zum naechsten Match (oder Textende)
+        window_end = matches[i + 1].start() if i + 1 < len(matches) else len(full_text)
+        window = full_text[fp_match.end():window_end]
+
+        avail_match = AVAILABILITY_RE.search(window)
         availability = avail_match.group(1) if avail_match else "Unbekannt"
 
-        price_match = PRICE_RE.search(block)
+        price_match = PRICE_RE.search(window)
         price = price_match.group(1).replace(".", "") if price_match else None
 
         key_raw = f"{model_url.split('?')[0]}|{trim}|{fuel}|{power}|{transmission}"
@@ -238,6 +245,10 @@ def fetch_current_offers(playwright, finn_url: str):
             configs = parse_model_configs(model_name, model_url, body_text)
             log(f"  -> {len(configs)} Konfiguration(en) erkannt")
             for c in configs:
+                log(
+                    f"     - {c['trim']} | {c['fuel']} | {c['transmission']} "
+                    f"| Preis: {c['price']} | Verfuegbarkeit: {c['availability']}"
+                )
                 all_configs[c["id"]] = c
         except Exception as e:
             log(f"  Fehler bei {model_url}: {e}")
