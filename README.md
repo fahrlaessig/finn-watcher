@@ -103,49 +103,99 @@ enthalten – die zwei Zusatzsuchen (Kupplung/HUD) hängt das Skript selbst an.
    W mit Head-up-Display)". Beim allerersten Lauf kommt noch **keine**
    Telegram-Nachricht (nichts zum Vergleichen da) – nur der Ist-Zustand
    wird in `state.json` gespeichert und automatisch committet.
-5. Ab dem nächsten planmäßigen Lauf (oder erneutem manuellen Start)
-   bekommst du bei echten Änderungen Telegram-Nachrichten.
+5. Ab dem nächsten planmäßigen Lauf (ausgelöst durch den externen Trigger,
+   siehe nächster Abschnitt, oder erneutem manuellen Start) bekommst du bei
+   echten Änderungen Telegram-Nachrichten.
 
-## Zeitplan
+### 5. Externen Trigger einrichten
 
-Der Workflow läuft automatisch, du musst nichts manuell anstoßen. Aktuell
-eingestellt: stündlich zur Minute `:07` (nicht `:00` – siehe unten),
-zwischen 07:00 und 19:00 **UTC** (`.github/workflows/finn-watch.yml`,
-`cron: "7 7-19 * * *"`).
+Damit der Watcher auch automatisch läuft, ohne dass du selbst auf
+"Run workflow" klicken musst: siehe Abschnitt **"Zeitplan / Trigger"**
+weiter unten (cron-job.org-Einrichtung).
 
-- **UTC statt Ortszeit:** GitHub-Cron kennt keine Zeitzonen. 07:00-19:00 UTC
-  entspricht ca. 08:00-20:00 Uhr deutscher Zeit im Winter (CET) bzw.
-  09:00-21:00 Uhr im Sommer (CEST) – das Fenster verschiebt sich zweimal
-  im Jahr durch die Zeitumstellung um eine Stunde.
-- **Minute `:07` statt `:00`:** GitHub selbst empfiehlt, geplante Workflows
-  nicht exakt auf die volle Stunde zu legen, da das der weltweit beliebteste
-  Zeitpunkt für Cron-Jobs ist und es dadurch zu Verzögerungen kommen kann.
-- **Nachtpause:** Bewusst eingebaut, um im kostenlosen GitHub-Actions-
-  Kontingent (2.000 Minuten/Monat für private Repos) zu bleiben – siehe
-  nächster Abschnitt.
+## Zeitplan / Trigger
 
-Intervall/Zeitfenster ändern: die `cron`-Zeile in `finn-watch.yml` anpassen,
-z.B. `"7 6-20 * * *"` für 06:00-20:00 UTC.
+**Wichtig:** GitHubs eigener `schedule`-Trigger hat sich bei diesem Repository
+als unzuverlässig erwiesen (bekannte, in der GitHub-Community mehrfach
+dokumentierte Plattform-Eigenheit: geplante Workflows feuern manchmal trotz
+korrekter Konfiguration einfach nicht). Deshalb läuft der Watcher **nicht**
+über `on: schedule`, sondern wird von einem **externen, kostenlosen
+Cron-Dienst ([cron-job.org](https://cron-job.org))** ausgelöst, der stündlich
+per GitHub-API einen `workflow_dispatch`-Aufruf macht. Vorteil nebenbei:
+cron-job.org läuft direkt in deiner eigenen Zeitzone (z.B. Europe/Berlin) –
+kein Umrechnen auf UTC nötig, keine Zeitumstellungs-Verschiebung.
+
+### Einmalige Einrichtung des externen Triggers
+
+**1. GitHub-Zugangstoken erstellen** (damit cron-job.org den Workflow starten
+darf):
+1. GitHub → Profilbild → Settings → ganz unten "Developer settings"
+2. "Personal access tokens" → "Fine-grained tokens" → "Generate new token"
+3. Name z.B. `finn-watcher-trigger`, Ablaufdatum wählen, Repository access
+   → "Only select repositories" → `finn-watcher`
+4. Unter "Repository permissions" → "Actions" auf **"Read and write"**
+   stellen, sonst nichts
+5. "Generate token" klicken, den Token (`github_pat_...`) sofort sicher
+   speichern (wird danach nie wieder angezeigt)
+6. **Ablaufdatum im Kalender vormerken** – nach Ablauf muss ein neuer Token
+   erstellt und bei cron-job.org eingetragen werden, sonst bleiben die
+   automatischen Läufe wieder aus
+
+**2. Cronjob bei cron-job.org anlegen:**
+- Kostenlosen Account erstellen
+- Neuer Cronjob mit:
+  - **URL:** `https://api.github.com/repos/<DEIN_GITHUB_USERNAME>/finn-watcher/actions/workflows/finn-watch.yml/dispatches`
+  - **Request method:** `POST`
+  - **Headers:**
+    | Key | Value |
+    |---|---|
+    | `Authorization` | `Bearer <DEIN_TOKEN>` |
+    | `Accept` | `application/vnd.github+json` |
+    | `Content-Type` | `application/json` |
+  - **Request body:** `{"ref":"main"}`
+  - **Time zone:** deine eigene (z.B. `Europe/Berlin`)
+  - **Zeitplan:** stündlich, nur zwischen z.B. 08:00 und 20:00 Uhr
+
+Der Token gehört ausschließlich in das Header-Feld bei cron-job.org – niemals
+in eine Datei im Repository oder sonst irgendwo veröffentlichen.
+
+### Woran man erkennt, welcher Trigger gefeuert hat
+
+In GitHub unter Actions steht bei jedem Lauf, wer/was ihn ausgelöst hat:
+- **"Manually run by \<dein Name\>"** → du selbst über den "Run workflow"-Button
+- **kein "Manually run by..." bzw. Auslöser ist ein Token/App** → externer
+  Trigger von cron-job.org via API
+
+Ein manueller Test-Klick auf "Run workflow" funktioniert weiterhin jederzeit
+zusätzlich, unabhängig vom externen Trigger.
+
+### Frequenz/Zeitfenster ändern
+
+Einfach den Zeitplan im cron-job.org-Dashboard anpassen (Uhrzeit-Fenster,
+Intervall) – keine Code- oder Repository-Änderung nötig.
 
 ## Kosten / GitHub-Actions-Minuten
 
 Das Skript selbst kostet nichts – es nutzt keine Claude-/AI-Tokens, sondern
 läuft als reiner Python-Code auf GitHub-Servern. Verbraucht wird lediglich
-**GitHub-Actions-Rechenzeit**:
+**GitHub-Actions-Rechenzeit** (unabhängig davon, ob der Lauf über den
+externen Trigger oder manuell gestartet wurde):
 
 - Privates Repo, GitHub-Free-Plan: **2.000 Minuten/Monat kostenlos**
 - Ein Durchlauf dauert ca. 4,5 Minuten (3 Teil-Suchen: Haupt, Kupplung, HUD)
-- Bei 13 Läufen/Tag (aktuelles 07-19-Uhr-Fenster, stündlich):
+- Bei 13 Läufen/Tag (aktuelles 08-20-Uhr-Fenster, stündlich):
   13 × 30 × 4,5 ≈ **1.755 Minuten/Monat** → passt bequem ins Kontingent
 
 GitHub-Konten haben standardmäßig ein **Ausgabenlimit von 0 $**: Wird das
-Kontingent doch mal überschritten, pausiert GitHub die Läufe einfach bis
-zum Monatswechsel – es entstehen **keine** unerwarteten Kosten, außer du
-hinterlegst selbst aktiv eine Zahlungsmethode mit höherem Limit.
+Kontingent doch mal überschritten, schlagen die von cron-job.org
+ausgelösten `workflow_dispatch`-Aufrufe fehl bzw. GitHub startet den Job
+einfach nicht, bis zum Monatswechsel – es entstehen **keine** unerwarteten
+Kosten, außer du hinterlegst selbst aktiv eine Zahlungsmethode mit höherem
+Limit.
 
 Willst du die Frequenz ändern (z.B. weniger Nachtpause oder öfter am Tag),
 im Kopf behalten: Laufzeit (~4,5 Min) × Läufe/Tag × 30 sollte unter 2.000
-bleiben.
+bleiben – Anpassung erfolgt im cron-job.org-Zeitplan, nicht im Code.
 
 ## Anpassen
 
