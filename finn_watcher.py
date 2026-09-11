@@ -235,73 +235,17 @@ def parse_model_configs(model_name: str, model_url: str, full_text: str):
                 "range_km": range_km,
                 "consumption": consumption,
                 "drive": drive,
-                "interior_color": None,
-                "hitch": None,
-                "hud": None,
             }
         )
 
     return configs
 
 
-def collect_car_detail_urls(page):
-    """Versucht, fuer jede Konfiguration den Link zur individuellen
-    Auto-Detailseite (hinter dem 'Abo konfigurieren'-Button) zu ermitteln.
-    Gibt eine Liste mit einem Eintrag pro gefundenem Button zurueck
-    (None, wenn kein Link ermittelbar war)."""
-    buttons = page.get_by_text("Abo konfigurieren")
-    n = buttons.count()
-    urls = []
-    for i in range(n):
-        href = None
-        try:
-            btn = buttons.nth(i)
-            href = btn.get_attribute("href")
-            if not href:
-                anchor = btn.locator("xpath=ancestor::a[1]")
-                if anchor.count() > 0:
-                    href = anchor.first.get_attribute("href")
-        except Exception:
-            href = None
-        urls.append(urljoin(BASE_URL, href) if href else None)
-    return urls
-
-
-def fetch_car_detail(page, url: str) -> dict:
-    """Besucht die individuelle Konfigurations-/Checkout-Seite eines
-    einzelnen Autos und sucht dort nach Innenfarbe, Antriebsart,
-    Anhaengerkupplung und Head-up-Display. Liefert ein (ggf. leeres)
-    Dictionary mit den gefundenen Werten zurueck."""
-    details = {}
-    try:
-        page.goto(url, wait_until="domcontentloaded", timeout=30000)
-        page.wait_for_timeout(2000)
-        text = page.inner_text("body")
-    except Exception as e:
-        log(f"      Konnte Auto-Detailseite nicht laden ({url}): {e}")
-        return details
-
-    drive_match = DRIVE_RE.search(text)
-    if drive_match:
-        details["drive"] = drive_match.group(1)
-
-    interior_match = INTERIOR_COLOR_RE.search(text)
-    if interior_match:
-        details["interior_color"] = interior_match.group(1).strip()
-
-    if HITCH_RE.search(text):
-        details["hitch"] = "Ja"
-
-    if HUD_RE.search(text):
-        details["hud"] = "Ja"
-
-    return details
-
-
-def fetch_current_offers(playwright, finn_url: str):
-    browser = playwright.chromium.launch(headless=True)
-    context = browser.new_context(locale="de-DE")
-    page = context.new_page()
+def fetch_current_offers(page, finn_url: str):
+    """Crawlt eine gefilterte finn.com-Such-URL komplett (alle passenden
+    Modelle und deren Konfigurationen). Nutzt eine von aussen uebergebene
+    Playwright-'page', damit der Browser fuer mehrere Durchlaeufe
+    (Haupt-Suche + Attribut-Filter-Suchen) wiederverwendet werden kann."""
 
     log(f"Lade Listing-Seite: {finn_url}")
     page.goto(finn_url, wait_until="domcontentloaded", timeout=45000)
@@ -345,36 +289,17 @@ def fetch_current_offers(playwright, finn_url: str):
 
             configs = parse_model_configs(model_name, model_url, body_text)
             log(f"  -> {len(configs)} Konfiguration(en) erkannt")
-
-            # Versuchen, fuer jede Konfiguration die individuelle
-            # Auto-Detailseite zu finden und dort Zusatzinfos zu holen.
-            car_urls = collect_car_detail_urls(page)
-            if len(car_urls) == len(configs) and car_urls:
-                for c, car_url in zip(configs, car_urls):
-                    if not car_url:
-                        continue
-                    extra = fetch_car_detail(page, car_url)
-                    c.update(extra)
-            else:
-                log(
-                    f"     Hinweis: {len(configs)} Konfiguration(en) aber "
-                    f"{len(car_urls)} 'Abo konfigurieren'-Links gefunden - "
-                    f"Zuordnung uebersprungen, Zusatzinfos fehlen fuer dieses Modell."
-                )
-
             for c in configs:
                 log(
                     f"     - {c['trim']} | {c['fuel']} | {c['transmission']} "
                     f"| Preis: {c['price']} | Verfuegbarkeit: {c['availability']} "
-                    f"| Antrieb: {c.get('drive')} | Innenfarbe: {c.get('interior_color')} "
-                    f"| Kupplung: {c.get('hitch')} | HUD: {c.get('hud')}"
+                    f"| Antrieb: {c.get('drive')}"
                 )
                 all_configs[c["id"]] = c
         except Exception as e:
             log(f"  Fehler bei {model_url}: {e}")
             continue
 
-    browser.close()
     return all_configs
 
 
@@ -468,10 +393,10 @@ def format_details_block(c: dict) -> str:
         lines.append(f"🎨 Innenfarbe: {c['interior_color']}")
 
     if c.get("hitch"):
-        lines.append("🚗 Anhängerkupplung: Ja")
+        lines.append(f"🚗 Anhängerkupplung: {c['hitch']}")
 
     if c.get("hud"):
-        lines.append("🖥️ Head-up-Display: Ja")
+        lines.append(f"🖥️ Head-up-Display: {c['hud']}")
 
     return "\n".join(lines)
 
@@ -546,9 +471,36 @@ def main():
     log(f"Bisheriger Stand: {len(old_state)} bekannte Konfigurationen.")
 
     with sync_playwright() as p:
-        new_state = fetch_current_offers(p, FINN_URL)
+        browser = p.chromium.launch(headless=True)
+        context = browser.new_context(locale="de-DE")
+        page = context.new_page()
 
-    log(f"Aktueller Stand: {len(new_state)} Konfigurationen gefunden.")
+        log("=== Hauptsuche ===")
+        new_state = fetch_current_offers(page, FINN_URL)
+
+        # Verbindungszeichen fuer den zusaetzlichen Filter-Parameter bestimmen
+        # (& falls die URL schon einen ? hat, sonst neu mit ? anfangen)
+        sep = "&" if "?" in FINN_URL else "?"
+
+        hitch_url = f"{FINN_URL}{sep}features=hitch"
+        hud_url = f"{FINN_URL}{sep}features=head_up_display"
+
+        log("=== Zusatz-Suche: Anhängerkupplung ===")
+        hitch_ids = set(fetch_current_offers(page, hitch_url).keys())
+
+        log("=== Zusatz-Suche: Head-up-Display ===")
+        hud_ids = set(fetch_current_offers(page, hud_url).keys())
+
+        browser.close()
+
+    log(
+        f"Aktueller Stand: {len(new_state)} Konfigurationen gefunden "
+        f"({len(hitch_ids)} mit Anhängerkupplung, {len(hud_ids)} mit Head-up-Display)."
+    )
+
+    for cid, c in new_state.items():
+        c["hitch"] = "Ja" if cid in hitch_ids else "Nein"
+        c["hud"] = "Ja" if cid in hud_ids else "Nein"
 
     if not new_state:
         log(
