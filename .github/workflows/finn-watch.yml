@@ -1,6 +1,9 @@
 name: FINN Angebots-Watcher
 
 on:
+  # Re-Registrierungs-Hinweis: falls der Schedule-Trigger nach einer Aenderung
+  # zunaechst nicht feuert (bekannte GitHub-Eigenheit), hilft oft ein weiterer
+  # kleiner Commit an dieser Datei, um den internen Cron neu zu registrieren.
   schedule:
     # Laeuft stuendlich (Minute :07, nicht :00 - siehe Hinweis unten), aber
     # NUR zwischen 07:00 und 19:00 UTC (entspricht ca. 08:00-20:00 Uhr
