@@ -165,4 +165,228 @@ def parse_model_configs(model_name: str, model_url: str, full_text: str):
 
         # Trim-Name: die Zeile direkt vor dem Fuel/Power-Match
         before = block[: fp_match.start()]
-        lines =
+        lines = [l.strip() for l in before.splitlines() if l.strip()]
+        trim = lines[-1] if lines else "Unbekannte Ausstattung"
+        # Trim-Zeile taucht in manchen Extraktionen doppelt auf (Bild-Alt-Text) -> saeubern
+        trim = re.sub(r"^\d+\s*$", "", trim).strip()
+        if not trim:
+            trim = lines[-2] if len(lines) > 1 else "Unbekannte Ausstattung"
+
+        avail_match = AVAILABILITY_RE.search(block)
+        availability = avail_match.group(1) if avail_match else "Unbekannt"
+
+        price_match = PRICE_RE.search(block)
+        price = price_match.group(1).replace(".", "") if price_match else None
+
+        key_raw = f"{model_url.split('?')[0]}|{trim}|{fuel}|{power}|{transmission}"
+        config_id = hashlib.sha1(key_raw.encode("utf-8")).hexdigest()[:16]
+
+        configs.append(
+            {
+                "id": config_id,
+                "model_name": model_name,
+                "model_url": model_url.split("?")[0],
+                "trim": trim,
+                "fuel": fuel,
+                "power": power,
+                "transmission": transmission,
+                "availability": availability,
+                "price": price,  # als String in Euro, z.B. "269", oder None wenn nicht gefunden
+            }
+        )
+
+    return configs
+
+
+def fetch_current_offers(playwright, finn_url: str):
+    browser = playwright.chromium.launch(headless=True)
+    context = browser.new_context(locale="de-DE")
+    page = context.new_page()
+
+    log(f"Lade Listing-Seite: {finn_url}")
+    page.goto(finn_url, wait_until="networkidle", timeout=60000)
+    accept_cookies_if_present(page)
+    page.wait_for_timeout(1500)
+
+    scroll_to_load_all(page)
+    debug_dump("listing_page", page.inner_text("body"))
+
+    model_links = extract_model_links(page)
+    log(f"{len(model_links)} Modell-Links gefunden.")
+
+    all_configs = {}
+    for idx, model_url in enumerate(model_links, start=1):
+        try:
+            log(f"[{idx}/{len(model_links)}] Lade Modellseite: {model_url}")
+            page.goto(model_url, wait_until="networkidle", timeout=60000)
+            page.wait_for_timeout(1800)  # Zeit fuer nachgeladene Preise
+
+            body_text = page.inner_text("body")
+            debug_dump(f"model_{idx}", body_text)
+
+            # Modellname aus H1 oder aus URL ableiten
+            model_name = model_url.rstrip("/").split("/")[-1].replace("-", " ").title()
+            try:
+                h1 = page.locator("h1").first
+                if h1.count() > 0:
+                    text = h1.inner_text().strip()
+                    if text:
+                        model_name = text
+            except Exception:
+                pass
+
+            configs = parse_model_configs(model_name, model_url, body_text)
+            log(f"  -> {len(configs)} Konfiguration(en) erkannt")
+            for c in configs:
+                all_configs[c["id"]] = c
+        except Exception as e:
+            log(f"  Fehler bei {model_url}: {e}")
+            continue
+
+    browser.close()
+    return all_configs
+
+
+def load_previous_state():
+    if not os.path.exists(STATE_FILE):
+        return {}
+    try:
+        with open(STATE_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+def save_state(state: dict):
+    with open(STATE_FILE, "w", encoding="utf-8") as f:
+        json.dump(state, f, ensure_ascii=False, indent=2)
+
+
+def send_telegram_message(text: str):
+    if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
+        log("WARNUNG: Telegram-Zugangsdaten fehlen, Nachricht wird nicht gesendet:")
+        log(text)
+        return
+    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
+    try:
+        resp = requests.post(
+            url,
+            data={
+                "chat_id": TELEGRAM_CHAT_ID,
+                "text": text,
+                "disable_web_page_preview": True,
+            },
+            timeout=15,
+        )
+        if resp.status_code != 200:
+            log(f"Telegram-Fehler ({resp.status_code}): {resp.text}")
+    except Exception as e:
+        log(f"Telegram-Sendefehler: {e}")
+
+
+def fmt_price(p):
+    return f"{p} €/Monat" if p else "Preis unbekannt"
+
+
+def format_car_label(c: dict) -> str:
+    return f"{c['model_name']} – {c['trim']} ({c['fuel']}, {c['transmission']})"
+
+
+def diff_and_notify(old_state: dict, new_state: dict):
+    old_ids = set(old_state.keys())
+    new_ids = set(new_state.keys())
+
+    removed = old_ids - new_ids
+    added = new_ids - old_ids
+    common = old_ids & new_ids
+
+    notifications = 0
+
+    for cid in sorted(added):
+        c = new_state[cid]
+        text = (
+            f"🆕 Neues Angebot verfügbar\n\n"
+            f"{format_car_label(c)}\n"
+            f"Preis: {fmt_price(c['price'])}\n"
+            f"Verfügbarkeit: {c['availability']}\n"
+            f"{c['model_url']}"
+        )
+        send_telegram_message(text)
+        notifications += 1
+
+    for cid in sorted(removed):
+        c = old_state[cid]
+        text = (
+            f"❌ Angebot nicht mehr verfügbar\n\n"
+            f"{format_car_label(c)}\n"
+            f"Letzter bekannter Preis: {fmt_price(c['price'])}\n"
+            f"{c['model_url']}"
+        )
+        send_telegram_message(text)
+        notifications += 1
+
+    for cid in sorted(common):
+        old_c = old_state[cid]
+        new_c = new_state[cid]
+
+        changes = []
+        if old_c.get("price") != new_c.get("price"):
+            changes.append(
+                f"Preis: {fmt_price(old_c.get('price'))} → {fmt_price(new_c.get('price'))}"
+            )
+        if old_c.get("availability") != new_c.get("availability"):
+            changes.append(
+                f"Verfügbarkeit: {old_c.get('availability')} → {new_c.get('availability')}"
+            )
+
+        if changes:
+            text = (
+                f"🔄 Angebot geändert\n\n"
+                f"{format_car_label(new_c)}\n"
+                + "\n".join(changes)
+                + f"\n{new_c['model_url']}"
+            )
+            send_telegram_message(text)
+            notifications += 1
+
+    return notifications
+
+
+def main():
+    if not FINN_URL:
+        log("FEHLER: Umgebungsvariable FINN_URL ist nicht gesetzt.")
+        sys.exit(1)
+
+    old_state = load_previous_state()
+    log(f"Bisheriger Stand: {len(old_state)} bekannte Konfigurationen.")
+
+    with sync_playwright() as p:
+        new_state = fetch_current_offers(p, FINN_URL)
+
+    log(f"Aktueller Stand: {len(new_state)} Konfigurationen gefunden.")
+
+    if not new_state:
+        log(
+            "WARNUNG: Es wurden 0 Konfigurationen gefunden. Um einen "
+            "kompletten Fehl-Alarm (alle Autos 'verschwunden') zu vermeiden, "
+            "wird der State in diesem Fall NICHT ueberschrieben und es "
+            "werden keine Benachrichtigungen verschickt. Bitte pruefen, "
+            "ob sich an der Seite etwas geaendert hat."
+        )
+        sys.exit(2)
+
+    if not old_state:
+        log("Kein vorheriger Stand vorhanden (vermutlich erster Lauf) - "
+            "es werden keine Benachrichtigungen verschickt, nur der "
+            "aktuelle Stand wird gespeichert.")
+        save_state(new_state)
+        return
+
+    n = diff_and_notify(old_state, new_state)
+    log(f"{n} Benachrichtigung(en) verschickt.")
+
+    save_state(new_state)
+
+
+if __name__ == "__main__":
+    main()
