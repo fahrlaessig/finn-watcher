@@ -21,6 +21,17 @@
     "availability": "Vsl. Übergabe 21.09.2026 - 05.10.2026",
     "price": "120"
   },
+  "ee071273a91b8bc7": {
+    "id": "ee071273a91b8bc7",
+    "model_name": "Fiat Grande Panda Elektro",
+    "model_url": "https://www.finn.com/de-DE/models/fiat/grande-panda-elektro",
+    "trim": "La Prima 44 kWh",
+    "fuel": "Elektro",
+    "power": "83 kW (113 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 23.09.2026 - 07.10.2026",
+    "price": "322"
+  },
   "8d49ad9b642d2725": {
     "id": "8d49ad9b642d2725",
     "model_name": "Opel Frontera",
@@ -42,6 +53,17 @@
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 28.09.2026 - 12.10.2026",
     "price": "347"
+  },
+  "2e9e6c725500fa60": {
+    "id": "2e9e6c725500fa60",
+    "model_name": "BYD Dolphin",
+    "model_url": "https://www.finn.com/de-DE/models/byd/dolphin",
+    "trim": "Comfort",
+    "fuel": "Elektro",
+    "power": "150 kW (204 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 21.09.2026 - 05.10.2026",
+    "price": "120"
   },
   "cc980fa4ce04e33a": {
     "id": "cc980fa4ce04e33a",
@@ -87,6 +109,50 @@
     "availability": "Vsl. Übergabe 19.10.2026 - 11.01.2027",
     "price": "356"
   },
+  "78ff988139c88246": {
+    "id": "78ff988139c88246",
+    "model_name": "MG 4 Urban",
+    "model_url": "https://www.finn.com/de-DE/models/mg/4-urban",
+    "trim": "54kWh Long Range Premium",
+    "fuel": "Elektro",
+    "power": "118 kW (160 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 21.09.2026 - 05.10.2026",
+    "price": "120"
+  },
+  "f2ab15b189250ce3": {
+    "id": "f2ab15b189250ce3",
+    "model_name": "MG 4",
+    "model_url": "https://www.finn.com/de-DE/models/mg/4",
+    "trim": "64 kWh Premium",
+    "fuel": "Elektro",
+    "power": "140 kW (190 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 17.09.2026 - 24.09.2026",
+    "price": "381"
+  },
+  "24534d01cac2674b": {
+    "id": "24534d01cac2674b",
+    "model_name": "BYD Atto 2",
+    "model_url": "https://www.finn.com/de-DE/models/byd/atto-2",
+    "trim": "Comfort",
+    "fuel": "Elektro",
+    "power": "150 kW (204 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 17.09.2026 - 24.09.2026",
+    "price": "240"
+  },
+  "5bf7bccecafaf9fb": {
+    "id": "5bf7bccecafaf9fb",
+    "model_name": "MG S5",
+    "model_url": "https://www.finn.com/de-DE/models/mg/s5",
+    "trim": "64 kWh Luxury Long Range",
+    "fuel": "Elektro",
+    "power": "180 kW (245 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 21.09.2026 - 05.10.2026",
+    "price": "120"
+  },
   "3cdd08a7c18f29c7": {
     "id": "3cdd08a7c18f29c7",
     "model_name": "Kia EV2",
@@ -120,6 +186,28 @@
     "availability": "Vsl. Übergabe 02.10.2026 - 30.10.2026",
     "price": "524"
   },
+  "dd219bf0124c2c8c": {
+    "id": "dd219bf0124c2c8c",
+    "model_name": "MG S6",
+    "model_url": "https://www.finn.com/de-DE/models/mg/s6",
+    "trim": "77 kWh Luxury Long Range",
+    "fuel": "Elektro",
+    "power": "180 kW (245 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 22.10.2026 - 19.11.2026",
+    "price": "120"
+  },
+  "bb6d404865fb11f2": {
+    "id": "bb6d404865fb11f2",
+    "model_name": "Toyota Urban Cruiser",
+    "model_url": "https://www.finn.com/de-DE/models/toyota/urban-cruiser",
+    "trim": "61 kWh Teamplayer",
+    "fuel": "Elektro",
+    "power": "128 kW (174 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 29.09.2026 - 13.10.2026",
+    "price": "120"
+  },
   "ddb214f6b5a6b920": {
     "id": "ddb214f6b5a6b920",
     "model_name": "Hyundai Kona Elektro",
@@ -141,6 +229,28 @@
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 29.09.2026 - 13.10.2026",
     "price": "482"
+  },
+  "4af916304310d144": {
+    "id": "4af916304310d144",
+    "model_name": "Cupra Born",
+    "model_url": "https://www.finn.com/de-DE/models/cupra/born",
+    "trim": "79 kWh 170 kW",
+    "fuel": "Elektro",
+    "power": "170 kW (231 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 29.09.2026 - 13.10.2026",
+    "price": "484"
+  },
+  "83ac10eda0ab0650": {
+    "id": "83ac10eda0ab0650",
+    "model_name": "BYD Sealion 7",
+    "model_url": "https://www.finn.com/de-DE/models/byd/sealion-7",
+    "trim": "Comfort",
+    "fuel": "Elektro",
+    "power": "230 kW (313 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 21.09.2026 - 05.10.2026",
+    "price": "493"
   },
   "1e1318e3ca7f6969": {
     "id": "1e1318e3ca7f6969",
@@ -317,5 +427,16 @@
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 19.11.2026 - 28.01.2027",
     "price": "524"
+  },
+  "4a156650415ae03b": {
+    "id": "4a156650415ae03b",
+    "model_name": "Hyundai IONIQ 6",
+    "model_url": "https://www.finn.com/de-DE/models/hyundai/ioniq-6",
+    "trim": "84kWh 168kW Heckantrieb Centriq",
+    "fuel": "Elektro",
+    "power": "168 kW (228 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 08.01.2027 - 12.03.2027",
+    "price": "583"
   }
 }
