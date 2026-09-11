@@ -8,13 +8,12 @@
     "power": "65 kW (88 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 21.09.2026 - 05.10.2026",
-    "price": "298",
+    "price": "365",
     "range_km": "322",
     "consumption": "16 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Ja"
   },
   "e41a21c38e6fef42": {
     "id": "e41a21c38e6fef42",
@@ -25,13 +24,12 @@
     "power": "115 kW (156 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 21.09.2026 - 05.10.2026",
-    "price": "322",
+    "price": "414",
     "range_km": "310",
     "consumption": "16 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Ja"
   },
   "ee071273a91b8bc7": {
     "id": "ee071273a91b8bc7",
@@ -42,13 +40,12 @@
     "power": "83 kW (113 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 23.09.2026 - 07.10.2026",
-    "price": "322",
+    "price": "381",
     "range_km": "320",
     "consumption": "16.8 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "8d49ad9b642d2725": {
     "id": "8d49ad9b642d2725",
@@ -59,13 +56,12 @@
     "power": "83 kW (113 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 09.10.2026 - 01.01.2027",
-    "price": "373",
+    "price": "482",
     "range_km": "408",
     "consumption": "158 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Ja"
   },
   "5f85f73a572bec9c": {
     "id": "5f85f73a572bec9c",
@@ -76,13 +72,12 @@
     "power": "83 kW (113 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 28.09.2026 - 12.10.2026",
-    "price": "347",
+    "price": "440",
     "range_km": "305",
     "consumption": "16.4 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Ja"
   },
   "2e9e6c725500fa60": {
     "id": "2e9e6c725500fa60",
@@ -93,13 +88,12 @@
     "power": "150 kW (204 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 21.09.2026 - 05.10.2026",
-    "price": "373",
+    "price": "432",
     "range_km": "427",
     "consumption": "15.9 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "cc980fa4ce04e33a": {
     "id": "cc980fa4ce04e33a",
@@ -110,13 +104,12 @@
     "power": "85 kW (116 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 23.10.2026 - 25.12.2026",
-    "price": "373",
+    "price": "440",
     "range_km": "360",
     "consumption": "15.1 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "2c12e189d71d0450": {
     "id": "2c12e189d71d0450",
@@ -127,13 +120,12 @@
     "power": "85 kW (116 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 23.10.2026 - 01.01.2027",
-    "price": "340",
+    "price": "390",
     "range_km": "370",
     "consumption": "14.9 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "65ce36093b5018d0": {
     "id": "65ce36093b5018d0",
@@ -144,13 +136,12 @@
     "power": "83 kW (113 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 29.09.2026 - 13.10.2026",
-    "price": "331",
+    "price": "423",
     "range_km": "386",
     "consumption": "16.6 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "b86f8aa5c0994b7d": {
     "id": "b86f8aa5c0994b7d",
@@ -161,13 +152,12 @@
     "power": "83 kW (113 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 19.10.2026 - 11.01.2027",
-    "price": "356",
+    "price": "449",
     "range_km": "384",
     "consumption": "16.7 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "78ff988139c88246": {
     "id": "78ff988139c88246",
@@ -178,13 +168,12 @@
     "power": "118 kW (160 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 21.09.2026 - 05.10.2026",
-    "price": "356",
+    "price": "406",
     "range_km": "404",
     "consumption": "15.5 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "f2ab15b189250ce3": {
     "id": "f2ab15b189250ce3",
@@ -195,13 +184,12 @@
     "power": "140 kW (190 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 17.09.2026 - 24.09.2026",
-    "price": "381",
+    "price": "448",
     "range_km": "452",
     "consumption": "17.6 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "24534d01cac2674b": {
     "id": "24534d01cac2674b",
@@ -212,13 +200,12 @@
     "power": "150 kW (204 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 21.09.2026 - 05.10.2026",
-    "price": "375",
+    "price": "425",
     "range_km": "430",
     "consumption": "17.4 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "5bf7bccecafaf9fb": {
     "id": "5bf7bccecafaf9fb",
@@ -229,13 +216,12 @@
     "power": "180 kW (245 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 21.09.2026 - 05.10.2026",
-    "price": "415",
+    "price": "482",
     "range_km": "465",
     "consumption": "16 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "3cdd08a7c18f29c7": {
     "id": "3cdd08a7c18f29c7",
@@ -246,13 +232,12 @@
     "power": "108 kW (147 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 29.09.2026 - 13.10.2026",
-    "price": "423",
+    "price": "491",
     "range_km": "308",
     "consumption": "15.5 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "af9cff55e92c8654": {
     "id": "af9cff55e92c8654",
@@ -263,13 +248,12 @@
     "power": "100 kW (136 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 02.10.2026 - 30.10.2026",
-    "price": "516",
+    "price": "575",
     "range_km": "418",
     "consumption": "16.2 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "e5e92738515b554e": {
     "id": "e5e92738515b554e",
@@ -280,13 +264,12 @@
     "power": "100 kW (136 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 02.10.2026 - 30.10.2026",
-    "price": "524",
+    "price": "583",
     "range_km": "418",
     "consumption": "16.2 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "dd219bf0124c2c8c": {
     "id": "dd219bf0124c2c8c",
@@ -297,13 +280,12 @@
     "power": "180 kW (245 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 22.10.2026 - 19.11.2026",
-    "price": "448",
+    "price": "524",
     "range_km": "530",
     "consumption": "16.6 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "bb6d404865fb11f2": {
     "id": "bb6d404865fb11f2",
@@ -314,13 +296,12 @@
     "power": "128 kW (174 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 29.09.2026 - 13.10.2026",
-    "price": "432",
+    "price": "499",
     "range_km": "426",
     "consumption": "15.1 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "ddb214f6b5a6b920": {
     "id": "ddb214f6b5a6b920",
@@ -331,13 +312,12 @@
     "power": "150 kW (204 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 29.09.2026 - 13.10.2026",
-    "price": "524",
+    "price": "608",
     "range_km": "509",
     "consumption": "14.8 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "1c729f62202c178e": {
     "id": "1c729f62202c178e",
@@ -348,13 +328,12 @@
     "power": "150 kW (204 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 29.09.2026 - 13.10.2026",
-    "price": "482",
+    "price": "558",
     "range_km": "509",
     "consumption": "14.7 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "4af916304310d144": {
     "id": "4af916304310d144",
@@ -365,13 +344,12 @@
     "power": "170 kW (231 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 29.09.2026 - 13.10.2026",
-    "price": "484",
+    "price": "593",
     "range_km": "549",
     "consumption": "16.2 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "83ac10eda0ab0650": {
     "id": "83ac10eda0ab0650",
@@ -382,13 +360,12 @@
     "power": "230 kW (313 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 21.09.2026 - 05.10.2026",
-    "price": "493",
+    "price": "569",
     "range_km": "482",
     "consumption": null,
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "1e1318e3ca7f6969": {
     "id": "1e1318e3ca7f6969",
@@ -398,14 +375,13 @@
     "fuel": "Elektro",
     "power": "210 kW (286 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 25.09.2026 - 09.10.2026",
-    "price": "482",
+    "availability": "Vsl. Übergabe 29.09.2026 - 13.10.2026",
+    "price": "558",
     "range_km": "571",
     "consumption": "15.2 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "b4c77c625ee6b6dd": {
     "id": "b4c77c625ee6b6dd",
@@ -416,13 +392,12 @@
     "power": "210 kW (286 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 16.09.2026 - 23.09.2026",
-    "price": "499",
+    "price": "566",
     "range_km": "571",
     "consumption": "15.2 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "a7c01257354511b1": {
     "id": "a7c01257354511b1",
@@ -433,13 +408,12 @@
     "power": "210 kW (286 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 23.10.2026 - 25.12.2026",
-    "price": "524",
+    "price": "608",
     "range_km": "553",
     "consumption": "15.8 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Ja",
+    "hud": "Nein"
   },
   "1e6aaf89f4ac0927": {
     "id": "1e6aaf89f4ac0927",
@@ -450,13 +424,12 @@
     "power": "210 kW (286 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 23.10.2026 - 25.12.2026",
-    "price": "566",
+    "price": "650",
     "range_km": "523",
     "consumption": "16.7 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Ja",
+    "hud": "Nein"
   },
   "088ec5c4a8baa60b": {
     "id": "088ec5c4a8baa60b",
@@ -467,13 +440,12 @@
     "power": "210 kW (286 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 16.09.2026 - 23.09.2026",
-    "price": "498",
+    "price": "616",
     "range_km": "568",
     "consumption": "15.6 kWh/100km",
     "drive": "Heckantrieb (RWD)",
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "c1890423715c70d2": {
     "id": "c1890423715c70d2",
@@ -484,13 +456,12 @@
     "power": "250 kW (340 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 16.09.2026 - 23.09.2026",
-    "price": "507",
+    "price": "625",
     "range_km": "514",
     "consumption": "17.5 kWh/100km",
     "drive": "Allradantrieb (AWD)",
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "a7a53d349d67b3f1": {
     "id": "a7a53d349d67b3f1",
@@ -501,13 +472,12 @@
     "power": "168 kW (228 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 23.10.2026 - 25.12.2026",
-    "price": "591",
+    "price": "675",
     "range_km": "570",
     "consumption": "16 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "b0adb274824c33bc": {
     "id": "b0adb274824c33bc",
@@ -518,13 +488,12 @@
     "power": "168 kW (228 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 29.09.2026 - 13.10.2026",
-    "price": "658",
+    "price": "768",
     "range_km": "570",
     "consumption": "17 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "2128ca22450f17e4": {
     "id": "2128ca22450f17e4",
@@ -535,13 +504,12 @@
     "power": "125 kW (170 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 29.09.2026 - 13.10.2026",
-    "price": "532",
+    "price": "624",
     "range_km": "440",
     "consumption": "15.6 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "cc41a2baf3b771e4": {
     "id": "cc41a2baf3b771e4",
@@ -552,13 +520,12 @@
     "power": "150 kW (204 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 29.09.2026 - 13.10.2026",
-    "price": "507",
+    "price": "600",
     "range_km": "605",
     "consumption": "14.9 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "57c37d277438d561": {
     "id": "57c37d277438d561",
@@ -569,13 +536,12 @@
     "power": "150 kW (204 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 29.09.2026 - 13.10.2026",
-    "price": "549",
+    "price": "650",
     "range_km": "608",
     "consumption": "14.9 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "4cdd8580781f7730": {
     "id": "4cdd8580781f7730",
@@ -586,13 +552,12 @@
     "power": "150 kW (204 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 29.09.2026 - 13.10.2026",
-    "price": "625",
+    "price": "734",
     "range_km": "563",
     "consumption": "16.2 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "995c4b7121fc3c58": {
     "id": "995c4b7121fc3c58",
@@ -603,13 +568,12 @@
     "power": "210 kW (286 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 16.09.2026 - 23.09.2026",
-    "price": "541",
+    "price": "608",
     "range_km": "595",
     "consumption": "14.8 kWh/100km",
     "drive": "Heckantrieb (RWD)",
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "281f76407818d69b": {
     "id": "281f76407818d69b",
@@ -620,13 +584,12 @@
     "power": "250 kW (340 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 16.09.2026 - 23.09.2026",
-    "price": "524",
+    "price": "617",
     "range_km": "552",
     "consumption": "16.3 kWh/100km",
     "drive": "Allradantrieb (AWD)",
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "767ae384be06e06c": {
     "id": "767ae384be06e06c",
@@ -637,13 +600,12 @@
     "power": "150 kW (204 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 02.10.2026 - 30.10.2026",
-    "price": "558",
+    "price": "634",
     "range_km": "594",
     "consumption": "15.5 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "89d27db3bdaaf059": {
     "id": "89d27db3bdaaf059",
@@ -654,13 +616,12 @@
     "power": "190 kW (258 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 19.11.2026 - 28.01.2027",
-    "price": "524",
+    "price": "591",
     "range_km": "484",
     "consumption": "18.9 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   },
   "4a156650415ae03b": {
     "id": "4a156650415ae03b",
@@ -671,12 +632,11 @@
     "power": "168 kW (228 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 08.01.2027 - 12.03.2027",
-    "price": "583",
+    "price": "659",
     "range_km": "680",
     "consumption": "13.5 kWh/100km",
     "drive": null,
-    "interior_color": null,
-    "hitch": null,
-    "hud": null
+    "hitch": "Nein",
+    "hud": "Nein"
   }
 }
