@@ -139,7 +139,10 @@ FUEL_POWER_RE = re.compile(
     re.IGNORECASE,
 )
 
-PRICE_RE = re.compile(r"(?:ab\s*)?(\d{2,4}(?:[.,]\d{3})?)\s*€")
+PRICE_RE = re.compile(
+    r"(\d{2,4}(?:[.,]\d{3})?)\s*€\s*\n?\s*(?:pro Monat|im Monat)",
+    re.IGNORECASE,
+)
 
 AVAILABILITY_RE = re.compile(
     r"(Vsl\.\s*Übergabe\s*[\d.]+\s*-\s*[\d.]+|Schnell verfügbar|Sofort verfügbar)"
@@ -229,6 +232,14 @@ def fetch_current_offers(playwright, finn_url: str):
             page.wait_for_timeout(3000)  # Zeit fuer nachgeladene Preise
 
             body_text = page.inner_text("body")
+
+            # "Aehnliche Modelle"-Empfehlungsbereich (andere Autos!) abschneiden,
+            # damit dessen Preise nicht versehentlich der letzten Konfiguration
+            # dieser Seite zugeordnet werden.
+            cutoff = body_text.find("Ähnliche Modelle")
+            if cutoff != -1:
+                body_text = body_text[:cutoff]
+
             debug_dump(f"model_{idx}", body_text)
 
             # Modellname aus H1 oder aus URL ableiten
@@ -250,15 +261,6 @@ def fetch_current_offers(playwright, finn_url: str):
                     f"| Preis: {c['price']} | Verfuegbarkeit: {c['availability']}"
                 )
                 all_configs[c["id"]] = c
-
-            # TEMPORAERE DIAGNOSE: zeigt fuer die ersten 2 Modelle den Text
-            # rund um JEDEN gefundenen Euro-Betrag, damit wir sehen koennen,
-            # woher z.B. ein fehlerhafter "120 EUR"-Wert stammt.
-            if idx <= 2:
-                for pm in PRICE_RE.finditer(body_text):
-                    s = max(0, pm.start() - 60)
-                    e = min(len(body_text), pm.end() + 20)
-                    log(f"    [PREISKONTEXT] {body_text[s:e]!r}")
         except Exception as e:
             log(f"  Fehler bei {model_url}: {e}")
             continue
