@@ -204,9 +204,9 @@ def fetch_current_offers(playwright, finn_url: str):
     page = context.new_page()
 
     log(f"Lade Listing-Seite: {finn_url}")
-    page.goto(finn_url, wait_until="networkidle", timeout=60000)
+    page.goto(finn_url, wait_until="domcontentloaded", timeout=45000)
     accept_cookies_if_present(page)
-    page.wait_for_timeout(1500)
+    page.wait_for_timeout(3000)
 
     scroll_to_load_all(page)
     debug_dump("listing_page", page.inner_text("body"))
@@ -218,8 +218,8 @@ def fetch_current_offers(playwright, finn_url: str):
     for idx, model_url in enumerate(model_links, start=1):
         try:
             log(f"[{idx}/{len(model_links)}] Lade Modellseite: {model_url}")
-            page.goto(model_url, wait_until="networkidle", timeout=60000)
-            page.wait_for_timeout(1800)  # Zeit fuer nachgeladene Preise
+            page.goto(model_url, wait_until="domcontentloaded", timeout=45000)
+            page.wait_for_timeout(3000)  # Zeit fuer nachgeladene Preise
 
             body_text = page.inner_text("body")
             debug_dump(f"model_{idx}", body_text)
