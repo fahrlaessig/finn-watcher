@@ -7,7 +7,7 @@ on:
     # Sommer durch die Zeitumstellung - GitHub-Cron kennt keine Zeitzonen).
     # So bleibt der monatliche Minutenverbrauch sicher unter dem kostenlosen
     # GitHub-Actions-Kontingent (2.000 Min/Monat).
-    - cron: "0 7-18 * * *"
+    - cron: "7 7-19 * * *"
   workflow_dispatch: {}   # erlaubt manuelles Starten ueber die GitHub-Oberflaeche
 
 permissions:
