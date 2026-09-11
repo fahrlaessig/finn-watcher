@@ -31,6 +31,22 @@
     "hitch": "Nein",
     "hud": "Ja"
   },
+  "ee071273a91b8bc7": {
+    "id": "ee071273a91b8bc7",
+    "model_name": "Fiat Grande Panda Elektro",
+    "model_url": "https://www.finn.com/de-DE/models/fiat/grande-panda-elektro",
+    "trim": "La Prima 44 kWh",
+    "fuel": "Elektro",
+    "power": "83 kW (113 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 23.09.2026 - 07.10.2026",
+    "price": "381",
+    "range_km": "320",
+    "consumption": "16.8 kWh/100km",
+    "drive": null,
+    "hitch": "Nein",
+    "hud": "Nein"
+  },
   "8d49ad9b642d2725": {
     "id": "8d49ad9b642d2725",
     "model_name": "Opel Frontera",
@@ -62,22 +78,6 @@
     "drive": null,
     "hitch": "Nein",
     "hud": "Ja"
-  },
-  "ee071273a91b8bc7": {
-    "id": "ee071273a91b8bc7",
-    "model_name": "Fiat Grande Panda Elektro",
-    "model_url": "https://www.finn.com/de-DE/models/fiat/grande-panda-elektro",
-    "trim": "La Prima 44 kWh",
-    "fuel": "Elektro",
-    "power": "83 kW (113 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 23.09.2026 - 07.10.2026",
-    "price": "381",
-    "range_km": "320",
-    "consumption": "16.8 kWh/100km",
-    "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
   },
   "2e9e6c725500fa60": {
     "id": "2e9e6c725500fa60",
@@ -319,22 +319,6 @@
     "hitch": "Nein",
     "hud": "Nein"
   },
-  "ddb214f6b5a6b920": {
-    "id": "ddb214f6b5a6b920",
-    "model_name": "Hyundai Kona Elektro",
-    "model_url": "https://www.finn.com/de-DE/models/hyundai/kona-elektro",
-    "trim": "150 kW Trend",
-    "fuel": "Elektro",
-    "power": "150 kW (204 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 29.09.2026 - 13.10.2026",
-    "price": "608",
-    "range_km": "509",
-    "consumption": "14.8 kWh/100km",
-    "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
-  },
   "1c729f62202c178e": {
     "id": "1c729f62202c178e",
     "model_name": "Hyundai Kona Elektro",
@@ -359,7 +343,7 @@
     "fuel": "Elektro",
     "power": "170 kW (231 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 02.10.2026 - 30.10.2026",
+    "availability": "Vsl. Übergabe 29.09.2026 - 13.10.2026",
     "price": "593",
     "range_km": "549",
     "consumption": "16.2 kWh/100km",
