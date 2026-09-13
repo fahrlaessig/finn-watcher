@@ -12,8 +12,7 @@
     "range_km": "322",
     "consumption": "16 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Ja"
+    "hitch": "Nein"
   },
   "e41a21c38e6fef42": {
     "id": "e41a21c38e6fef42",
@@ -28,8 +27,7 @@
     "range_km": "310",
     "consumption": "16 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Ja"
+    "hitch": "Nein"
   },
   "ee071273a91b8bc7": {
     "id": "ee071273a91b8bc7",
@@ -44,8 +42,7 @@
     "range_km": "320",
     "consumption": "16.8 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "8d49ad9b642d2725": {
     "id": "8d49ad9b642d2725",
@@ -60,8 +57,7 @@
     "range_km": "408",
     "consumption": "158 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "5f85f73a572bec9c": {
     "id": "5f85f73a572bec9c",
@@ -76,8 +72,7 @@
     "range_km": "305",
     "consumption": "16.4 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "cc980fa4ce04e33a": {
     "id": "cc980fa4ce04e33a",
@@ -92,8 +87,7 @@
     "range_km": "360",
     "consumption": "15.1 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "2c12e189d71d0450": {
     "id": "2c12e189d71d0450",
@@ -108,8 +102,7 @@
     "range_km": "370",
     "consumption": "14.9 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "65ce36093b5018d0": {
     "id": "65ce36093b5018d0",
@@ -124,8 +117,7 @@
     "range_km": "386",
     "consumption": "16.6 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "b86f8aa5c0994b7d": {
     "id": "b86f8aa5c0994b7d",
@@ -140,8 +132,7 @@
     "range_km": "384",
     "consumption": "16.7 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "78ff988139c88246": {
     "id": "78ff988139c88246",
@@ -156,8 +147,7 @@
     "range_km": "404",
     "consumption": "15.5 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "2e9e6c725500fa60": {
     "id": "2e9e6c725500fa60",
@@ -172,8 +162,7 @@
     "range_km": "427",
     "consumption": "15.9 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "f2ab15b189250ce3": {
     "id": "f2ab15b189250ce3",
@@ -188,8 +177,7 @@
     "range_km": "452",
     "consumption": "17.6 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "5bf7bccecafaf9fb": {
     "id": "5bf7bccecafaf9fb",
@@ -204,8 +192,7 @@
     "range_km": "465",
     "consumption": "16 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "24534d01cac2674b": {
     "id": "24534d01cac2674b",
@@ -220,8 +207,7 @@
     "range_km": "430",
     "consumption": "17.4 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "993f70520fb3c27f": {
     "id": "993f70520fb3c27f",
@@ -236,8 +222,7 @@
     "range_km": "308",
     "consumption": "15.5 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "078876a7aa591b35": {
     "id": "078876a7aa591b35",
@@ -252,8 +237,7 @@
     "range_km": "308",
     "consumption": "15.5 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "af9cff55e92c8654": {
     "id": "af9cff55e92c8654",
@@ -268,8 +252,7 @@
     "range_km": "418",
     "consumption": "16.2 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "e5e92738515b554e": {
     "id": "e5e92738515b554e",
@@ -284,8 +267,7 @@
     "range_km": "418",
     "consumption": "16.2 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "bb6d404865fb11f2": {
     "id": "bb6d404865fb11f2",
@@ -300,8 +282,7 @@
     "range_km": "426",
     "consumption": "15.1 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "dd219bf0124c2c8c": {
     "id": "dd219bf0124c2c8c",
@@ -316,8 +297,7 @@
     "range_km": "530",
     "consumption": "16.6 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "1c729f62202c178e": {
     "id": "1c729f62202c178e",
@@ -327,13 +307,12 @@
     "fuel": "Elektro",
     "power": "150 kW (204 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 16.09.2026 - 23.09.2026",
+    "availability": "Vsl. Übergabe 29.09.2026 - 13.10.2026",
     "price": "566",
     "range_km": "509",
     "consumption": "14.7 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "4af916304310d144": {
     "id": "4af916304310d144",
@@ -348,8 +327,7 @@
     "range_km": "549",
     "consumption": "16.2 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "a7a53d349d67b3f1": {
     "id": "a7a53d349d67b3f1",
@@ -364,8 +342,7 @@
     "range_km": "570",
     "consumption": "16 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "b0adb274824c33bc": {
     "id": "b0adb274824c33bc",
@@ -380,8 +357,7 @@
     "range_km": "570",
     "consumption": "17 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "2128ca22450f17e4": {
     "id": "2128ca22450f17e4",
@@ -396,8 +372,7 @@
     "range_km": "440",
     "consumption": "15.6 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "1e1318e3ca7f6969": {
     "id": "1e1318e3ca7f6969",
@@ -412,8 +387,7 @@
     "range_km": "571",
     "consumption": "15.2 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "b4c77c625ee6b6dd": {
     "id": "b4c77c625ee6b6dd",
@@ -428,8 +402,7 @@
     "range_km": "571",
     "consumption": "15.2 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "a7c01257354511b1": {
     "id": "a7c01257354511b1",
@@ -444,8 +417,7 @@
     "range_km": "553",
     "consumption": "15.8 kWh/100km",
     "drive": null,
-    "hitch": "Ja",
-    "hud": "Nein"
+    "hitch": "Ja"
   },
   "1e6aaf89f4ac0927": {
     "id": "1e6aaf89f4ac0927",
@@ -460,8 +432,7 @@
     "range_km": "523",
     "consumption": "16.7 kWh/100km",
     "drive": null,
-    "hitch": "Ja",
-    "hud": "Nein"
+    "hitch": "Ja"
   },
   "088ec5c4a8baa60b": {
     "id": "088ec5c4a8baa60b",
@@ -476,8 +447,7 @@
     "range_km": "568",
     "consumption": "15.6 kWh/100km",
     "drive": "Heckantrieb (RWD)",
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "c1890423715c70d2": {
     "id": "c1890423715c70d2",
@@ -492,8 +462,7 @@
     "range_km": "514",
     "consumption": "17.5 kWh/100km",
     "drive": "Allradantrieb (AWD)",
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "cc41a2baf3b771e4": {
     "id": "cc41a2baf3b771e4",
@@ -508,8 +477,7 @@
     "range_km": "605",
     "consumption": "14.9 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "57c37d277438d561": {
     "id": "57c37d277438d561",
@@ -524,8 +492,7 @@
     "range_km": "608",
     "consumption": "14.9 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "4cdd8580781f7730": {
     "id": "4cdd8580781f7730",
@@ -540,8 +507,7 @@
     "range_km": "563",
     "consumption": "16.2 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "83ac10eda0ab0650": {
     "id": "83ac10eda0ab0650",
@@ -556,8 +522,7 @@
     "range_km": "482",
     "consumption": null,
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "995c4b7121fc3c58": {
     "id": "995c4b7121fc3c58",
@@ -572,8 +537,7 @@
     "range_km": "595",
     "consumption": "14.8 kWh/100km",
     "drive": "Heckantrieb (RWD)",
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "281f76407818d69b": {
     "id": "281f76407818d69b",
@@ -588,8 +552,7 @@
     "range_km": "552",
     "consumption": "16.3 kWh/100km",
     "drive": "Allradantrieb (AWD)",
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "767ae384be06e06c": {
     "id": "767ae384be06e06c",
@@ -604,8 +567,7 @@
     "range_km": "594",
     "consumption": "15.5 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "89d27db3bdaaf059": {
     "id": "89d27db3bdaaf059",
@@ -620,8 +582,7 @@
     "range_km": "484",
     "consumption": "18.9 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   },
   "4a156650415ae03b": {
     "id": "4a156650415ae03b",
@@ -636,7 +597,6 @@
     "range_km": "680",
     "consumption": "13.5 kWh/100km",
     "drive": null,
-    "hitch": "Nein",
-    "hud": "Nein"
+    "hitch": "Nein"
   }
 }
