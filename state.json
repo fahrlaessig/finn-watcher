@@ -127,7 +127,7 @@
     "fuel": "Elektro",
     "power": "83 kW (113 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 23.11.2026 - 15.02.2027",
+    "availability": "Vsl. Übergabe 09.11.2026 - 01.02.2027",
     "price": "449",
     "range_km": "384",
     "consumption": "16.7 kWh/100km",
@@ -314,21 +314,6 @@
     "drive": null,
     "hitch": "Nein"
   },
-  "1e1318e3ca7f6969": {
-    "id": "1e1318e3ca7f6969",
-    "model_name": "Skoda Elroq",
-    "model_url": "https://www.finn.com/de-DE/models/skoda/elroq",
-    "trim": "85 Select",
-    "fuel": "Elektro",
-    "power": "210 kW (286 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 30.09.2026 - 14.10.2026",
-    "price": "583",
-    "range_km": "571",
-    "consumption": "15.2 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
   "b4c77c625ee6b6dd": {
     "id": "b4c77c625ee6b6dd",
     "model_name": "Skoda Elroq",
@@ -344,6 +329,21 @@
     "drive": null,
     "hitch": "Ja"
   },
+  "1e1318e3ca7f6969": {
+    "id": "1e1318e3ca7f6969",
+    "model_name": "Skoda Elroq",
+    "model_url": "https://www.finn.com/de-DE/models/skoda/elroq",
+    "trim": "85 Select",
+    "fuel": "Elektro",
+    "power": "210 kW (286 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 17.09.2026 - 24.09.2026",
+    "price": "583",
+    "range_km": "571",
+    "consumption": "15.2 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+  },
   "a7c01257354511b1": {
     "id": "a7c01257354511b1",
     "model_name": "Skoda Elroq",
@@ -352,7 +352,7 @@
     "fuel": "Elektro",
     "power": "210 kW (286 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 26.10.2026 - 28.12.2026",
+    "availability": "Vsl. Übergabe 26.10.2026 - 21.12.2026",
     "price": "608",
     "range_km": "553",
     "consumption": "15.8 kWh/100km",
