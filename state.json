@@ -37,7 +37,7 @@
     "fuel": "Elektro",
     "power": "83 kW (113 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 22.09.2026 - 29.09.2026",
+    "availability": "Vsl. Übergabe 29.09.2026 - 13.10.2026",
     "price": "381",
     "range_km": "320",
     "consumption": "16.8 kWh/100km",
@@ -74,21 +74,6 @@
     "drive": null,
     "hitch": "Nein"
   },
-  "2c12e189d71d0450": {
-    "id": "2c12e189d71d0450",
-    "model_name": "Hyundai Inster",
-    "model_url": "https://www.finn.com/de-DE/models/hyundai/inster",
-    "trim": "49 kWh Trend",
-    "fuel": "Elektro",
-    "power": "85 kW (116 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 05.10.2026 - 19.10.2026",
-    "price": "390",
-    "range_km": "370",
-    "consumption": "14.9 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
   "cc980fa4ce04e33a": {
     "id": "cc980fa4ce04e33a",
     "model_name": "Hyundai Inster",
@@ -101,6 +86,21 @@
     "price": "449",
     "range_km": "360",
     "consumption": "15.1 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+  },
+  "2c12e189d71d0450": {
+    "id": "2c12e189d71d0450",
+    "model_name": "Hyundai Inster",
+    "model_url": "https://www.finn.com/de-DE/models/hyundai/inster",
+    "trim": "49 kWh Trend",
+    "fuel": "Elektro",
+    "power": "85 kW (116 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 22.10.2026 - 19.11.2026",
+    "price": "390",
+    "range_km": "370",
+    "consumption": "14.9 kWh/100km",
     "drive": null,
     "hitch": "Nein"
   },
@@ -329,21 +329,6 @@
     "drive": null,
     "hitch": "Ja"
   },
-  "a7c01257354511b1": {
-    "id": "a7c01257354511b1",
-    "model_name": "Skoda Elroq",
-    "model_url": "https://www.finn.com/de-DE/models/skoda/elroq",
-    "trim": "85 Sportline",
-    "fuel": "Elektro",
-    "power": "210 kW (286 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 05.10.2026 - 19.10.2026",
-    "price": "608",
-    "range_km": "553",
-    "consumption": "15.8 kWh/100km",
-    "drive": null,
-    "hitch": "Ja"
-  },
   "1e1318e3ca7f6969": {
     "id": "1e1318e3ca7f6969",
     "model_name": "Skoda Elroq",
@@ -358,6 +343,21 @@
     "consumption": "15.2 kWh/100km",
     "drive": null,
     "hitch": "Nein"
+  },
+  "a7c01257354511b1": {
+    "id": "a7c01257354511b1",
+    "model_name": "Skoda Elroq",
+    "model_url": "https://www.finn.com/de-DE/models/skoda/elroq",
+    "trim": "85 Sportline",
+    "fuel": "Elektro",
+    "power": "210 kW (286 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 29.10.2026 - 31.12.2026",
+    "price": "608",
+    "range_km": "553",
+    "consumption": "15.8 kWh/100km",
+    "drive": null,
+    "hitch": "Ja"
   },
   "1e6aaf89f4ac0927": {
     "id": "1e6aaf89f4ac0927",
