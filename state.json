@@ -299,21 +299,6 @@
     "drive": null,
     "hitch": "Nein"
   },
-  "1c729f62202c178e": {
-    "id": "1c729f62202c178e",
-    "model_name": "Hyundai Kona Elektro",
-    "model_url": "https://www.finn.com/de-DE/models/hyundai/kona-elektro",
-    "trim": "150 kW Select",
-    "fuel": "Elektro",
-    "power": "150 kW (204 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 23.09.2026 - 30.09.2026",
-    "price": "566",
-    "range_km": "509",
-    "consumption": "14.7 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
   "4af916304310d144": {
     "id": "4af916304310d144",
     "model_name": "Cupra Born",
@@ -611,6 +596,36 @@
     "price": "659",
     "range_km": "680",
     "consumption": "13.5 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+  },
+  "83ac10eda0ab0650": {
+    "id": "83ac10eda0ab0650",
+    "model_name": "BYD Sealion 7",
+    "model_url": "https://www.finn.com/de-DE/models/byd/sealion-7",
+    "trim": "Comfort",
+    "fuel": "Elektro",
+    "power": "230 kW (313 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 28.09.2026 - 12.10.2026",
+    "price": "636",
+    "range_km": "482",
+    "consumption": null,
+    "drive": null,
+    "hitch": "Nein"
+  },
+  "e2b892438a33ec25": {
+    "id": "e2b892438a33ec25",
+    "model_name": "BYD Sealion 7",
+    "model_url": "https://www.finn.com/de-DE/models/byd/sealion-7",
+    "trim": "COMFORT",
+    "fuel": "Elektro",
+    "power": "230 kW (313 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 28.09.2026 - 12.10.2026",
+    "price": "726",
+    "range_km": "482",
+    "consumption": "19.9 kWh/100km",
     "drive": null,
     "hitch": "Nein"
   }
