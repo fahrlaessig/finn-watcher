@@ -142,7 +142,7 @@
     "fuel": "Elektro",
     "power": "83 kW (113 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 01.10.2026 - 15.10.2026",
+    "availability": "Vsl. Übergabe 28.09.2026 - 05.10.2026",
     "price": "398",
     "range_km": "320",
     "consumption": "16.8 kWh/100km",
@@ -419,21 +419,6 @@
     "drive": null,
     "hitch": "Ja"
   },
-  "c1890423715c70d2": {
-    "id": "c1890423715c70d2",
-    "model_name": "Ford Explorer",
-    "model_url": "https://www.finn.com/de-DE/models/ford/explorer",
-    "trim": "Dualmotor Extended R. 77kWh AWD Premium",
-    "fuel": "Elektro",
-    "power": "250 kW (340 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 24.09.2026 - 01.10.2026",
-    "price": "658",
-    "range_km": "514",
-    "consumption": "17.5 kWh/100km",
-    "drive": "Allradantrieb (AWD)",
-    "hitch": "Nein"
-  },
   "088ec5c4a8baa60b": {
     "id": "088ec5c4a8baa60b",
     "model_name": "Ford Explorer",
@@ -447,6 +432,21 @@
     "range_km": "568",
     "consumption": "15.6 kWh/100km",
     "drive": "Heckantrieb (RWD)",
+    "hitch": "Nein"
+  },
+  "c1890423715c70d2": {
+    "id": "c1890423715c70d2",
+    "model_name": "Ford Explorer",
+    "model_url": "https://www.finn.com/de-DE/models/ford/explorer",
+    "trim": "Dualmotor Extended R. 77kWh AWD Premium",
+    "fuel": "Elektro",
+    "power": "250 kW (340 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 24.09.2026 - 01.10.2026",
+    "price": "658",
+    "range_km": "514",
+    "consumption": "17.5 kWh/100km",
+    "drive": "Allradantrieb (AWD)",
     "hitch": "Nein"
   },
   "995c4b7121fc3c58": {
