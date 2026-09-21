@@ -367,7 +367,7 @@
     "fuel": "Elektro",
     "power": "150 kW (204 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 05.10.2026 - 19.10.2026",
+    "availability": "Vsl. Übergabe 07.10.2026 - 21.10.2026",
     "price": "583",
     "range_km": "605",
     "consumption": "14.9 kWh/100km",
@@ -427,12 +427,12 @@
     "fuel": "Elektro",
     "power": "210 kW (286 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 28.09.2026 - 05.10.2026",
-    "price": "806",
+    "availability": "Vsl. Übergabe 24.09.2026 - 01.10.2026",
+    "price": "608",
     "range_km": "571",
-    "consumption": "15.5 kWh/100km",
+    "consumption": "15.2 kWh/100km",
     "drive": null,
-    "hitch": "Ja"
+    "hitch": "Nein"
   },
   "a7c01257354511b1": {
     "id": "a7c01257354511b1",
