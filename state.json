@@ -464,21 +464,6 @@
     "drive": null,
     "hitch": "Nein"
   },
-  "83ac10eda0ab0650": {
-    "id": "83ac10eda0ab0650",
-    "model_name": "BYD Sealion 7",
-    "model_url": "https://www.finn.com/de-DE/models/byd/sealion-7",
-    "trim": "Comfort",
-    "fuel": "Elektro",
-    "power": "230 kW (313 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 30.09.2026 - 14.10.2026",
-    "price": "636",
-    "range_km": "482",
-    "consumption": null,
-    "drive": null,
-    "hitch": "Nein"
-  },
   "b4c77c625ee6b6dd": {
     "id": "b4c77c625ee6b6dd",
     "model_name": "Skoda Elroq",
@@ -488,7 +473,7 @@
     "power": "210 kW (286 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 08.10.2026 - 22.10.2026",
-    "price": "658",
+    "price": "616",
     "range_km": "563",
     "consumption": "15.5 kWh/100km",
     "drive": null,
@@ -517,7 +502,7 @@
     "fuel": "Elektro",
     "power": "210 kW (286 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 08.10.2026 - 22.10.2026",
+    "availability": "Vsl. Übergabe 13.10.2026 - 10.11.2026",
     "price": "725",
     "range_km": "523",
     "consumption": "16.7 kWh/100km",
@@ -553,6 +538,21 @@
     "consumption": "15.5 kWh/100km",
     "drive": null,
     "hitch": "Ja"
+  },
+  "83ac10eda0ab0650": {
+    "id": "83ac10eda0ab0650",
+    "model_name": "BYD Sealion 7",
+    "model_url": "https://www.finn.com/de-DE/models/byd/sealion-7",
+    "trim": "Comfort",
+    "fuel": "Elektro",
+    "power": "230 kW (313 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 30.09.2026 - 14.10.2026",
+    "price": "636",
+    "range_km": "482",
+    "consumption": null,
+    "drive": null,
+    "hitch": "Nein"
   },
   "610c1b024eda7e8d": {
     "id": "610c1b024eda7e8d",
