@@ -239,21 +239,6 @@
     "drive": null,
     "hitch": "Nein"
   },
-  "bb6d404865fb11f2": {
-    "id": "bb6d404865fb11f2",
-    "model_name": "Toyota Urban Cruiser",
-    "model_url": "https://www.finn.com/de-DE/models/toyota/urban-cruiser",
-    "trim": "61 kWh Teamplayer",
-    "fuel": "Elektro",
-    "power": "128 kW (174 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 08.10.2026 - 22.10.2026",
-    "price": "490",
-    "range_km": "426",
-    "consumption": "15.1 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
   "5bf7bccecafaf9fb": {
     "id": "5bf7bccecafaf9fb",
     "model_name": "MG S5",
@@ -464,6 +449,21 @@
     "drive": null,
     "hitch": "Nein"
   },
+  "83ac10eda0ab0650": {
+    "id": "83ac10eda0ab0650",
+    "model_name": "BYD Sealion 7",
+    "model_url": "https://www.finn.com/de-DE/models/byd/sealion-7",
+    "trim": "Comfort",
+    "fuel": "Elektro",
+    "power": "230 kW (313 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 30.09.2026 - 14.10.2026",
+    "price": "636",
+    "range_km": "482",
+    "consumption": null,
+    "drive": null,
+    "hitch": "Nein"
+  },
   "b4c77c625ee6b6dd": {
     "id": "b4c77c625ee6b6dd",
     "model_name": "Skoda Elroq",
@@ -473,7 +473,7 @@
     "power": "210 kW (286 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 08.10.2026 - 22.10.2026",
-    "price": "616",
+    "price": "658",
     "range_km": "563",
     "consumption": "15.5 kWh/100km",
     "drive": null,
@@ -538,21 +538,6 @@
     "consumption": "15.5 kWh/100km",
     "drive": null,
     "hitch": "Ja"
-  },
-  "83ac10eda0ab0650": {
-    "id": "83ac10eda0ab0650",
-    "model_name": "BYD Sealion 7",
-    "model_url": "https://www.finn.com/de-DE/models/byd/sealion-7",
-    "trim": "Comfort",
-    "fuel": "Elektro",
-    "power": "230 kW (313 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 30.09.2026 - 14.10.2026",
-    "price": "636",
-    "range_km": "482",
-    "consumption": null,
-    "drive": null,
-    "hitch": "Nein"
   },
   "610c1b024eda7e8d": {
     "id": "610c1b024eda7e8d",
