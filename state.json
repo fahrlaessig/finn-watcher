@@ -59,21 +59,6 @@
     "drive": null,
     "hitch": "Nein"
   },
-  "b86f8aa5c0994b7d": {
-    "id": "b86f8aa5c0994b7d",
-    "model_name": "Citroen ë-C3 Aircross",
-    "model_url": "https://www.finn.com/de-DE/models/citroen/e-c3-aircross",
-    "trim": "Elektromotor 113 Extended-Range MAX",
-    "fuel": "Elektro",
-    "power": "83 kW (113 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 09.11.2026 - 01.02.2027",
-    "price": "449",
-    "range_km": "384",
-    "consumption": "16.7 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
   "65ce36093b5018d0": {
     "id": "65ce36093b5018d0",
     "model_name": "Citroen ë-C3 Aircross",
@@ -86,6 +71,21 @@
     "price": "423",
     "range_km": "386",
     "consumption": "16.6 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+  },
+  "b86f8aa5c0994b7d": {
+    "id": "b86f8aa5c0994b7d",
+    "model_name": "Citroen ë-C3 Aircross",
+    "model_url": "https://www.finn.com/de-DE/models/citroen/e-c3-aircross",
+    "trim": "Elektromotor 113 Extended-Range MAX",
+    "fuel": "Elektro",
+    "power": "83 kW (113 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 09.11.2026 - 01.02.2027",
+    "price": "449",
+    "range_km": "384",
+    "consumption": "16.7 kWh/100km",
     "drive": null,
     "hitch": "Nein"
   },
@@ -179,21 +179,6 @@
     "drive": null,
     "hitch": "Nein"
   },
-  "078876a7aa591b35": {
-    "id": "078876a7aa591b35",
-    "model_name": "Kia EV2",
-    "model_url": "https://www.finn.com/de-DE/models/kia/ev2",
-    "trim": "42,2 kWh Earth 4 Sitzer",
-    "fuel": "Elektro",
-    "power": "108 kW (147 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 12.10.2026 - 26.10.2026",
-    "price": "491",
-    "range_km": "308",
-    "consumption": "15.5 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
   "af9cff55e92c8654": {
     "id": "af9cff55e92c8654",
     "model_name": "Kia EV2",
@@ -206,6 +191,21 @@
     "price": "566",
     "range_km": "418",
     "consumption": "16.2 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+  },
+  "078876a7aa591b35": {
+    "id": "078876a7aa591b35",
+    "model_name": "Kia EV2",
+    "model_url": "https://www.finn.com/de-DE/models/kia/ev2",
+    "trim": "42,2 kWh Earth 4 Sitzer",
+    "fuel": "Elektro",
+    "power": "108 kW (147 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 12.10.2026 - 26.10.2026",
+    "price": "491",
+    "range_km": "308",
+    "consumption": "15.5 kWh/100km",
     "drive": null,
     "hitch": "Nein"
   },
@@ -296,51 +296,6 @@
     "price": "593",
     "range_km": "549",
     "consumption": "16.2 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
-  "ddb214f6b5a6b920": {
-    "id": "ddb214f6b5a6b920",
-    "model_name": "Hyundai Kona Elektro",
-    "model_url": "https://www.finn.com/de-DE/models/hyundai/kona-elektro",
-    "trim": "150 kW Trend",
-    "fuel": "Elektro",
-    "power": "150 kW (204 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 29.09.2026 - 06.10.2026",
-    "price": "617",
-    "range_km": "509",
-    "consumption": "14.8 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
-  "57c37d277438d561": {
-    "id": "57c37d277438d561",
-    "model_name": "Kia EV3",
-    "model_url": "https://www.finn.com/de-DE/models/kia/ev3",
-    "trim": "81 kWh 150 kW Earth Frontantrieb",
-    "fuel": "Elektro",
-    "power": "150 kW (204 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 12.10.2026 - 26.10.2026",
-    "price": "650",
-    "range_km": "608",
-    "consumption": "14.9 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
-  "cc41a2baf3b771e4": {
-    "id": "cc41a2baf3b771e4",
-    "model_name": "Kia EV3",
-    "model_url": "https://www.finn.com/de-DE/models/kia/ev3",
-    "trim": "81 kWh 150 kW Air Frontantrieb",
-    "fuel": "Elektro",
-    "power": "150 kW (204 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 12.10.2026 - 26.10.2026",
-    "price": "583",
-    "range_km": "605",
-    "consumption": "14.9 kWh/100km",
     "drive": null,
     "hitch": "Nein"
   },
@@ -464,6 +419,21 @@
     "drive": null,
     "hitch": "Nein"
   },
+  "57c37d277438d561": {
+    "id": "57c37d277438d561",
+    "model_name": "Kia EV3",
+    "model_url": "https://www.finn.com/de-DE/models/kia/ev3",
+    "trim": "81 kWh 150 kW Earth Frontantrieb",
+    "fuel": "Elektro",
+    "power": "150 kW (204 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 12.10.2026 - 26.10.2026",
+    "price": "650",
+    "range_km": "608",
+    "consumption": "14.9 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+  },
   "89d27db3bdaaf059": {
     "id": "89d27db3bdaaf059",
     "model_name": "Mazda CX-6e",
@@ -568,5 +538,20 @@
     "consumption": "15.5 kWh/100km",
     "drive": null,
     "hitch": "Ja"
+  },
+  "610c1b024eda7e8d": {
+    "id": "610c1b024eda7e8d",
+    "model_name": "Kia EV6",
+    "model_url": "https://www.finn.com/de-DE/models/kia/ev6",
+    "trim": "84 kWh 168 kW Heckantrieb Earth",
+    "fuel": "Elektro",
+    "power": "168 kW (228 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 12.10.2026 - 26.10.2026",
+    "price": "684",
+    "range_km": "560",
+    "consumption": "16.9 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
   }
 }
