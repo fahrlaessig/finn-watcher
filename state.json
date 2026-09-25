@@ -472,10 +472,10 @@
     "fuel": "Elektro",
     "power": "230 kW (313 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 05.10.2026 - 19.10.2026",
-    "price": "644",
+    "availability": "Vsl. Übergabe 01.10.2026 - 08.10.2026",
+    "price": "636",
     "range_km": "482",
-    "consumption": "19.9 kWh/100km",
+    "consumption": null,
     "drive": null,
     "hitch": "Nein"
   },
