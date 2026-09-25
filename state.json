@@ -97,7 +97,7 @@
     "fuel": "Elektro",
     "power": "118 kW (160 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 05.10.2026 - 19.10.2026",
+    "availability": "Vsl. Übergabe 05.10.2026 - 12.10.2026",
     "price": "383",
     "range_km": "404",
     "consumption": "15.5 kWh/100km",
@@ -172,7 +172,7 @@
     "fuel": "Elektro",
     "power": "150 kW (204 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 05.10.2026 - 19.10.2026",
+    "availability": "Vsl. Übergabe 01.10.2026 - 08.10.2026",
     "price": "425",
     "range_km": "427",
     "consumption": "15.9 kWh/100km",
@@ -296,6 +296,21 @@
     "price": "593",
     "range_km": "549",
     "consumption": "16.2 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+  },
+  "186fe9248de53fab": {
+    "id": "186fe9248de53fab",
+    "model_name": "Cupra Tavascan",
+    "model_url": "https://www.finn.com/de-DE/models/cupra/tavascan",
+    "trim": "Endurance 210 kW / (286 PS) / 77 kWh",
+    "fuel": "Elektro",
+    "power": "210 kW (286 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 06.10.2026 - 13.10.2026",
+    "price": "634",
+    "range_km": "547",
+    "consumption": "16.8 kWh/100km",
     "drive": null,
     "hitch": "Nein"
   },
@@ -553,20 +568,5 @@
     "consumption": "15.8 kWh/100km",
     "drive": null,
     "hitch": "Ja"
-  },
-  "610c1b024eda7e8d": {
-    "id": "610c1b024eda7e8d",
-    "model_name": "Kia EV6",
-    "model_url": "https://www.finn.com/de-DE/models/kia/ev6",
-    "trim": "84 kWh 168 kW Heckantrieb Earth",
-    "fuel": "Elektro",
-    "power": "168 kW (228 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 13.10.2026 - 27.10.2026",
-    "price": "684",
-    "range_km": "560",
-    "consumption": "16.9 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
   }
 }
