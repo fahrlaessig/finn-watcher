@@ -269,21 +269,6 @@
     "drive": null,
     "hitch": "Nein"
   },
-  "dd219bf0124c2c8c": {
-    "id": "dd219bf0124c2c8c",
-    "model_name": "MG S6",
-    "model_url": "https://www.finn.com/de-DE/models/mg/s6",
-    "trim": "77 kWh Luxury Long Range",
-    "fuel": "Elektro",
-    "power": "180 kW (245 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 22.10.2026 - 19.11.2026",
-    "price": "518",
-    "range_km": "530",
-    "consumption": "16.6 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
   "4af916304310d144": {
     "id": "4af916304310d144",
     "model_name": "Cupra Born",
@@ -296,21 +281,6 @@
     "price": "593",
     "range_km": "549",
     "consumption": "16.2 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
-  "186fe9248de53fab": {
-    "id": "186fe9248de53fab",
-    "model_name": "Cupra Tavascan",
-    "model_url": "https://www.finn.com/de-DE/models/cupra/tavascan",
-    "trim": "Endurance 210 kW / (286 PS) / 77 kWh",
-    "fuel": "Elektro",
-    "power": "210 kW (286 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 06.10.2026 - 13.10.2026",
-    "price": "634",
-    "range_km": "547",
-    "consumption": "16.8 kWh/100km",
     "drive": null,
     "hitch": "Nein"
   },
@@ -554,18 +524,33 @@
     "drive": null,
     "hitch": "Ja"
   },
-  "a7c01257354511b1": {
-    "id": "a7c01257354511b1",
-    "model_name": "Skoda Elroq",
-    "model_url": "https://www.finn.com/de-DE/models/skoda/elroq",
+  "610c1b024eda7e8d": {
+    "id": "610c1b024eda7e8d",
+    "model_name": "Kia EV6",
+    "model_url": "https://www.finn.com/de-DE/models/kia/ev6",
+    "trim": "84 kWh 168 kW Heckantrieb Earth",
+    "fuel": "Elektro",
+    "power": "168 kW (228 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 13.10.2026 - 27.10.2026",
+    "price": "684",
+    "range_km": "560",
+    "consumption": "16.9 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+  },
+  "82aec73b818a5f80": {
+    "id": "82aec73b818a5f80",
+    "model_name": "Skoda Enyaq Coupé",
+    "model_url": "https://www.finn.com/de-DE/models/skoda/enyaq-coupe",
     "trim": "85 Sportline",
     "fuel": "Elektro",
     "power": "210 kW (286 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 06.11.2026 - 08.01.2027",
-    "price": "675",
-    "range_km": "553",
-    "consumption": "15.8 kWh/100km",
+    "availability": "Vsl. Übergabe 30.09.2026 - 07.10.2026",
+    "price": "734",
+    "range_km": "570",
+    "consumption": "15.3 kWh/100km",
     "drive": null,
     "hitch": "Ja"
   }
