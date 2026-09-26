@@ -323,9 +323,9 @@
     "power": "150 kW (204 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 13.10.2026 - 27.10.2026",
-    "price": "650",
-    "range_km": "594",
-    "consumption": "15.5 kWh/100km",
+    "price": "625",
+    "range_km": "625",
+    "consumption": "14.6 kWh/100km",
     "drive": null,
     "hitch": "Nein"
   },
@@ -464,21 +464,6 @@
     "drive": "Heckantrieb (RWD)",
     "hitch": "Nein"
   },
-  "883f658887563f08": {
-    "id": "883f658887563f08",
-    "model_name": "Polestar 4",
-    "model_url": "https://www.finn.com/de-DE/models/polestar/4",
-    "trim": "Long Range Single motor",
-    "fuel": "Elektro",
-    "power": "200 kW (272 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 05.10.2026 - 12.10.2026",
-    "price": "658",
-    "range_km": "600",
-    "consumption": "18.4 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
   "b4c77c625ee6b6dd": {
     "id": "b4c77c625ee6b6dd",
     "model_name": "Skoda Elroq",
@@ -551,6 +536,21 @@
     "price": "686",
     "range_km": "482",
     "consumption": null,
+    "drive": null,
+    "hitch": "Nein"
+  },
+  "610c1b024eda7e8d": {
+    "id": "610c1b024eda7e8d",
+    "model_name": "Kia EV6",
+    "model_url": "https://www.finn.com/de-DE/models/kia/ev6",
+    "trim": "84 kWh 168 kW Heckantrieb Earth",
+    "fuel": "Elektro",
+    "power": "168 kW (228 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 13.10.2026 - 27.10.2026",
+    "price": "726",
+    "range_km": "560",
+    "consumption": "16.9 kWh/100km",
     "drive": null,
     "hitch": "Nein"
   }
