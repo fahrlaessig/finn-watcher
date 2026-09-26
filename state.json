@@ -37,7 +37,7 @@
     "fuel": "Elektro",
     "power": "85 kW (116 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 09.11.2026 - 11.01.2027",
+    "availability": "Vsl. Übergabe 13.10.2026 - 27.10.2026",
     "price": "442",
     "range_km": "360",
     "consumption": "15.1 kWh/100km",
@@ -239,21 +239,6 @@
     "drive": null,
     "hitch": "Nein"
   },
-  "1c729f62202c178e": {
-    "id": "1c729f62202c178e",
-    "model_name": "Hyundai Kona Elektro",
-    "model_url": "https://www.finn.com/de-DE/models/hyundai/kona-elektro",
-    "trim": "150 kW Select",
-    "fuel": "Elektro",
-    "power": "150 kW (204 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 13.10.2026 - 27.10.2026",
-    "price": "535",
-    "range_km": "509",
-    "consumption": "14.7 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
   "24534d01cac2674b": {
     "id": "24534d01cac2674b",
     "model_name": "BYD Atto 2",
@@ -442,7 +427,7 @@
     "fuel": "Elektro",
     "power": "210 kW (286 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 13.10.2026 - 27.10.2026",
+    "availability": "Vsl. Übergabe 30.09.2026 - 07.10.2026",
     "price": "700",
     "range_km": "568",
     "consumption": "15.6 kWh/100km",
@@ -611,6 +596,21 @@
     "price": "945",
     "range_km": "534",
     "consumption": "16.3 kWh/100km",
+    "drive": null,
+    "hitch": "Ja"
+  },
+  "82aec73b818a5f80": {
+    "id": "82aec73b818a5f80",
+    "model_name": "Skoda Enyaq Coupé",
+    "model_url": "https://www.finn.com/de-DE/models/skoda/enyaq-coupe",
+    "trim": "85 Sportline",
+    "fuel": "Elektro",
+    "power": "210 kW (286 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 30.09.2026 - 07.10.2026",
+    "price": "835",
+    "range_km": "570",
+    "consumption": "15.3 kWh/100km",
     "drive": null,
     "hitch": "Ja"
   }
