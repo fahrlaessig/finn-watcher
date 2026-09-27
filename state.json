@@ -284,6 +284,21 @@
     "drive": null,
     "hitch": "Nein"
   },
+  "767ae384be06e06c": {
+    "id": "767ae384be06e06c",
+    "model_name": "Kia EV4",
+    "model_url": "https://www.finn.com/de-DE/models/kia/ev4",
+    "trim": "81 kWh 150 kW Earth Frontantrieb",
+    "fuel": "Elektro",
+    "power": "150 kW (204 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 13.10.2026 - 27.10.2026",
+    "price": "625",
+    "range_km": "625",
+    "consumption": "14.6 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+  },
   "4cdd8580781f7730": {
     "id": "4cdd8580781f7730",
     "model_name": "Kia EV3",
@@ -299,21 +314,6 @@
     "drive": null,
     "hitch": "Nein"
   },
-  "cc41a2baf3b771e4": {
-    "id": "cc41a2baf3b771e4",
-    "model_name": "Kia EV3",
-    "model_url": "https://www.finn.com/de-DE/models/kia/ev3",
-    "trim": "81 kWh 150 kW Air Frontantrieb",
-    "fuel": "Elektro",
-    "power": "150 kW (204 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 13.10.2026 - 27.10.2026",
-    "price": "600",
-    "range_km": "605",
-    "consumption": "14.9 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
   "57c37d277438d561": {
     "id": "57c37d277438d561",
     "model_name": "Kia EV3",
@@ -326,21 +326,6 @@
     "price": "667",
     "range_km": "608",
     "consumption": "14.9 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
-  "767ae384be06e06c": {
-    "id": "767ae384be06e06c",
-    "model_name": "Kia EV4",
-    "model_url": "https://www.finn.com/de-DE/models/kia/ev4",
-    "trim": "81 kWh 150 kW Earth Frontantrieb",
-    "fuel": "Elektro",
-    "power": "150 kW (204 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 13.10.2026 - 27.10.2026",
-    "price": "625",
-    "range_km": "625",
-    "consumption": "14.6 kWh/100km",
     "drive": null,
     "hitch": "Nein"
   },
