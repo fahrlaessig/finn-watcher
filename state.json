@@ -702,21 +702,5 @@
     "consumption": "15.6 kWh/100km",
     "drive": null,
     "hitch": "Ja"
-  },
-  "9286abf63bd11235": {
-    "id": "9286abf63bd11235",
-    "model_name": "Skoda Enyaq",
-    "model_url": "https://www.finn.com/de-DE/models/skoda/enyaq",
-    "trim": "Sportline 85x",
-    "fuel": "Elektro",
-    "power": "220 kW (299 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 15.10.2026 - 29.10.2026",
-    "price": "835",
-    "price_basis": "netto",
-    "range_km": "568",
-    "consumption": "16.3 kWh/100km",
-    "drive": null,
-    "hitch": "Ja"
   }
 }
