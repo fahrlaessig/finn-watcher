@@ -29,6 +29,12 @@ h1{font-family:var(--num);font-weight:700;font-size:1.9rem;line-height:1.1;margi
 .stand{color:var(--muted);font-size:.9rem;margin-top:4px}
 .summary{display:flex;gap:18px;flex-wrap:wrap;margin:6px 0 0;font-size:.95rem}
 .summary b{font-family:var(--num);font-size:1.15rem}
+.filters{margin:0 0 20px;padding:10px 12px;background:var(--surface);border:1px solid var(--line);border-radius:6px;font-size:.9rem}
+.filters p{margin:0 0 6px;color:var(--muted)}
+.filters dl{display:grid;grid-template-columns:max-content 1fr;gap:3px 14px;margin:0}
+.filters dt{color:var(--muted)}
+.filters dd{margin:0;font-weight:500}
+.filters a{display:inline-block;margin-top:8px}
 .controls{display:grid;grid-template-columns:1fr auto;gap:8px;margin-bottom:10px}
 input[type=search],select{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:9px 10px;min-width:0}
 .seg{display:flex;gap:0;margin-bottom:18px;border:1px solid var(--line);border-radius:6px;overflow:hidden;width:max-content}
@@ -76,6 +82,8 @@ a{color:var(--sign)}
     <div class="stand" id="stand"></div>
     <div class="summary" id="summary"></div>
   </header>
+
+  <section class="filters" id="filters" hidden aria-label="Suchfilter"></section>
 
   <div class="controls">
     <input type="search" id="q" placeholder="Modell oder Ausstattung suchen" aria-label="Suchen">
@@ -209,7 +217,7 @@ function carHTML(a){
     <button class="row" aria-expanded="false">
       <div><div class="trim">${esc(a.trim)}</div><div class="specs">${esc(a.specs)}</div>${tags}</div>
       ${chartSVG(a,92,30,{small:true})}
-      <div class="price"><span class="now">${eur(a.cur)}</span><span class="unit"> /Monat</span>${deltaHTML(a)}</div>
+      <div class="price"><span class="now">${eur(a.cur)}</span><span class="unit"> /Monat netto</span>${deltaHTML(a)}</div>
     </button>
     <div class="detail" hidden>
       ${chartSVG(a,chartW(),Math.round(chartW()*.42)+40)}
@@ -277,6 +285,13 @@ document.querySelectorAll(".seg button").forEach(b=>b.addEventListener("click",(
     `<span><b>${all.filter(c=>c.present).length}</b> verfügbar</span>`+
     `<span><b>${all.filter(c=>!c.present).length}</b> nicht mehr da</span>`+
     `<span><b>${changes}</b> Preisänderungen in 7 Tagen</span>`;
+  if (DATA.filters && DATA.filters.length){
+    const f = document.getElementById("filters");
+    f.innerHTML = `<p>Beobachtet werden alle Angebote auf finn.com mit diesen Filtern. Alle Preise sind Geschäftspreise netto (exkl. MwSt.).</p><dl>`
+      + DATA.filters.map(([k,v])=>`<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("")
+      + `</dl>` + (DATA.finn_url ? `<a href="${esc(DATA.finn_url)}" target="_blank" rel="noopener">Diese Suche auf finn.com öffnen</a>` : "");
+    f.hidden = false;
+  }
   render();
 })();
 </script>
