@@ -63,22 +63,6 @@
     "drive": null,
     "hitch": "Nein"
   },
-  "2c12e189d71d0450": {
-    "id": "2c12e189d71d0450",
-    "model_name": "Hyundai Inster",
-    "model_url": "https://www.finn.com/de-DE/models/hyundai/inster",
-    "trim": "49 kWh Trend",
-    "fuel": "Elektro",
-    "power": "85 kW (116 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 03.11.2026 - 01.12.2026",
-    "price": "392",
-    "price_basis": "netto",
-    "range_km": "370",
-    "consumption": "14.9 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
   "cc980fa4ce04e33a": {
     "id": "cc980fa4ce04e33a",
     "model_name": "Hyundai Inster",
@@ -92,6 +76,22 @@
     "price_basis": "netto",
     "range_km": "360",
     "consumption": "15.1 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+  },
+  "2c12e189d71d0450": {
+    "id": "2c12e189d71d0450",
+    "model_name": "Hyundai Inster",
+    "model_url": "https://www.finn.com/de-DE/models/hyundai/inster",
+    "trim": "49 kWh Trend",
+    "fuel": "Elektro",
+    "power": "85 kW (116 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 03.11.2026 - 01.12.2026",
+    "price": "392",
+    "price_basis": "netto",
+    "range_km": "370",
+    "consumption": "14.9 kWh/100km",
     "drive": null,
     "hitch": "Nein"
   },
