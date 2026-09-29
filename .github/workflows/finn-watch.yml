@@ -1,19 +1,12 @@
 name: FINN Angebots-Watcher
 
 on:
-  # HINWEIS: Der interne GitHub-'schedule'-Trigger wurde deaktiviert, da er
-  # bei diesem Repo trotz korrekter Konfiguration nicht zuverlaessig feuerte
-  # (bekannte GitHub-Plattform-Eigenheit). Stattdessen wird dieser Workflow
-  # jetzt von AUSSEN ueber einen externen Cron-Dienst (cron-job.org) per
-  # 'workflow_dispatch' (GitHub-API) ausgeloest - siehe README.
-  #
-  # Frueherer interner Trigger (aktuell auskommentiert):
-  # schedule:
-  #   - cron: "7 7-19 * * *"
-  workflow_dispatch: {}   # wird vom externen Cron-Dienst UND manuell genutzt
+  # Wird von AUSSEN ueber cron-job.org per 'workflow_dispatch' (GitHub-API)
+  # ausgeloest - siehe README. Der interne GitHub-Schedule bleibt deaktiviert.
+  workflow_dispatch: {}
 
 permissions:
-  contents: write   # noetig, damit der Workflow state.json zurueck committen kann
+  contents: write   # noetig, damit der Workflow Stand, Verlauf und Dashboard committen kann
 
 concurrency:
   group: finn-watch
@@ -26,6 +19,8 @@ jobs:
     steps:
       - name: Repository auschecken
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # komplette Git-Historie, damit history.py den Verlauf rekonstruieren kann
 
       - name: Python einrichten
         uses: actions/setup-python@v5
@@ -44,14 +39,18 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python finn_watcher.py
 
-      - name: Aktualisierten Stand committen
+      - name: Verlauf und Dashboard aktualisieren
+        run: python history.py
+
+      - name: Stand, Verlauf und Dashboard committen
         run: |
           git config user.name "finn-watcher-bot"
           git config user.email "actions@github.com"
-          git add state.json
+          git add state.json history.json docs/
           if ! git diff --cached --quiet; then
-            git commit -m "Update state.json [skip ci]"
+            # bewusst OHNE [skip ci], sonst baut GitHub Pages die Seite nicht neu
+            git commit -m "Update Stand und Verlauf"
             git push
           else
-            echo "Keine Aenderung am Stand."
+            echo "Keine Aenderung."
           fi
