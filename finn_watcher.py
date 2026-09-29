@@ -161,7 +161,6 @@ DRIVE_RE = re.compile(
 )
 INTERIOR_COLOR_RE = re.compile(r"Innenfarbe:?\s*([A-Za-zÄÖÜäöüß][A-Za-zÄÖÜäöüß\-/ ]{2,40})")
 HITCH_RE = re.compile(r"Anhängerkupplung", re.IGNORECASE)
-HUD_RE = re.compile(r"Head[-\s]?up[-\s]?Display", re.IGNORECASE)
 
 
 def parse_model_configs(model_name: str, model_url: str, full_text: str):
@@ -378,7 +377,7 @@ def format_car_label(c: dict) -> str:
 
 def format_details_block(c: dict) -> str:
     """Baut den ausfuehrlichen Detail-Block (Leistung, Getriebe, Verbrauch,
-    Reichweite, Antrieb, Innenfarbe, Kupplung, HUD) - laesst fehlende
+    Reichweite, Antrieb, Innenfarbe, Kupplung) - laesst fehlende
     Werte weg, statt falsche/unsichere Angaben zu machen."""
     lines = [f"🔧 {c['power']} · {c['transmission']} · {c['fuel']}"]
 
@@ -396,9 +395,6 @@ def format_details_block(c: dict) -> str:
 
     if c.get("hitch"):
         lines.append(f"🚗 Anhängerkupplung: {c['hitch']}")
-
-    if c.get("hud"):
-        lines.append(f"🖥️ Head-up-Display: {c['hud']}")
 
     return "\n".join(lines)
 
@@ -502,24 +498,19 @@ def main():
         sep = "&" if "?" in FINN_URL else "?"
 
         hitch_url = f"{FINN_URL}{sep}features=hitch"
-        hud_url = f"{FINN_URL}{sep}features=head_up_display"
 
         log("=== Zusatz-Suche: Anhängerkupplung ===")
         hitch_ids = set(fetch_current_offers(page, hitch_url).keys())
-
-        log("=== Zusatz-Suche: Head-up-Display ===")
-        hud_ids = set(fetch_current_offers(page, hud_url).keys())
 
         browser.close()
 
     log(
         f"Aktueller Stand: {len(new_state)} Konfigurationen gefunden "
-        f"({len(hitch_ids)} mit Anhängerkupplung, {len(hud_ids)} mit Head-up-Display)."
+        f"({len(hitch_ids)} mit Anhängerkupplung)."
     )
 
     for cid, c in new_state.items():
         c["hitch"] = "Ja" if cid in hitch_ids else "Nein"
-        c["hud"] = "Ja" if cid in hud_ids else "Nein"
 
     if not new_state:
         log(
