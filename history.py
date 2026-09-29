@@ -24,11 +24,13 @@ import json
 import os
 import re
 import subprocess
+from urllib.parse import urlparse, parse_qsl
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 
 STATE_FILE = os.environ.get("STATE_FILE", "state.json")
 HISTORY_FILE = os.environ.get("HISTORY_FILE", "history.json")
+FINN_URL = os.environ.get("FINN_URL", "").strip()
 TEMPLATE_FILE = "dashboard_template.html"
 OUTPUT_FILE = os.path.join("docs", "index.html")
 
@@ -137,6 +139,70 @@ def backfill_from_git(history):
         apply_snapshot(history, state, ts)
 
 
+# Lesbare Namen fuer die bekannten Filter-Parameter der finn.com-URL.
+# Unbekannte Parameter werden unveraendert (Name = Wert) angezeigt.
+FILTER_LABELS = {
+    "is_for_business": ("Kundentyp", {"true": "Geschäftskunde", "false": "Privatkunde"}),
+    "max_price_msrp": ("Max. Listenpreis (UVP)", "eur"),
+    "min_price_msrp": ("Min. Listenpreis (UVP)", "eur"),
+    "max_price": ("Max. Monatsrate", "eur"),
+    "min_price": ("Min. Monatsrate", "eur"),
+    "mileage_package": ("Kilometerpaket", "km"),
+    "monthly_payment_of_service_fee": ("Servicegebühr", {"true": "monatlich statt einmalig", "false": "einmalig"}),
+    "term": ("Laufzeit", "monate"),
+    "brands": ("Marken", None),
+    "models": ("Modelle", None),
+    "fuels": ("Kraftstoff", None),
+    "cartypes": ("Karosserie", None),
+    "gearshifts": ("Getriebe", None),
+    "features": ("Ausstattung", None),
+}
+IGNORED_PARAMS = {"sort", "page", "utm_source", "utm_medium", "utm_campaign"}
+PATH_LABELS = {
+    "elektro": "Elektro", "hybrid": "Hybrid", "benzin": "Benzin", "diesel": "Diesel",
+}
+
+
+def fmt_thousands(v):
+    try:
+        return f"{int(v):,}".replace(",", ".")
+    except ValueError:
+        return v
+
+
+def describe_filters(url):
+    """Macht aus der finn.com-Such-URL eine Liste lesbarer Filter
+    [[Bezeichnung, Wert], ...] fuer das Dashboard."""
+    if not url:
+        return []
+    parsed = urlparse(url)
+    filters = []
+
+    # Pfad, z.B. /de-DE/subscribe/elektro -> Antrieb: Elektro
+    parts = [p for p in parsed.path.split("/") if p]
+    if "subscribe" in parts:
+        rest = parts[parts.index("subscribe") + 1:]
+        for seg in rest:
+            filters.append(["Antrieb", PATH_LABELS.get(seg.lower(), seg.replace("-", " ").title())])
+
+    for key, value in parse_qsl(parsed.query):
+        if key in IGNORED_PARAMS:
+            continue
+        label, fmt = FILTER_LABELS.get(key, (key, None))
+        if isinstance(fmt, dict):
+            value = fmt.get(value.lower(), value)
+        elif fmt == "eur":
+            value = f"{fmt_thousands(value)} €"
+        elif fmt == "km":
+            value = f"{fmt_thousands(value)} km/Monat"
+        elif fmt == "monate":
+            value = f"{value} Monate"
+        filters.append([label, value])
+
+    filters.append(["Zusätzlich geprüft", "Anhängerkupplung"])
+    return filters
+
+
 def load_json(path, default):
     if not os.path.exists(path):
         return default
@@ -173,6 +239,9 @@ def main():
 
     state = load_json(STATE_FILE, {})
     n = apply_snapshot(history, state, now_iso())
+    if FINN_URL:
+        history["filters"] = describe_filters(FINN_URL)
+        history["finn_url"] = FINN_URL
     log(f"{n} neue Ereignisse, {len(history['cars'])} Konfigurationen im Verlauf.")
 
     with open(HISTORY_FILE, "w", encoding="utf-8") as f:
