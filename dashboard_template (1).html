@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Finn-Preisverlauf</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#E9EDF1; --surface:#FFFFFF; --ink:#16202B; --muted:#5B6875; --line:#D3DAE1;
+  --sign:#1D4F91; --up:#B83A26; --down:#23764A; --gone:#8A94A0;
+  --font:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --num:"Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#121820;--surface:#1A222C;--ink:#E6EBF0;--muted:#98A4B1;--line:#2A3440;
+        --sign:#7FA8DF;--up:#E57862;--down:#5DBB88;--gone:#6E7A87;}
+}
+*,*::before,*::after{box-sizing:inherit}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.45}
+.wrap{max-width:760px;margin:0 auto;padding:20px 16px 48px}
+header{border-left:6px solid var(--sign);padding:4px 0 4px 14px;margin-bottom:20px}
+h1{font-family:var(--num);font-weight:700;font-size:1.9rem;line-height:1.1;margin:0}
+.stand{color:var(--muted);font-size:.9rem;margin-top:4px}
+.summary{display:flex;gap:18px;flex-wrap:wrap;margin:6px 0 0;font-size:.95rem}
+.summary b{font-family:var(--num);font-size:1.15rem}
+.controls{display:grid;grid-template-columns:1fr auto;gap:8px;margin-bottom:10px}
+input[type=search],select{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:9px 10px;min-width:0}
+.seg{display:flex;gap:0;margin-bottom:18px;border:1px solid var(--line);border-radius:6px;overflow:hidden;width:max-content}
+.seg button{font:inherit;background:var(--surface);color:var(--ink);border:0;padding:7px 14px;cursor:pointer}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button[aria-pressed=true]{background:var(--sign);color:var(--surface)}
+:focus-visible{outline:2px solid var(--sign);outline-offset:2px}
+h2{font-family:var(--num);font-weight:600;font-size:1.15rem;margin:22px 0 6px}
+.car{background:var(--surface);border:1px solid var(--line);border-radius:6px;margin-bottom:6px}
+.car.gone{opacity:.72}
+.row{display:grid;grid-template-columns:1fr 92px auto;gap:12px;align-items:center;width:100%;text-align:left;font:inherit;color:inherit;background:none;border:0;padding:10px 12px;cursor:pointer}
+.trim{font-weight:600}
+.specs{color:var(--muted);font-size:.85rem}
+.tag{display:inline-block;white-space:nowrap;font-size:.75rem;border:1px solid var(--line);border-radius:4px;padding:0 5px;margin:3px 4px 0 0;color:var(--muted)}
+.tag.re{border-color:var(--up);color:var(--up)}
+.price{text-align:right;font-family:var(--num);font-variant-numeric:tabular-nums;white-space:nowrap}
+.price .now{font-size:1.35rem;font-weight:700}
+.price .unit{font-size:.8rem;color:var(--muted)}
+.delta{font-size:.85rem;font-weight:600}
+.up{color:var(--up)} .down{color:var(--down)} .flat{color:var(--muted)} .gonec{color:var(--gone)}
+.spark{width:92px;height:30px;display:block}
+.detail{padding:0 12px 14px;border-top:1px solid var(--line)}
+.detail[hidden]{display:none}
+.chart{width:100%;height:auto;display:block;margin:12px 0 6px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:8px 0 12px}
+.stats div{font-size:.8rem;color:var(--muted)}
+.stats b{display:block;font-family:var(--num);font-size:1.1rem;color:var(--ink);font-variant-numeric:tabular-nums}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+td{padding:5px 6px 5px 0;border-bottom:1px solid var(--line);vertical-align:top}
+td.num{text-align:right;font-family:var(--num);font-variant-numeric:tabular-nums;white-space:nowrap}
+.evlist{max-height:260px;overflow:auto}
+a{color:var(--sign)}
+.empty{color:var(--muted);padding:24px 0}
+@media (max-width:520px){
+  .row{grid-template-columns:1fr auto}
+  .spark{display:none}
+  .stats{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Finn-Preisverlauf</h1>
+    <div class="stand" id="stand"></div>
+    <div class="summary" id="summary"></div>
+  </header>
+
+  <div class="controls">
+    <input type="search" id="q" placeholder="Modell oder Ausstattung suchen" aria-label="Suchen">
+    <select id="sort" aria-label="Sortierung">
+      <option value="model">Nach Modell</option>
+      <option value="price">Preis aufsteigend</option>
+      <option value="delta">Größte Änderung</option>
+      <option value="recent">Zuletzt geändert</option>
+    </select>
+  </div>
+  <div class="seg" role="group" aria-label="Filter">
+    <button data-f="present" aria-pressed="true">Verfügbar</button>
+    <button data-f="all" aria-pressed="false">Alle</button>
+    <button data-f="gone" aria-pressed="false">Nicht mehr da</button>
+  </div>
+
+  <main id="list"></main>
+</div>
+
+<script>
+const DATA = /*__DATA__*/null;
+
+const fmtDate = t => new Date(t).toLocaleString("de-DE",{day:"2-digit",month:"2-digit",year:"2-digit",hour:"2-digit",minute:"2-digit"});
+const fmtDay  = t => new Date(t).toLocaleDateString("de-DE",{day:"2-digit",month:"2-digit"});
+const eur = p => p==null ? "–" : p.toLocaleString("de-DE")+" €";
+const esc = s => String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const EV = {neu:"Neu im Angebot",preis:"Preisänderung",verf:"Verfügbarkeit geändert",weg:"Nicht mehr verfügbar",wieder:"Wieder da"};
+
+function analyse(id, c){
+  const m = c.meta||{}, ev = c.events||[];
+  const prices = ev.filter(e=>e.p!=null && e.e!=="weg").map(e=>e.p);
+  const entry = ev.find(e=>e.p!=null);
+  const reentries = ev.filter(e=>e.e==="wieder");
+  // Preis beim letzten Wiedereinstieg vs. letzter Preis davor
+  let reDelta = null;
+  if (reentries.length){
+    const last = reentries[reentries.length-1];
+    const idx = ev.lastIndexOf(last);
+    const before = ev.slice(0,idx).reverse().find(e=>e.p!=null);
+    if (before && last.p!=null) reDelta = last.p - before.p;
+  }
+  const cur = c.price;
+  const lastChange = ev.length ? ev[ev.length-1].t : null;
+  const flags = [];
+  for (const [k,v] of Object.entries(m)){
+    if (v===true){
+      const kl = k.toLowerCase();
+      if (kl.includes("hitch")||kl.includes("kupplung")) flags.push("Anhängerkupplung");
+      else if (kl.includes("hud")||kl.includes("head")) flags.push("Head-up-Display");
+    }
+  }
+  return {
+    id, c, m, ev,
+    model: m.model_name || "Unbekanntes Modell",
+    trim: m.trim || id,
+    specs: [m.power, m.transmission, m.fuel, m.drive].filter(Boolean).join(", "),
+    flags,
+    cur, entry: entry ? entry.p : null,
+    min: prices.length ? Math.min(...prices) : null,
+    max: prices.length ? Math.max(...prices) : null,
+    delta: (cur!=null && entry && entry.p!=null) ? cur - entry.p : null,
+    reentries: reentries.length, reDelta,
+    lastChange, present: c.present
+  };
+}
+
+// Segmente fuer das Stufendiagramm: Luecken, wenn das Auto weg war
+function segments(a){
+  const end = DATA.last_update;
+  const segs=[]; let seg=null;
+  for (const e of a.ev){
+    const t = Date.parse(e.t);
+    if (e.e==="weg"){ if(seg){seg.push([t,seg[seg.length-1][1]]);segs.push(seg);seg=null;} continue; }
+    if (e.p==null) continue;
+    if (!seg) seg=[];
+    seg.push([t,e.p]);
+  }
+  if (seg){ seg.push([Date.parse(end), seg[seg.length-1][1]]); segs.push(seg); }
+  return segs;
+}
+
+function chartSVG(a, w, h, opts={}){
+  const segs = segments(a);
+  const pts = segs.flat();
+  if (!pts.length) return "";
+  const pad = opts.small ? {l:2,r:2,t:3,b:3} : {l:44,r:10,t:10,b:22};
+  let t0 = Math.min(...pts.map(p=>p[0])), t1 = Math.max(...pts.map(p=>p[0]));
+  if (t1===t0) t1 = t0+3600e3;
+  let p0 = Math.min(...pts.map(p=>p[1])), p1 = Math.max(...pts.map(p=>p[1]));
+  if (p1===p0){ p0-=10; p1+=10; } else { const r=(p1-p0)*.12; p0-=r; p1+=r; }
+  const X = t => pad.l + (t-t0)/(t1-t0)*(w-pad.l-pad.r);
+  const Y = p => pad.t + (1-(p-p0)/(p1-p0))*(h-pad.t-pad.b);
+  const color = a.present ? "var(--sign)" : "var(--gone)";
+  let out = "";
+  if (!opts.small){
+    for (const v of [p0+(p1-p0)*.1, (p0+p1)/2, p1-(p1-p0)*.1]){
+      const y=Y(v);
+      out += `<line x1="${pad.l}" x2="${w-pad.r}" y1="${y}" y2="${y}" stroke="var(--line)" stroke-width="1"/>`;
+      out += `<text x="${pad.l-6}" y="${y+4}" text-anchor="end" font-size="11" fill="var(--muted)" font-family="var(--num)">${Math.round(v)} €</text>`;
+    }
+    out += `<text x="${pad.l}" y="${h-5}" font-size="11" fill="var(--muted)">${fmtDay(t0)}</text>`;
+    out += `<text x="${w-pad.r}" y="${h-5}" text-anchor="end" font-size="11" fill="var(--muted)">${fmtDay(t1)}</text>`;
+  }
+  for (const s of segs){
+    let d = `M${X(s[0][0]).toFixed(1)},${Y(s[0][1]).toFixed(1)}`;
+    for (let i=1;i<s.length;i++){
+      d += `H${X(s[i][0]).toFixed(1)}V${Y(s[i][1]).toFixed(1)}`;
+    }
+    out += `<path d="${d}" fill="none" stroke="${color}" stroke-width="${opts.small?1.6:2.2}" stroke-linejoin="round"/>`;
+    if (!opts.small){
+      out += `<circle cx="${X(s[0][0])}" cy="${Y(s[0][1])}" r="3.5" fill="${color}"/>`;
+    }
+  }
+  return `<svg class="${opts.small?"spark":"chart"}" viewBox="0 0 ${w} ${h}" ${opts.small?'aria-hidden="true"':'role="img" aria-label="Preisverlauf"'}>${out}</svg>`;
+}
+
+function deltaHTML(a){
+  if (!a.present) return `<div class="delta gonec">nicht mehr da</div>`;
+  if (a.delta==null) return "";
+  if (a.delta===0) return `<div class="delta flat">wie Einstieg</div>`;
+  const pct = a.entry ? (a.delta/a.entry*100).toFixed(1).replace(".",",") : "";
+  const cls = a.delta>0 ? "up" : "down";
+  return `<div class="delta ${cls}">${a.delta>0?"+":"−"}${Math.abs(a.delta)} € (${a.delta>0?"+":"−"}${pct.replace("-","")} %) seit Einstieg</div>`;
+}
+
+function carHTML(a){
+  const tags = a.flags.map(f=>`<span class="tag">${f}</span>`).join("")
+    + (a.reentries ? `<span class="tag re">${a.reentries}× wieder da${a.reDelta?` (${a.reDelta>0?"+":"−"}${Math.abs(a.reDelta)} €)`:""}</span>` : "");
+  const events = [...a.ev].reverse().map(e=>`<tr><td>${fmtDate(e.t)}</td><td>${EV[e.e]||e.e}${e.a && e.e!=="weg"?`<br><span class="specs">${esc(e.a)}</span>`:""}</td><td class="num">${e.e==="weg"?"":eur(e.p)}</td></tr>`).join("");
+  return `<div class="car${a.present?"":" gone"}">
+    <button class="row" aria-expanded="false">
+      <div><div class="trim">${esc(a.trim)}</div><div class="specs">${esc(a.specs)}</div>${tags}</div>
+      ${chartSVG(a,92,30,{small:true})}
+      <div class="price"><span class="now">${eur(a.cur)}</span><span class="unit"> /Monat</span>${deltaHTML(a)}</div>
+    </button>
+    <div class="detail" hidden>
+      ${chartSVG(a,chartW(),Math.round(chartW()*.42)+40)}
+      <div class="stats">
+        <div>Einstieg<b>${eur(a.entry)}</b></div>
+        <div>Tiefstwert<b>${eur(a.min)}</b></div>
+        <div>Höchstwert<b>${eur(a.max)}</b></div>
+        <div>Aktuell<b>${a.present?eur(a.cur):"–"}</b></div>
+      </div>
+      <div class="evlist"><table>${events}</table></div>
+      ${a.m.model_url?`<p><a href="${esc(a.m.model_url)}" target="_blank" rel="noopener">Auf finn.com ansehen</a></p>`:""}
+    </div>
+  </div>`;
+}
+
+let filter="present";
+const chartW = () => Math.max(300, Math.min(736, document.getElementById("list").clientWidth - 26));
+window.addEventListener("resize", ()=>{ clearTimeout(window._rt); window._rt=setTimeout(render,200); });
+function render(){
+  const q = document.getElementById("q").value.trim().toLowerCase();
+  const sort = document.getElementById("sort").value;
+  let cars = Object.entries(DATA.cars).map(([id,c])=>analyse(id,c));
+  cars = cars.filter(a => filter==="all" || (filter==="present")===a.present);
+  if (q) cars = cars.filter(a => (a.model+" "+a.trim+" "+a.specs).toLowerCase().includes(q));
+
+  const list = document.getElementById("list");
+  if (!cars.length){ list.innerHTML = `<p class="empty">Keine Autos für diese Auswahl. Filter oder Suche anpassen.</p>`; return; }
+
+  if (sort==="model"){
+    cars.sort((a,b)=>a.model.localeCompare(b.model,"de")||(a.cur??1e9)-(b.cur??1e9));
+    const groups = {};
+    for (const a of cars) (groups[a.model] ||= []).push(a);
+    list.innerHTML = Object.entries(groups).map(([m,arr])=>`<h2>${esc(m)}</h2>`+arr.map(carHTML).join("")).join("");
+  } else {
+    const key = {
+      price: (a,b)=>(a.cur??1e9)-(b.cur??1e9),
+      delta: (a,b)=>Math.abs(b.delta??0)-Math.abs(a.delta??0),
+      recent:(a,b)=>Date.parse(b.lastChange||0)-Date.parse(a.lastChange||0)
+    }[sort];
+    cars.sort(key);
+    list.innerHTML = cars.map(a=>`<h2>${esc(a.model)}</h2>`+carHTML(a)).join("");
+  }
+}
+
+document.getElementById("list").addEventListener("click", e=>{
+  const btn = e.target.closest(".row"); if(!btn) return;
+  const d = btn.nextElementSibling, open = d.hidden;
+  d.hidden = !open; btn.setAttribute("aria-expanded", open);
+});
+document.getElementById("q").addEventListener("input", render);
+document.getElementById("sort").addEventListener("change", render);
+document.querySelectorAll(".seg button").forEach(b=>b.addEventListener("click",()=>{
+  filter=b.dataset.f;
+  document.querySelectorAll(".seg button").forEach(x=>x.setAttribute("aria-pressed", x===b));
+  render();
+}));
+
+(function init(){
+  if (!DATA || !DATA.cars){ document.getElementById("list").innerHTML='<p class="empty">Noch keine Daten. Nach dem nächsten Lauf des Watchers erscheint hier der Verlauf.</p>'; return; }
+  const all = Object.values(DATA.cars);
+  const week = Date.now()-7*864e5;
+  const changes = all.reduce((n,c)=>n+c.events.filter(e=>e.e==="preis"&&Date.parse(e.t)>week).length,0);
+  document.getElementById("stand").textContent = "Stand: "+fmtDate(DATA.last_update)+(DATA.start?" · Verlauf ab "+new Date(DATA.start).toLocaleDateString("de-DE"):"");
+  document.getElementById("summary").innerHTML =
+    `<span><b>${all.filter(c=>c.present).length}</b> verfügbar</span>`+
+    `<span><b>${all.filter(c=>!c.present).length}</b> nicht mehr da</span>`+
+    `<span><b>${changes}</b> Preisänderungen in 7 Tagen</span>`;
+  render();
+})();
+</script>
+</body>
+</html>
