@@ -1,7 +1,7 @@
 {
  "version": 1,
  "start": "2026-09-14",
- "last_update": "2026-09-29T08:19:42+00:00",
+ "last_update": "2026-09-29T08:42:29+00:00",
  "cars": {
   "0ca2e5e5ec5222f9": {
    "meta": {
@@ -3196,7 +3196,7 @@
     "hitch": "Ja"
    },
    "present": true,
-   "price": 700,
+   "price": 658,
    "avail": "Vsl. Übergabe 15.10.2026 - 29.10.2026",
    "events": [
     {
@@ -3359,6 +3359,12 @@
      "t": "2026-09-29T08:03:41+00:00",
      "e": "preis",
      "p": 700,
+     "a": "Vsl. Übergabe 15.10.2026 - 29.10.2026"
+    },
+    {
+     "t": "2026-09-29T08:42:29+00:00",
+     "e": "preis",
+     "p": 658,
      "a": "Vsl. Übergabe 15.10.2026 - 29.10.2026"
     }
    ]
@@ -5893,9 +5899,9 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": false,
+   "present": true,
    "price": 827,
-   "avail": "Vsl. Übergabe 14.10.2026 - 28.10.2026",
+   "avail": "Vsl. Übergabe 15.10.2026 - 29.10.2026",
    "events": [
     {
      "t": "2026-09-26T12:03:21+00:00",
@@ -5926,6 +5932,12 @@
      "e": "weg",
      "p": 827,
      "a": null
+    },
+    {
+     "t": "2026-09-29T08:42:29+00:00",
+     "e": "wieder",
+     "p": 827,
+     "a": "Vsl. Übergabe 15.10.2026 - 29.10.2026"
     }
    ]
   },
@@ -6300,6 +6312,58 @@
      "e": "weg",
      "p": 939,
      "a": null
+    }
+   ]
+  },
+  "dc3209a8b0eb0425": {
+   "meta": {
+    "id": "dc3209a8b0eb0425",
+    "model_name": "Skoda Elroq",
+    "model_url": "https://www.finn.com/de-DE/models/skoda/elroq",
+    "trim": "Sportline 85x",
+    "fuel": "Elektro",
+    "power": "220 kW (299 PS)",
+    "transmission": "Automatik",
+    "range_km": "563",
+    "consumption": "15.5 kWh/100km",
+    "drive": null,
+    "hitch": "Ja"
+   },
+   "present": true,
+   "price": 728,
+   "avail": "Vsl. Übergabe 15.10.2026 - 29.10.2026",
+   "events": [
+    {
+     "t": "2026-09-29T08:42:29+00:00",
+     "e": "neu",
+     "p": 728,
+     "a": "Vsl. Übergabe 15.10.2026 - 29.10.2026"
+    }
+   ]
+  },
+  "9286abf63bd11235": {
+   "meta": {
+    "id": "9286abf63bd11235",
+    "model_name": "Skoda Enyaq",
+    "model_url": "https://www.finn.com/de-DE/models/skoda/enyaq",
+    "trim": "Sportline 85x",
+    "fuel": "Elektro",
+    "power": "220 kW (299 PS)",
+    "transmission": "Automatik",
+    "range_km": "568",
+    "consumption": "16.3 kWh/100km",
+    "drive": null,
+    "hitch": "Ja"
+   },
+   "present": true,
+   "price": 835,
+   "avail": "Vsl. Übergabe 15.10.2026 - 29.10.2026",
+   "events": [
+    {
+     "t": "2026-09-29T08:42:29+00:00",
+     "e": "neu",
+     "p": 835,
+     "a": "Vsl. Übergabe 15.10.2026 - 29.10.2026"
     }
    ]
   }
