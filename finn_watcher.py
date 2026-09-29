@@ -4,14 +4,17 @@ finn_watcher.py
 
 Beobachtet eine gefilterte finn.com Auto-Abo-Suche (z.B.
 https://www.finn.com/de-DE/subscribe/elektro?is_for_business=true&...)
-auf Veraenderungen im Angebot:
+und meldet per Telegram:
 
-  - ein Fahrzeug/eine Konfiguration ist nicht mehr verfuegbar
   - ein Fahrzeug/eine Konfiguration ist neu dazugekommen
-  - der Preis einer Konfiguration hat sich geaendert
+  - ein Fahrzeug/eine Konfiguration ist nicht mehr verfuegbar
+  - der Preis einer Konfiguration ist GESUNKEN
 
-Bei jeder erkannten Aenderung wird eine EINZELNE Telegram-Nachricht
-pro betroffenem Fahrzeug/Konfiguration verschickt.
+Preiserhoehungen und geaenderte Verfuegbarkeit werden NICHT per Telegram
+gemeldet, sondern nur im Verlauf festgehalten (history.py / Dashboard).
+
+Pro betroffenem Fahrzeug/Konfiguration wird eine EINZELNE Telegram-Nachricht
+verschickt, gruppiert nach Fahrzeugmodell.
 
 Der letzte bekannte Stand wird in einer JSON-Datei (STATE_FILE)
 gespeichert, damit beim naechsten Lauf verglichen werden kann.
@@ -158,6 +161,7 @@ DRIVE_RE = re.compile(
 )
 INTERIOR_COLOR_RE = re.compile(r"Innenfarbe:?\s*([A-Za-zÄÖÜäöüß][A-Za-zÄÖÜäöüß\-/ ]{2,40})")
 HITCH_RE = re.compile(r"Anhängerkupplung", re.IGNORECASE)
+HUD_RE = re.compile(r"Head[-\s]?up[-\s]?Display", re.IGNORECASE)
 
 
 def parse_model_configs(model_name: str, model_url: str, full_text: str):
@@ -374,8 +378,8 @@ def format_car_label(c: dict) -> str:
 
 def format_details_block(c: dict) -> str:
     """Baut den ausfuehrlichen Detail-Block (Leistung, Getriebe, Verbrauch,
-    Reichweite, Antrieb, Innenfarbe, Kupplung) - laesst fehlende Werte weg,
-    statt falsche/unsichere Angaben zu machen."""
+    Reichweite, Antrieb, Innenfarbe, Kupplung, HUD) - laesst fehlende
+    Werte weg, statt falsche/unsichere Angaben zu machen."""
     lines = [f"🔧 {c['power']} · {c['transmission']} · {c['fuel']}"]
 
     if c.get("drive"):
@@ -393,7 +397,19 @@ def format_details_block(c: dict) -> str:
     if c.get("hitch"):
         lines.append(f"🚗 Anhängerkupplung: {c['hitch']}")
 
+    if c.get("hud"):
+        lines.append(f"🖥️ Head-up-Display: {c['hud']}")
+
     return "\n".join(lines)
+
+
+def to_int_price(p):
+    """Wandelt den gespeicherten Preis-String (z.B. "649") in eine Zahl um.
+    Gibt None zurueck, wenn kein Preis bekannt ist."""
+    try:
+        return int(p)
+    except (TypeError, ValueError):
+        return None
 
 
 def diff_and_notify(old_state: dict, new_state: dict):
@@ -406,8 +422,7 @@ def diff_and_notify(old_state: dict, new_state: dict):
 
     # Alle zu verschickenden Nachrichten zuerst sammeln (mit Modellname/Ausstattung
     # als Sortierschluessel), statt sie sofort zu senden. So koennen wir sie vor
-    # dem eigentlichen Versand nach Modell gruppieren, statt sie in der
-    # zufaelligen internen Reihenfolge (neu/weg/geaendert getrennt) zu schicken.
+    # dem eigentlichen Versand nach Modell gruppieren.
     events = []  # Liste von (model_name, trim, text)
 
     for cid in added:
@@ -437,16 +452,19 @@ def diff_and_notify(old_state: dict, new_state: dict):
         old_c = old_state[cid]
         new_c = new_state[cid]
 
-        # Bewusste Entscheidung: Nur echte PREISaenderungen loesen eine
-        # Nachricht aus. Aenderungen der voraussichtlichen Uebergabezeit
-        # allein (die relativ haeufig vorkommen, aber im ersten Wurf nicht
-        # interessieren) werden ignoriert.
-        if old_c.get("price") != new_c.get("price"):
+        # Nur Preissenkungen per Telegram melden. Preiserhoehungen und
+        # geaenderte Verfuegbarkeit stehen im Dashboard-Verlauf.
+        old_p = to_int_price(old_c.get("price"))
+        new_p = to_int_price(new_c.get("price"))
+        if old_p is None or new_p is None:
+            continue
+
+        if new_p < old_p:
             text = (
-                f"🔄 Angebot geändert\n\n"
+                f"📉 Preis gesenkt\n\n"
                 f"{format_car_label(new_c)}\n"
                 f"{format_details_block(new_c)}\n\n"
-                f"{fmt_price_change(old_c.get('price'), new_c.get('price'))}\n"
+                f"{fmt_price_change(old_p, new_p)}\n"
                 f"📅 Verfügbarkeit: {new_c['availability']}\n\n"
                 f"{new_c['model_url']}"
             )
@@ -484,19 +502,24 @@ def main():
         sep = "&" if "?" in FINN_URL else "?"
 
         hitch_url = f"{FINN_URL}{sep}features=hitch"
+        hud_url = f"{FINN_URL}{sep}features=head_up_display"
 
         log("=== Zusatz-Suche: Anhängerkupplung ===")
         hitch_ids = set(fetch_current_offers(page, hitch_url).keys())
+
+        log("=== Zusatz-Suche: Head-up-Display ===")
+        hud_ids = set(fetch_current_offers(page, hud_url).keys())
 
         browser.close()
 
     log(
         f"Aktueller Stand: {len(new_state)} Konfigurationen gefunden "
-        f"({len(hitch_ids)} mit Anhängerkupplung)."
+        f"({len(hitch_ids)} mit Anhängerkupplung, {len(hud_ids)} mit Head-up-Display)."
     )
 
     for cid, c in new_state.items():
         c["hitch"] = "Ja" if cid in hitch_ids else "Nein"
+        c["hud"] = "Ja" if cid in hud_ids else "Nein"
 
     if not new_state:
         log(
