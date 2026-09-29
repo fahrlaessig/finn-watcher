@@ -121,7 +121,7 @@ function analyse(id, c){
   const lastChange = ev.length ? ev[ev.length-1].t : null;
   const flags = [];
   for (const [k,v] of Object.entries(m)){
-    if (v===true){
+    if (v===true || v==="Ja"){
       const kl = k.toLowerCase();
       if (kl.includes("hitch")||kl.includes("kupplung")) flags.push("Anhängerkupplung");
       else if (kl.includes("hud")||kl.includes("head")) flags.push("Head-up-Display");
