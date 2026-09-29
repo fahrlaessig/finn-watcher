@@ -40,6 +40,17 @@ OUTPUT_FILE = os.path.join("docs", "index.html")
 HISTORY_START = "2026-09-14"
 START_TS = datetime.fromisoformat(HISTORY_START).replace(tzinfo=ZoneInfo("Europe/Berlin"))
 
+# Alle Preise im Verlauf sind Geschaeftspreise NETTO (exkl. MwSt.).
+# Aeltere Staende (vor der Umstellung, ohne "price_basis": "netto") enthielten
+# Brutto-Preise und werden beim Einlesen durch 1,19 geteilt.
+VAT_FACTOR = 1.19
+# Rundungsunterschiede bis zu dieser Hoehe beim Wechsel von umgerechneten
+# zu echten Netto-Preisen werden still uebernommen (kein Preis-Ereignis).
+BASIS_SWITCH_TOLERANCE = 2
+
+# Wird die Version erhoeht, baut sich history.json automatisch neu auf.
+HISTORY_VERSION = 2
+
 
 def log(msg):
     print(f"[history] {msg}", flush=True)
@@ -57,7 +68,18 @@ def now_iso():
 
 
 def new_history():
-    return {"version": 1, "start": HISTORY_START, "last_update": None, "cars": {}}
+    return {"version": HISTORY_VERSION, "start": HISTORY_START, "last_update": None, "cars": {}}
+
+
+def net_price(c):
+    """Liefert den Netto-Preis einer Konfiguration in ganzen Euro und die
+    Preisbasis ("netto" oder "umgerechnet")."""
+    price = to_int(c.get("price"))
+    if price is None:
+        return None, None
+    if c.get("price_basis") == "netto":
+        return price, "netto"
+    return int(price / VAT_FACTOR + 0.5), "umgerechnet"
 
 
 def apply_snapshot(history, state, ts):
@@ -71,7 +93,7 @@ def apply_snapshot(history, state, ts):
     for cid, c in state.items():
         if not isinstance(c, dict):
             continue
-        price = to_int(c.get("price"))
+        price, basis = net_price(c)
         avail = c.get("availability")
         meta = {k: v for k, v in c.items() if k not in ("price", "availability")}
         entry = cars.get(cid)
@@ -81,6 +103,7 @@ def apply_snapshot(history, state, ts):
                 "meta": meta,
                 "present": True,
                 "price": price,
+                "basis": basis,
                 "avail": avail,
                 "events": [{"t": ts, "e": "neu", "p": price, "a": avail}],
             }
@@ -88,6 +111,17 @@ def apply_snapshot(history, state, ts):
             continue
 
         entry["meta"] = meta
+        # Wechsel von umgerechneten zu echten Netto-Preisen: kleine
+        # Rundungsdifferenzen still uebernehmen, statt eine Preisaenderung
+        # zu verbuchen.
+        if (
+            entry["present"]
+            and entry.get("basis") != basis
+            and price is not None
+            and entry["price"] is not None
+            and abs(price - entry["price"]) <= BASIS_SWITCH_TOLERANCE
+        ):
+            entry["price"] = price
         if not entry["present"]:
             entry["events"].append({"t": ts, "e": "wieder", "p": price, "a": avail})
             events += 1
@@ -97,7 +131,7 @@ def apply_snapshot(history, state, ts):
         elif avail != entry["avail"]:
             entry["events"].append({"t": ts, "e": "verf", "p": price, "a": avail})
             events += 1
-        entry.update(present=True, price=price, avail=avail)
+        entry.update(present=True, price=price, basis=basis, avail=avail)
 
     for cid, entry in cars.items():
         if entry["present"] and cid not in state:
@@ -232,8 +266,12 @@ def build_dashboard(history):
 
 def main():
     history = load_json(HISTORY_FILE, None)
-    if history is None or history.get("start") != HISTORY_START:
-        log(f"Baue Verlauf neu auf (Start: {HISTORY_START}).")
+    if (
+        history is None
+        or history.get("start") != HISTORY_START
+        or history.get("version") != HISTORY_VERSION
+    ):
+        log(f"Baue Verlauf neu auf (Start: {HISTORY_START}, Version {HISTORY_VERSION}).")
         history = new_history()
         backfill_from_git(history)
 
