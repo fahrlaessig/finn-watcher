@@ -13,6 +13,10 @@ und meldet per Telegram:
 Preiserhoehungen und geaenderte Verfuegbarkeit werden NICHT per Telegram
 gemeldet, sondern nur im Verlauf festgehalten (history.py / Dashboard).
 
+Alle Preise sind GESCHAEFTSPREISE (netto, exkl. MwSt.). Das Skript erzwingt
+das auf jeder Modellseite (URL-Parameter + Schalter "Geschaeftspreise") und
+markiert jede Konfiguration mit "price_basis": "netto".
+
 Pro betroffenem Fahrzeug/Konfiguration wird eine EINZELNE Telegram-Nachricht
 verschickt, gruppiert nach Fahrzeugmodell.
 
@@ -37,7 +41,7 @@ import re
 import sys
 import time
 import hashlib
-from urllib.parse import urljoin, urlparse, parse_qs
+from urllib.parse import urljoin, urlparse, parse_qs, parse_qsl, urlencode, urlunparse
 
 import requests
 from playwright.sync_api import sync_playwright
@@ -131,6 +135,44 @@ def extract_model_links(page):
     return list(seen.values())
 
 
+def with_search_params(model_url: str, search_url: str) -> str:
+    """Uebertraegt die Filter-Parameter der Such-URL (v.a. is_for_business,
+    mileage_package, monthly_payment_of_service_fee) auf eine Modell-URL.
+    Ohne das zeigt finn.com auf der Modellseite ggf. Privatpreise inkl. MwSt.
+    bzw. ein anderes Kilometerpaket an."""
+    m = urlparse(model_url)
+    params = dict(parse_qsl(m.query))
+    for k, v in parse_qsl(urlparse(search_url).query):
+        if k in MODEL_URL_SKIP_PARAMS:
+            continue
+        params[k] = v
+    params["is_for_business"] = "true"
+    return urlunparse(m._replace(query=urlencode(params)))
+
+
+def ensure_business_prices(page) -> str:
+    """Stellt sicher, dass der Schalter "Geschaeftspreise (exkl. MwSt.)"
+    aktiv ist. Gibt einen Status-Text fuers Log zurueck."""
+    label = re.compile(r"Geschäftspreise", re.IGNORECASE)
+    for role in ("switch", "checkbox"):
+        try:
+            sw = page.get_by_role(role, name=label)
+            if sw.count() == 0:
+                continue
+            sw = sw.first
+            checked = sw.is_checked()
+            if checked:
+                return "Geschäftspreise aktiv"
+            sw.click(timeout=3000)
+            page.wait_for_timeout(2500)
+            if sw.is_checked():
+                return "Geschäftspreise waren AUS - eingeschaltet"
+            return "WARNUNG: Geschäftspreise liessen sich nicht einschalten"
+        except Exception as e:
+            return f"WARNUNG: Schalter-Pruefung fehlgeschlagen ({e})"
+    return "Schalter nicht gefunden (URL-Parameter is_for_business=true gesetzt)"
+
+
 CONFIG_BLOCK_SPLIT_MARKER = "Vergleichen"
 
 # Erkennt Zeilen wie: "Benzin143 kW (194 PS)Automatik" oder "Elektro150 kW (204 PS)Automatik"
@@ -141,10 +183,16 @@ FUEL_POWER_RE = re.compile(
     re.IGNORECASE,
 )
 
+# Erkennt z.B. "549 €", "1.049 €" und auch Netto-Preise mit Cent wie "461,34 €"
 PRICE_RE = re.compile(
-    r"(\d{2,4}(?:[.,]\d{3})?)\s*€\s*\n?\s*(?:pro Monat|im Monat)",
+    r"(?<![\d.,])(\d{1,3}(?:\.\d{3})+|\d{2,4})(?:,(\d{1,2}))?\s*€\s*\n?\s*(?:pro Monat|im Monat)",
     re.IGNORECASE,
 )
+
+PRICE_BASIS = "netto"
+
+# Parameter aus FINN_URL, die NICHT auf die Modellseiten uebertragen werden
+MODEL_URL_SKIP_PARAMS = {"sort", "page"}
 
 AVAILABILITY_RE = re.compile(
     r"(Vsl\.\s*Übergabe\s*[\d.]+\s*-\s*[\d.]+|Schnell verfügbar|Sofort verfügbar)"
@@ -200,7 +248,12 @@ def parse_model_configs(model_name: str, model_url: str, full_text: str):
         availability = avail_match.group(1) if avail_match else "Unbekannt"
 
         price_match = PRICE_RE.search(window)
-        price = price_match.group(1).replace(".", "") if price_match else None
+        price = None
+        if price_match:
+            euros = int(price_match.group(1).replace(".", ""))
+            cents = int((price_match.group(2) or "0").ljust(2, "0"))
+            # auf ganze Euro runden (kaufmaennisch)
+            price = str(euros + (1 if cents >= 50 else 0))
 
         range_match = RANGE_RE.search(window)
         range_km = range_match.group(1) if range_match else None
@@ -232,7 +285,8 @@ def parse_model_configs(model_name: str, model_url: str, full_text: str):
                 "power": power,
                 "transmission": transmission,
                 "availability": availability,
-                "price": price,  # als String in Euro, z.B. "269", oder None wenn nicht gefunden
+                "price": price,  # als String in ganzen Euro netto, z.B. "269", oder None
+                "price_basis": PRICE_BASIS,
                 "range_km": range_km,
                 "consumption": consumption,
                 "drive": drive,
@@ -252,6 +306,7 @@ def fetch_current_offers(page, finn_url: str):
     page.goto(finn_url, wait_until="domcontentloaded", timeout=45000)
     accept_cookies_if_present(page)
     page.wait_for_timeout(3000)
+    log(f"  Listing: {ensure_business_prices(page)}")
 
     scroll_to_load_all(page)
     debug_dump("listing_page", page.inner_text("body"))
@@ -262,9 +317,11 @@ def fetch_current_offers(page, finn_url: str):
     all_configs = {}
     for idx, model_url in enumerate(model_links, start=1):
         try:
+            model_url = with_search_params(model_url, finn_url)
             log(f"[{idx}/{len(model_links)}] Lade Modellseite: {model_url}")
             page.goto(model_url, wait_until="domcontentloaded", timeout=45000)
             page.wait_for_timeout(3000)  # Zeit fuer nachgeladene Preise
+            log(f"  {ensure_business_prices(page)}")
 
             body_text = page.inner_text("body")
 
@@ -342,7 +399,7 @@ def send_telegram_message(text: str):
 
 
 def fmt_price(p):
-    return f"{p} €/Monat" if p else "Preis unbekannt"
+    return f"{p} €/Monat netto" if p else "Preis unbekannt"
 
 
 def fmt_price_change(old_p, new_p):
@@ -366,7 +423,7 @@ def fmt_price_change(old_p, new_p):
         arrow, sign = "➡️", ""
 
     return (
-        f"💶 Preis: {old_i}€ → {new_i}€ {arrow} "
+        f"💶 Preis (netto): {old_i}€ → {new_i}€ {arrow} "
         f"({sign}{diff}€, {sign}{pct:.1f}%)"
     )
 
@@ -447,6 +504,11 @@ def diff_and_notify(old_state: dict, new_state: dict):
     for cid in common:
         old_c = old_state[cid]
         new_c = new_state[cid]
+
+        # Einmalige Umstellung auf Netto-Preise: Der alte Stand enthielt noch
+        # Brutto-Preise. Diese Preise sind nicht vergleichbar -> keine Meldung.
+        if old_c.get("price_basis") != new_c.get("price_basis"):
+            continue
 
         # Nur Preissenkungen per Telegram melden. Preiserhoehungen und
         # geaenderte Verfuegbarkeit stehen im Dashboard-Verlauf.
