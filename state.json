@@ -303,22 +303,6 @@
     "drive": "Heckantrieb (RWD)",
     "hitch": "Nein"
   },
-  "715bd19672b2264b": {
-    "id": "715bd19672b2264b",
-    "model_name": "Mazda Mazda6e",
-    "model_url": "https://www.finn.com/de-DE/models/mazda/mazda6e",
-    "trim": "EV RWD Homura Plus 78kWh",
-    "fuel": "Elektro",
-    "power": "190 kW (258 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 21.12.2026 - 01.03.2027",
-    "price": "583",
-    "price_basis": "netto",
-    "range_km": "560",
-    "consumption": "16.1 kWh/100km",
-    "drive": "Heckantrieb (RWD)",
-    "hitch": "Nein"
-  },
   "4af916304310d144": {
     "id": "4af916304310d144",
     "model_name": "Cupra Born",
@@ -364,22 +348,6 @@
     "price_basis": "netto",
     "range_km": "608",
     "consumption": "14.9 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
-  "767ae384be06e06c": {
-    "id": "767ae384be06e06c",
-    "model_name": "Kia EV4",
-    "model_url": "https://www.finn.com/de-DE/models/kia/ev4",
-    "trim": "81 kWh 150 kW Earth Frontantrieb",
-    "fuel": "Elektro",
-    "power": "150 kW (204 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 16.10.2026 - 30.10.2026",
-    "price": "633",
-    "price_basis": "netto",
-    "range_km": "625",
-    "consumption": "14.6 kWh/100km",
     "drive": null,
     "hitch": "Nein"
   },
@@ -431,6 +399,22 @@
     "drive": null,
     "hitch": "Nein"
   },
+  "767ae384be06e06c": {
+    "id": "767ae384be06e06c",
+    "model_name": "Kia EV4",
+    "model_url": "https://www.finn.com/de-DE/models/kia/ev4",
+    "trim": "81 kWh 150 kW Earth Frontantrieb",
+    "fuel": "Elektro",
+    "power": "150 kW (204 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 16.10.2026 - 30.10.2026",
+    "price": "617",
+    "price_basis": "netto",
+    "range_km": "594",
+    "consumption": "15.5 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+  },
   "995c4b7121fc3c58": {
     "id": "995c4b7121fc3c58",
     "model_name": "Ford Capri",
@@ -463,22 +447,6 @@
     "drive": "Allradantrieb (AWD)",
     "hitch": "Nein"
   },
-  "088ec5c4a8baa60b": {
-    "id": "088ec5c4a8baa60b",
-    "model_name": "Ford Explorer",
-    "model_url": "https://www.finn.com/de-DE/models/ford/explorer",
-    "trim": "Extended Range 79kWh RWD Premium",
-    "fuel": "Elektro",
-    "power": "210 kW (286 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 05.10.2026 - 12.10.2026",
-    "price": "700",
-    "price_basis": "netto",
-    "range_km": "568",
-    "consumption": "15.6 kWh/100km",
-    "drive": "Heckantrieb (RWD)",
-    "hitch": "Nein"
-  },
   "c1890423715c70d2": {
     "id": "c1890423715c70d2",
     "model_name": "Ford Explorer",
@@ -495,6 +463,22 @@
     "drive": "Allradantrieb (AWD)",
     "hitch": "Nein"
   },
+  "088ec5c4a8baa60b": {
+    "id": "088ec5c4a8baa60b",
+    "model_name": "Ford Explorer",
+    "model_url": "https://www.finn.com/de-DE/models/ford/explorer",
+    "trim": "Extended Range 79kWh RWD Premium",
+    "fuel": "Elektro",
+    "power": "210 kW (286 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 16.10.2026 - 30.10.2026",
+    "price": "700",
+    "price_basis": "netto",
+    "range_km": "568",
+    "consumption": "15.6 kWh/100km",
+    "drive": "Heckantrieb (RWD)",
+    "hitch": "Nein"
+  },
   "b4c77c625ee6b6dd": {
     "id": "b4c77c625ee6b6dd",
     "model_name": "Skoda Elroq",
@@ -503,7 +487,7 @@
     "fuel": "Elektro",
     "power": "210 kW (286 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 21.10.2026 - 18.11.2026",
+    "availability": "Vsl. Übergabe 11.11.2026 - 13.01.2027",
     "price": "658",
     "price_basis": "netto",
     "range_km": "563",
@@ -519,13 +503,13 @@
     "fuel": "Elektro",
     "power": "210 kW (286 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 21.10.2026 - 28.10.2026",
-    "price": "864",
+    "availability": "Vsl. Übergabe 05.10.2026 - 12.10.2026",
+    "price": "692",
     "price_basis": "netto",
     "range_km": "571",
-    "consumption": "15.5 kWh/100km",
+    "consumption": "15.2 kWh/100km",
     "drive": null,
-    "hitch": "Ja"
+    "hitch": "Nein"
   },
   "1e6aaf89f4ac0927": {
     "id": "1e6aaf89f4ac0927",
