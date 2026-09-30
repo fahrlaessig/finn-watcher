@@ -1,7 +1,7 @@
 {
  "version": 2,
  "start": "2026-09-14",
- "last_update": "2026-09-30T15:03:33+00:00",
+ "last_update": "2026-09-30T16:03:28+00:00",
  "cars": {
   "0ca2e5e5ec5222f9": {
    "meta": {
@@ -463,15 +463,15 @@
     "power": "83 kW (113 PS)",
     "transmission": "Automatik",
     "price_basis": "netto",
-    "range_km": "408",
+    "range_km": "390",
     "consumption": "158 kWh/100km",
     "drive": null,
     "hitch": "Nein"
    },
    "present": true,
-   "price": 540,
+   "price": 482,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 12.10.2026 - 26.10.2026",
+   "avail": "Vsl. Übergabe 30.11.2026 - 08.02.2027",
    "events": [
     {
      "t": "2026-09-14T06:03:16+00:00",
@@ -646,6 +646,12 @@
      "e": "verf",
      "p": 540,
      "a": "Vsl. Übergabe 12.10.2026 - 26.10.2026"
+    },
+    {
+     "t": "2026-09-30T16:03:28+00:00",
+     "e": "preis",
+     "p": 482,
+     "a": "Vsl. Übergabe 30.11.2026 - 08.02.2027"
     }
    ]
   },
