@@ -335,22 +335,6 @@
     "drive": null,
     "hitch": "Nein"
   },
-  "4cdd8580781f7730": {
-    "id": "4cdd8580781f7730",
-    "model_name": "Kia EV3",
-    "model_url": "https://www.finn.com/de-DE/models/kia/ev3",
-    "trim": "81 kWh 150 kW GT-Line Frontantrieb",
-    "fuel": "Elektro",
-    "power": "150 kW (204 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 19.10.2026 - 02.11.2026",
-    "price": "675",
-    "price_basis": "netto",
-    "range_km": "563",
-    "consumption": "16.2 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
   "57c37d277438d561": {
     "id": "57c37d277438d561",
     "model_name": "Kia EV3",

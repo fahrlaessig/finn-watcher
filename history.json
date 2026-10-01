@@ -1,7 +1,7 @@
 {
  "version": 2,
  "start": "2026-09-14",
- "last_update": "2026-10-01T12:03:24+00:00",
+ "last_update": "2026-10-01T13:03:28+00:00",
  "cars": {
   "0ca2e5e5ec5222f9": {
    "meta": {
@@ -5028,7 +5028,7 @@
     "drive": null,
     "hitch": "Nein"
    },
-   "present": true,
+   "present": false,
    "price": 675,
    "basis": "netto",
    "avail": "Vsl. Übergabe 19.10.2026 - 02.11.2026",
@@ -5128,6 +5128,12 @@
      "e": "verf",
      "p": 675,
      "a": "Vsl. Übergabe 19.10.2026 - 02.11.2026"
+    },
+    {
+     "t": "2026-10-01T13:03:28+00:00",
+     "e": "weg",
+     "p": 675,
+     "a": null
     }
    ]
   },
