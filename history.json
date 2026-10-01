@@ -1,7 +1,7 @@
 {
  "version": 2,
  "start": "2026-09-14",
- "last_update": "2026-10-01T14:03:15+00:00",
+ "last_update": "2026-10-01T15:04:07+00:00",
  "cars": {
   "0ca2e5e5ec5222f9": {
    "meta": {
@@ -489,7 +489,7 @@
    "present": true,
    "price": 540,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 13.10.2026 - 27.10.2026",
+   "avail": "Vsl. Übergabe 08.10.2026 - 15.10.2026",
    "events": [
     {
      "t": "2026-09-14T06:03:16+00:00",
@@ -682,6 +682,12 @@
      "e": "verf",
      "p": 540,
      "a": "Vsl. Übergabe 13.10.2026 - 27.10.2026"
+    },
+    {
+     "t": "2026-10-01T15:04:07+00:00",
+     "e": "verf",
+     "p": 540,
+     "a": "Vsl. Übergabe 08.10.2026 - 15.10.2026"
     }
    ]
   },
@@ -5153,7 +5159,7 @@
     "hitch": "Nein"
    },
    "present": true,
-   "price": 696,
+   "price": 686,
    "basis": "netto",
    "avail": "Vsl. Übergabe 09.10.2026 - 23.10.2026",
    "events": [
@@ -5354,6 +5360,12 @@
      "e": "preis",
      "p": 696,
      "a": "Vsl. Übergabe 09.10.2026 - 23.10.2026"
+    },
+    {
+     "t": "2026-10-01T15:04:07+00:00",
+     "e": "preis",
+     "p": 686,
+     "a": "Vsl. Übergabe 09.10.2026 - 23.10.2026"
     }
    ]
   },
@@ -5373,7 +5385,7 @@
     "hitch": "Nein"
    },
    "present": true,
-   "price": 658,
+   "price": 668,
    "basis": "netto",
    "avail": "Vsl. Übergabe 06.10.2026 - 13.10.2026",
    "events": [
@@ -5501,6 +5513,12 @@
      "t": "2026-10-01T06:03:26+00:00",
      "e": "verf",
      "p": 658,
+     "a": "Vsl. Übergabe 06.10.2026 - 13.10.2026"
+    },
+    {
+     "t": "2026-10-01T15:04:07+00:00",
+     "e": "preis",
+     "p": 668,
      "a": "Vsl. Übergabe 06.10.2026 - 13.10.2026"
     }
    ]
@@ -7201,15 +7219,16 @@
     "fuel": "Elektro",
     "power": "250 kW (340 PS)",
     "transmission": "Automatik",
+    "price_basis": "netto",
     "range_km": "543",
     "consumption": "16.6 kWh/100km",
     "drive": "Allradantrieb (AWD)",
     "hitch": "Nein"
    },
-   "present": false,
-   "price": 512,
-   "basis": "umgerechnet",
-   "avail": "Vsl. Übergabe 02.10.2026 - 09.10.2026",
+   "present": true,
+   "price": 761,
+   "basis": "netto",
+   "avail": "Vsl. Übergabe 06.10.2026 - 13.10.2026",
    "events": [
     {
      "t": "2026-09-29T08:00:05+00:00",
@@ -7222,6 +7241,12 @@
      "e": "weg",
      "p": 512,
      "a": null
+    },
+    {
+     "t": "2026-10-01T15:04:07+00:00",
+     "e": "wieder",
+     "p": 761,
+     "a": "Vsl. Übergabe 06.10.2026 - 13.10.2026"
     }
    ]
   },
