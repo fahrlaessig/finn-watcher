@@ -127,22 +127,6 @@
     "drive": null,
     "hitch": "Nein"
   },
-  "5f85f73a572bec9c": {
-    "id": "5f85f73a572bec9c",
-    "model_name": "Opel Frontera",
-    "model_url": "https://www.finn.com/de-DE/models/opel/frontera",
-    "trim": "Electric 44-kWh-Batterie 83kW Edition",
-    "fuel": "Elektro",
-    "power": "83 kW (113 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 07.10.2026 - 14.10.2026",
-    "price": "491",
-    "price_basis": "netto",
-    "range_km": "305",
-    "consumption": "16.4 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
   "8d49ad9b642d2725": {
     "id": "8d49ad9b642d2725",
     "model_name": "Opel Frontera",
@@ -156,6 +140,22 @@
     "price_basis": "netto",
     "range_km": "408",
     "consumption": "158 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+  },
+  "5f85f73a572bec9c": {
+    "id": "5f85f73a572bec9c",
+    "model_name": "Opel Frontera",
+    "model_url": "https://www.finn.com/de-DE/models/opel/frontera",
+    "trim": "Electric 44-kWh-Batterie 83kW Edition",
+    "fuel": "Elektro",
+    "power": "83 kW (113 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 20.11.2026 - 29.01.2027",
+    "price": "491",
+    "price_basis": "netto",
+    "range_km": "305",
+    "consumption": "16.4 kWh/100km",
     "drive": null,
     "hitch": "Nein"
   },
