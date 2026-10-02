@@ -215,7 +215,7 @@
     "fuel": "Elektro",
     "power": "108 kW (147 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 20.10.2026 - 03.11.2026",
+    "availability": "Vsl. Übergabe 09.10.2026 - 16.10.2026",
     "price": "516",
     "price_basis": "netto",
     "range_km": "308",
@@ -463,22 +463,6 @@
     "drive": "Allradantrieb (AWD)",
     "hitch": "Nein"
   },
-  "e7764b9a689cd67e": {
-    "id": "e7764b9a689cd67e",
-    "model_name": "Kia EV5",
-    "model_url": "https://www.finn.com/de-DE/models/kia/ev5",
-    "trim": "81 kWh Earth Frontantrieb",
-    "fuel": "Elektro",
-    "power": "160 kW (218 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 13.11.2026 - 15.01.2027",
-    "price": "633",
-    "price_basis": "netto",
-    "range_km": "520",
-    "consumption": "17.1 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
   "c1890423715c70d2": {
     "id": "c1890423715c70d2",
     "model_name": "Ford Explorer",
@@ -535,7 +519,7 @@
     "fuel": "Elektro",
     "power": "210 kW (286 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 13.11.2026 - 15.01.2027",
+    "availability": "Vsl. Übergabe 20.10.2026 - 03.11.2026",
     "price": "700",
     "price_basis": "netto",
     "range_km": "563",
@@ -575,6 +559,22 @@
     "drive": null,
     "hitch": "Ja"
   },
+  "a7c01257354511b1": {
+    "id": "a7c01257354511b1",
+    "model_name": "Skoda Elroq",
+    "model_url": "https://www.finn.com/de-DE/models/skoda/elroq",
+    "trim": "85 Sportline",
+    "fuel": "Elektro",
+    "power": "210 kW (286 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 20.10.2026 - 03.11.2026",
+    "price": "717",
+    "price_basis": "netto",
+    "range_km": "553",
+    "consumption": "15.8 kWh/100km",
+    "drive": null,
+    "hitch": "Ja"
+  },
   "fa874f3b23b070b7": {
     "id": "fa874f3b23b070b7",
     "model_name": "Skoda Elroq",
@@ -606,5 +606,21 @@
     "consumption": "15.5 kWh/100km",
     "drive": null,
     "hitch": "Ja"
+  },
+  "610c1b024eda7e8d": {
+    "id": "610c1b024eda7e8d",
+    "model_name": "Kia EV6",
+    "model_url": "https://www.finn.com/de-DE/models/kia/ev6",
+    "trim": "84 kWh 168 kW Heckantrieb Earth",
+    "fuel": "Elektro",
+    "power": "168 kW (228 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 20.10.2026 - 03.11.2026",
+    "price": "726",
+    "price_basis": "netto",
+    "range_km": "560",
+    "consumption": "16.9 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
   }
 }
