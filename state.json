@@ -383,38 +383,6 @@
     "drive": null,
     "hitch": "Nein"
   },
-  "995c4b7121fc3c58": {
-    "id": "995c4b7121fc3c58",
-    "model_name": "Ford Capri",
-    "model_url": "https://www.finn.com/de-DE/models/ford/capri",
-    "trim": "Extended Range 79kWh RWD Premium",
-    "fuel": "Elektro",
-    "power": "210 kW (286 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 08.10.2026 - 15.10.2026",
-    "price": "675",
-    "price_basis": "netto",
-    "range_km": "595",
-    "consumption": "14.8 kWh/100km",
-    "drive": "Heckantrieb (RWD)",
-    "hitch": "Nein"
-  },
-  "281f76407818d69b": {
-    "id": "281f76407818d69b",
-    "model_name": "Ford Capri",
-    "model_url": "https://www.finn.com/de-DE/models/ford/capri",
-    "trim": "Dualmotor Extended R. 77kWh AWD Select",
-    "fuel": "Elektro",
-    "power": "250 kW (340 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 08.10.2026 - 15.10.2026",
-    "price": "684",
-    "price_basis": "netto",
-    "range_km": "552",
-    "consumption": "16.3 kWh/100km",
-    "drive": "Allradantrieb (AWD)",
-    "hitch": "Nein"
-  },
   "89d27db3bdaaf059": {
     "id": "89d27db3bdaaf059",
     "model_name": "Mazda CX-6e",
@@ -461,6 +429,22 @@
     "range_km": "514",
     "consumption": "17.5 kWh/100km",
     "drive": "Allradantrieb (AWD)",
+    "hitch": "Nein"
+  },
+  "995c4b7121fc3c58": {
+    "id": "995c4b7121fc3c58",
+    "model_name": "Ford Capri",
+    "model_url": "https://www.finn.com/de-DE/models/ford/capri",
+    "trim": "Extended Range 79kWh RWD Premium",
+    "fuel": "Elektro",
+    "power": "210 kW (286 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 08.10.2026 - 15.10.2026",
+    "price": "675",
+    "price_basis": "netto",
+    "range_km": "595",
+    "consumption": "14.8 kWh/100km",
+    "drive": "Heckantrieb (RWD)",
     "hitch": "Nein"
   },
   "83ac10eda0ab0650": {
