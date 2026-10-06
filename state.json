@@ -31,6 +31,38 @@
     "drive": null,
     "hitch": "Nein"
   },
+  "65ce36093b5018d0": {
+    "id": "65ce36093b5018d0",
+    "model_name": "Citroen ë-C3 Aircross",
+    "model_url": "https://www.finn.com/de-DE/models/citroen/e-c3-aircross",
+    "trim": "Elektromotor 113 Extended-Range PLUS",
+    "fuel": "Elektro",
+    "power": "83 kW (113 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 03.11.2026 - 05.01.2027",
+    "price": "448",
+    "price_basis": "netto",
+    "range_km": "386",
+    "consumption": "16.6 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+  },
+  "b86f8aa5c0994b7d": {
+    "id": "b86f8aa5c0994b7d",
+    "model_name": "Citroen ë-C3 Aircross",
+    "model_url": "https://www.finn.com/de-DE/models/citroen/e-c3-aircross",
+    "trim": "Elektromotor 113 Extended-Range MAX",
+    "fuel": "Elektro",
+    "power": "83 kW (113 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 03.11.2026 - 05.01.2027",
+    "price": "474",
+    "price_basis": "netto",
+    "range_km": "384",
+    "consumption": "16.7 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+  },
   "057149e8f7330589": {
     "id": "057149e8f7330589",
     "model_name": "MG 4 Urban",
@@ -79,22 +111,6 @@
     "drive": null,
     "hitch": "Nein"
   },
-  "b86f8aa5c0994b7d": {
-    "id": "b86f8aa5c0994b7d",
-    "model_name": "Citroen ë-C3 Aircross",
-    "model_url": "https://www.finn.com/de-DE/models/citroen/e-c3-aircross",
-    "trim": "Elektromotor 113 Extended-Range MAX",
-    "fuel": "Elektro",
-    "power": "83 kW (113 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 23.11.2026 - 15.02.2027",
-    "price": "474",
-    "price_basis": "netto",
-    "range_km": "384",
-    "consumption": "16.7 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
   "8d49ad9b642d2725": {
     "id": "8d49ad9b642d2725",
     "model_name": "Opel Frontera",
@@ -103,7 +119,7 @@
     "fuel": "Elektro",
     "power": "83 kW (113 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 16.10.2026 - 30.10.2026",
+    "availability": "Vsl. Übergabe 09.10.2026 - 16.10.2026",
     "price": "540",
     "price_basis": "netto",
     "range_km": "408",
@@ -479,22 +495,6 @@
     "drive": null,
     "hitch": "Nein"
   },
-  "1e1318e3ca7f6969": {
-    "id": "1e1318e3ca7f6969",
-    "model_name": "Skoda Elroq",
-    "model_url": "https://www.finn.com/de-DE/models/skoda/elroq",
-    "trim": "85 Select",
-    "fuel": "Elektro",
-    "power": "210 kW (286 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 09.10.2026 - 16.10.2026",
-    "price": "726",
-    "price_basis": "netto",
-    "range_km": "571",
-    "consumption": "15.2 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
   "b4c77c625ee6b6dd": {
     "id": "b4c77c625ee6b6dd",
     "model_name": "Skoda Elroq",
@@ -526,6 +526,22 @@
     "consumption": "16.7 kWh/100km",
     "drive": null,
     "hitch": "Ja"
+  },
+  "1e1318e3ca7f6969": {
+    "id": "1e1318e3ca7f6969",
+    "model_name": "Skoda Elroq",
+    "model_url": "https://www.finn.com/de-DE/models/skoda/elroq",
+    "trim": "85 Select",
+    "fuel": "Elektro",
+    "power": "210 kW (286 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 09.10.2026 - 16.10.2026",
+    "price": "726",
+    "price_basis": "netto",
+    "range_km": "571",
+    "consumption": "15.2 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
   },
   "fa874f3b23b070b7": {
     "id": "fa874f3b23b070b7",
