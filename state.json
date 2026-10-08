@@ -239,22 +239,6 @@
     "drive": null,
     "hitch": "Nein"
   },
-  "bb6d404865fb11f2": {
-    "id": "bb6d404865fb11f2",
-    "model_name": "Toyota Urban Cruiser",
-    "model_url": "https://www.finn.com/de-DE/models/toyota/urban-cruiser",
-    "trim": "61 kWh Teamplayer",
-    "fuel": "Elektro",
-    "power": "128 kW (174 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 09.11.2026 - 11.01.2027",
-    "price": "499",
-    "price_basis": "netto",
-    "range_km": "426",
-    "consumption": "15.1 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
   "24534d01cac2674b": {
     "id": "24534d01cac2674b",
     "model_name": "BYD Atto 2",
@@ -652,6 +636,38 @@
     "price_basis": "netto",
     "range_km": "534",
     "consumption": "16.3 kWh/100km",
+    "drive": null,
+    "hitch": "Ja"
+  },
+  "82aec73b818a5f80": {
+    "id": "82aec73b818a5f80",
+    "model_name": "Skoda Enyaq Coupé",
+    "model_url": "https://www.finn.com/de-DE/models/skoda/enyaq-coupe",
+    "trim": "85 Sportline",
+    "fuel": "Elektro",
+    "power": "210 kW (286 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 13.10.2026 - 20.10.2026",
+    "price": "835",
+    "price_basis": "netto",
+    "range_km": "570",
+    "consumption": "15.3 kWh/100km",
+    "drive": null,
+    "hitch": "Ja"
+  },
+  "aad2350a0a69ec73": {
+    "id": "aad2350a0a69ec73",
+    "model_name": "Skoda Enyaq Coupé",
+    "model_url": "https://www.finn.com/de-DE/models/skoda/enyaq-coupe",
+    "trim": "Sportline 85",
+    "fuel": "Elektro",
+    "power": "210 kW (286 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 13.10.2026 - 20.10.2026",
+    "price": "852",
+    "price_basis": "netto",
+    "range_km": "570",
+    "consumption": "15.3 kWh/100km",
     "drive": null,
     "hitch": "Ja"
   }
