@@ -1,7 +1,7 @@
 {
  "version": 2,
  "start": "2026-09-14",
- "last_update": "2026-10-10T18:03:01+00:00",
+ "last_update": "2026-10-11T06:03:10+00:00",
  "cars": {
   "0ca2e5e5ec5222f9": {
    "meta": {
@@ -973,7 +973,7 @@
    "present": true,
    "price": 508,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 09.11.2026 - 16.11.2026",
+   "avail": "Vsl. Übergabe 10.11.2026 - 17.11.2026",
    "events": [
     {
      "t": "2026-09-14T06:03:16+00:00",
@@ -1238,6 +1238,12 @@
      "e": "verf",
      "p": 508,
      "a": "Vsl. Übergabe 09.11.2026 - 16.11.2026"
+    },
+    {
+     "t": "2026-10-11T06:03:10+00:00",
+     "e": "verf",
+     "p": 508,
+     "a": "Vsl. Übergabe 10.11.2026 - 17.11.2026"
     }
    ]
   },
@@ -2492,7 +2498,7 @@
    "present": true,
    "price": 593,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 19.10.2026 - 02.11.2026",
+   "avail": "Vsl. Übergabe 15.10.2026 - 22.10.2026",
    "events": [
     {
      "t": "2026-09-14T06:03:16+00:00",
@@ -2733,6 +2739,12 @@
      "e": "verf",
      "p": 593,
      "a": "Vsl. Übergabe 19.10.2026 - 02.11.2026"
+    },
+    {
+     "t": "2026-10-11T06:03:10+00:00",
+     "e": "verf",
+     "p": 593,
+     "a": "Vsl. Übergabe 15.10.2026 - 22.10.2026"
     }
    ]
   },
@@ -10876,6 +10888,34 @@
      "e": "weg",
      "p": 433,
      "a": null
+    }
+   ]
+  },
+  "d0b599e513f0df50": {
+   "meta": {
+    "id": "d0b599e513f0df50",
+    "model_name": "Ford Explorer",
+    "model_url": "https://www.finn.com/de-DE/models/ford/explorer",
+    "trim": "Dualmotor Extended R. 77kWh AWD Select",
+    "fuel": "Elektro",
+    "power": "250 kW (340 PS)",
+    "transmission": "Automatik",
+    "price_basis": "netto",
+    "range_km": "526",
+    "consumption": "17.1 kWh/100km",
+    "drive": "Allradantrieb (AWD)",
+    "hitch": "Nein"
+   },
+   "present": true,
+   "price": 734,
+   "basis": "netto",
+   "avail": "Vsl. Übergabe 16.11.2026 - 18.01.2027",
+   "events": [
+    {
+     "t": "2026-10-11T06:03:10+00:00",
+     "e": "neu",
+     "p": 734,
+     "a": "Vsl. Übergabe 16.11.2026 - 18.01.2027"
     }
    ]
   }
