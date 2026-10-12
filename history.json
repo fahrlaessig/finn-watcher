@@ -1,7 +1,7 @@
 {
  "version": 2,
  "start": "2026-09-14",
- "last_update": "2026-10-12T06:03:12+00:00",
+ "last_update": "2026-10-12T07:03:08+00:00",
  "cars": {
   "0ca2e5e5ec5222f9": {
    "meta": {
@@ -7764,7 +7764,7 @@
     "drive": "Allradantrieb (AWD)",
     "hitch": "Nein"
    },
-   "present": true,
+   "present": false,
    "price": 726,
    "basis": "netto",
    "avail": "Vsl. Übergabe 15.10.2026 - 22.10.2026",
@@ -7954,6 +7954,12 @@
      "e": "wieder",
      "p": 726,
      "a": "Vsl. Übergabe 15.10.2026 - 22.10.2026"
+    },
+    {
+     "t": "2026-10-12T07:03:08+00:00",
+     "e": "weg",
+     "p": 726,
+     "a": null
     }
    ]
   },
@@ -8811,7 +8817,7 @@
    "present": true,
    "price": 433,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 02.11.2026 - 11.01.2027",
+   "avail": "Vsl. Übergabe 20.10.2026 - 03.11.2026",
    "events": [
     {
      "t": "2026-09-22T17:03:17+00:00",
@@ -9034,6 +9040,12 @@
      "e": "preis",
      "p": 433,
      "a": "Vsl. Übergabe 02.11.2026 - 11.01.2027"
+    },
+    {
+     "t": "2026-10-12T07:03:08+00:00",
+     "e": "verf",
+     "p": 433,
+     "a": "Vsl. Übergabe 20.10.2026 - 03.11.2026"
     }
    ]
   },
