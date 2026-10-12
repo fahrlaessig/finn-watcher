@@ -1,7 +1,7 @@
 {
  "version": 2,
  "start": "2026-09-14",
- "last_update": "2026-10-12T16:03:20+00:00",
+ "last_update": "2026-10-12T17:03:11+00:00",
  "cars": {
   "0ca2e5e5ec5222f9": {
    "meta": {
@@ -8859,7 +8859,7 @@
    "present": true,
    "price": 433,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 20.10.2026 - 03.11.2026",
+   "avail": "Vsl. Übergabe 16.10.2026 - 23.10.2026",
    "events": [
     {
      "t": "2026-09-22T17:03:17+00:00",
@@ -9106,6 +9106,12 @@
      "e": "verf",
      "p": 433,
      "a": "Vsl. Übergabe 20.10.2026 - 03.11.2026"
+    },
+    {
+     "t": "2026-10-12T17:03:11+00:00",
+     "e": "verf",
+     "p": 433,
+     "a": "Vsl. Übergabe 16.10.2026 - 23.10.2026"
     }
    ]
   },
@@ -11246,6 +11252,34 @@
      "e": "neu",
      "p": 734,
      "a": "Vsl. Übergabe 16.11.2026 - 18.01.2027"
+    }
+   ]
+  },
+  "ef9508b7510d93b7": {
+   "meta": {
+    "id": "ef9508b7510d93b7",
+    "model_name": "MG 4",
+    "model_url": "https://www.finn.com/de-DE/models/mg/4",
+    "trim": "EV 64 kWh Luxury",
+    "fuel": "Elektro",
+    "power": "150 kW (204 PS)",
+    "transmission": "Automatik",
+    "price_basis": "netto",
+    "range_km": "450",
+    "consumption": "16.4 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+   },
+   "present": true,
+   "price": 730,
+   "basis": "netto",
+   "avail": "Vsl. Übergabe 30.11.2026 - 14.12.2026",
+   "events": [
+    {
+     "t": "2026-10-12T17:03:11+00:00",
+     "e": "neu",
+     "p": 730,
+     "a": "Vsl. Übergabe 30.11.2026 - 14.12.2026"
     }
    ]
   }
