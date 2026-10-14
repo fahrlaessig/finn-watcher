@@ -607,22 +607,6 @@
     "drive": null,
     "hitch": "Ja"
   },
-  "dd1416a878a786a9": {
-    "id": "dd1416a878a786a9",
-    "model_name": "Skoda Enyaq",
-    "model_url": "https://www.finn.com/de-DE/models/skoda/enyaq",
-    "trim": "Sportline 85",
-    "fuel": "Elektro",
-    "power": "210 kW (286 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 30.10.2026 - 13.11.2026",
-    "price": "861",
-    "price_basis": "netto",
-    "range_km": "566",
-    "consumption": "15.6 kWh/100km",
-    "drive": null,
-    "hitch": "Ja"
-  },
   "5e380babc2929b75": {
     "id": "5e380babc2929b75",
     "model_name": "Skoda Enyaq",
@@ -652,6 +636,22 @@
     "price_basis": "netto",
     "range_km": "534",
     "consumption": "16.3 kWh/100km",
+    "drive": null,
+    "hitch": "Ja"
+  },
+  "dd1416a878a786a9": {
+    "id": "dd1416a878a786a9",
+    "model_name": "Skoda Enyaq",
+    "model_url": "https://www.finn.com/de-DE/models/skoda/enyaq",
+    "trim": "Sportline 85",
+    "fuel": "Elektro",
+    "power": "210 kW (286 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 30.10.2026 - 13.11.2026",
+    "price": "827",
+    "price_basis": "netto",
+    "range_km": "566",
+    "consumption": "15.6 kWh/100km",
     "drive": null,
     "hitch": "Ja"
   }
