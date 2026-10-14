@@ -1,7 +1,7 @@
 {
  "version": 2,
  "start": "2026-09-14",
- "last_update": "2026-10-14T08:03:23+00:00",
+ "last_update": "2026-10-14T09:03:31+00:00",
  "cars": {
   "0ca2e5e5ec5222f9": {
    "meta": {
@@ -3250,7 +3250,7 @@
     "drive": null,
     "hitch": "Nein"
    },
-   "present": true,
+   "present": false,
    "price": 540,
    "basis": "netto",
    "avail": "Vsl. Übergabe 04.11.2026 - 02.12.2026",
@@ -3512,6 +3512,12 @@
      "e": "verf",
      "p": 540,
      "a": "Vsl. Übergabe 04.11.2026 - 02.12.2026"
+    },
+    {
+     "t": "2026-10-14T09:03:31+00:00",
+     "e": "weg",
+     "p": 540,
+     "a": null
     }
    ]
   },
@@ -3530,7 +3536,7 @@
     "drive": null,
     "hitch": "Nein"
    },
-   "present": true,
+   "present": false,
    "price": 625,
    "basis": "netto",
    "avail": "Vsl. Übergabe 30.10.2026 - 13.11.2026",
@@ -3744,6 +3750,12 @@
      "e": "verf",
      "p": 625,
      "a": "Vsl. Übergabe 30.10.2026 - 13.11.2026"
+    },
+    {
+     "t": "2026-10-14T09:03:31+00:00",
+     "e": "weg",
+     "p": 625,
+     "a": null
     }
    ]
   },
@@ -3762,7 +3774,7 @@
     "drive": null,
     "hitch": "Nein"
    },
-   "present": true,
+   "present": false,
    "price": 642,
    "basis": "netto",
    "avail": "Vsl. Übergabe 30.10.2026 - 13.11.2026",
@@ -3958,6 +3970,12 @@
      "e": "verf",
      "p": 642,
      "a": "Vsl. Übergabe 30.10.2026 - 13.11.2026"
+    },
+    {
+     "t": "2026-10-14T09:03:31+00:00",
+     "e": "weg",
+     "p": 642,
+     "a": null
     }
    ]
   },
@@ -7603,7 +7621,7 @@
    "present": true,
    "price": 720,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 20.10.2026 - 27.10.2026",
+   "avail": "Vsl. Übergabe 22.10.2026 - 05.11.2026",
    "events": [
     {
      "t": "2026-09-14T06:03:16+00:00",
@@ -7916,6 +7934,12 @@
      "e": "verf",
      "p": 720,
      "a": "Vsl. Übergabe 20.10.2026 - 27.10.2026"
+    },
+    {
+     "t": "2026-10-14T09:03:31+00:00",
+     "e": "verf",
+     "p": 720,
+     "a": "Vsl. Übergabe 22.10.2026 - 05.11.2026"
     }
    ]
   },
@@ -7934,7 +7958,7 @@
     "drive": "Heckantrieb (RWD)",
     "hitch": "Nein"
    },
-   "present": true,
+   "present": false,
    "price": 717,
    "basis": "netto",
    "avail": "Vsl. Übergabe 30.10.2026 - 13.11.2026",
@@ -8160,6 +8184,12 @@
      "e": "verf",
      "p": 717,
      "a": "Vsl. Übergabe 30.10.2026 - 13.11.2026"
+    },
+    {
+     "t": "2026-10-14T09:03:31+00:00",
+     "e": "weg",
+     "p": 717,
+     "a": null
     }
    ]
   },
@@ -9062,7 +9092,7 @@
     "drive": null,
     "hitch": "Nein"
    },
-   "present": true,
+   "present": false,
    "price": 768,
    "basis": "netto",
    "avail": "Vsl. Übergabe 30.10.2026 - 13.11.2026",
@@ -9240,6 +9270,12 @@
      "e": "verf",
      "p": 768,
      "a": "Vsl. Übergabe 30.10.2026 - 13.11.2026"
+    },
+    {
+     "t": "2026-10-14T09:03:31+00:00",
+     "e": "weg",
+     "p": 768,
+     "a": null
     }
    ]
   },
@@ -9261,7 +9297,7 @@
    "present": true,
    "price": 433,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 16.11.2026 - 14.12.2026",
+   "avail": "Vsl. Übergabe 21.10.2026 - 28.10.2026",
    "events": [
     {
      "t": "2026-09-22T17:03:17+00:00",
@@ -9526,6 +9562,12 @@
      "e": "verf",
      "p": 433,
      "a": "Vsl. Übergabe 16.11.2026 - 14.12.2026"
+    },
+    {
+     "t": "2026-10-14T09:03:31+00:00",
+     "e": "verf",
+     "p": 433,
+     "a": "Vsl. Übergabe 21.10.2026 - 28.10.2026"
     }
    ]
   },
@@ -9608,10 +9650,10 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": false,
+   "present": true,
    "price": 835,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 16.10.2026 - 23.10.2026",
+   "avail": "Vsl. Übergabe 19.10.2026 - 26.10.2026",
    "events": [
     {
      "t": "2026-09-25T15:03:35+00:00",
@@ -9750,6 +9792,12 @@
      "e": "weg",
      "p": 835,
      "a": null
+    },
+    {
+     "t": "2026-10-14T09:03:31+00:00",
+     "e": "wieder",
+     "p": 835,
+     "a": "Vsl. Übergabe 19.10.2026 - 26.10.2026"
     }
    ]
   },
@@ -10959,7 +11007,7 @@
     "drive": "Heckantrieb (RWD)",
     "hitch": "Nein"
    },
-   "present": true,
+   "present": false,
    "price": 616,
    "basis": "netto",
    "avail": "Vsl. Übergabe 21.12.2026 - 01.03.2027",
@@ -11059,6 +11107,12 @@
      "e": "preis",
      "p": 616,
      "a": "Vsl. Übergabe 21.12.2026 - 01.03.2027"
+    },
+    {
+     "t": "2026-10-14T09:03:31+00:00",
+     "e": "weg",
+     "p": 616,
+     "a": null
     }
    ]
   },
@@ -11077,10 +11131,10 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": false,
+   "present": true,
    "price": 852,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 29.10.2026 - 12.11.2026",
+   "avail": "Vsl. Übergabe 30.10.2026 - 13.11.2026",
    "events": [
     {
      "t": "2026-09-29T08:00:05+00:00",
@@ -11195,6 +11249,12 @@
      "e": "weg",
      "p": 852,
      "a": null
+    },
+    {
+     "t": "2026-10-14T09:03:31+00:00",
+     "e": "wieder",
+     "p": 852,
+     "a": "Vsl. Übergabe 30.10.2026 - 13.11.2026"
     }
    ]
   },
@@ -11213,10 +11273,10 @@
     "drive": "Allradantrieb (AWD)",
     "hitch": "Nein"
    },
-   "present": false,
-   "price": 761,
+   "present": true,
+   "price": 685,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 06.10.2026 - 13.10.2026",
+   "avail": "Vsl. Übergabe 19.10.2026 - 26.10.2026",
    "events": [
     {
      "t": "2026-09-29T08:00:05+00:00",
@@ -11241,6 +11301,12 @@
      "e": "weg",
      "p": 761,
      "a": null
+    },
+    {
+     "t": "2026-10-14T09:03:31+00:00",
+     "e": "wieder",
+     "p": 685,
+     "a": "Vsl. Übergabe 19.10.2026 - 26.10.2026"
     }
    ]
   },
@@ -11259,10 +11325,10 @@
     "drive": null,
     "hitch": "Nein"
    },
-   "present": false,
-   "price": 603,
+   "present": true,
+   "price": 645,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 09.11.2026 - 07.12.2026",
+   "avail": "Vsl. Übergabe 18.11.2026 - 16.12.2026",
    "events": [
     {
      "t": "2026-09-29T08:00:05+00:00",
@@ -11299,6 +11365,12 @@
      "e": "weg",
      "p": 603,
      "a": null
+    },
+    {
+     "t": "2026-10-14T09:03:31+00:00",
+     "e": "wieder",
+     "p": 645,
+     "a": "Vsl. Übergabe 18.11.2026 - 16.12.2026"
     }
    ]
   },
@@ -11317,8 +11389,8 @@
     "drive": null,
     "hitch": "Nein"
    },
-   "present": false,
-   "price": 769,
+   "present": true,
+   "price": 853,
    "basis": "netto",
    "avail": "Vsl. Übergabe 09.11.2026 - 11.01.2027",
    "events": [
@@ -11357,6 +11429,12 @@
      "e": "weg",
      "p": 769,
      "a": null
+    },
+    {
+     "t": "2026-10-14T09:03:31+00:00",
+     "e": "wieder",
+     "p": 853,
+     "a": "Vsl. Übergabe 09.11.2026 - 11.01.2027"
     }
    ]
   },
@@ -11375,10 +11453,10 @@
     "drive": null,
     "hitch": "Nein"
    },
-   "present": false,
-   "price": 895,
+   "present": true,
+   "price": 987,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 26.10.2026 - 28.12.2026",
+   "avail": "Vsl. Übergabe 10.11.2026 - 12.01.2027",
    "events": [
     {
      "t": "2026-09-29T08:00:05+00:00",
@@ -11415,6 +11493,12 @@
      "e": "weg",
      "p": 895,
      "a": null
+    },
+    {
+     "t": "2026-10-14T09:03:31+00:00",
+     "e": "wieder",
+     "p": 987,
+     "a": "Vsl. Übergabe 10.11.2026 - 12.01.2027"
     }
    ]
   },
@@ -11851,6 +11935,34 @@
      "e": "weg",
      "p": 730,
      "a": null
+    }
+   ]
+  },
+  "ce2b457efd4f851c": {
+   "meta": {
+    "id": "ce2b457efd4f851c",
+    "model_name": "Mercedes-Benz CLA Elektro",
+    "model_url": "https://www.finn.com/de-DE/models/mercedes-benz/cla-elektro",
+    "trim": "CLA 45 4MATIC+ elektrisch AMG",
+    "fuel": "Elektro",
+    "power": "500 kW (680 PS)",
+    "transmission": "Automatik",
+    "price_basis": "netto",
+    "range_km": "655",
+    "consumption": "16.9 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+   },
+   "present": true,
+   "price": 1323,
+   "basis": "netto",
+   "avail": "Vsl. Übergabe 19.02.2027 - 30.04.2027",
+   "events": [
+    {
+     "t": "2026-10-14T09:03:31+00:00",
+     "e": "neu",
+     "p": 1323,
+     "a": "Vsl. Übergabe 19.02.2027 - 30.04.2027"
     }
    ]
   }
