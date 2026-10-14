@@ -63,22 +63,6 @@
     "drive": null,
     "hitch": "Nein"
   },
-  "b86f8aa5c0994b7d": {
-    "id": "b86f8aa5c0994b7d",
-    "model_name": "Citroen ë-C3 Aircross",
-    "model_url": "https://www.finn.com/de-DE/models/citroen/e-c3-aircross",
-    "trim": "Elektromotor 113 Extended-Range MAX",
-    "fuel": "Elektro",
-    "power": "83 kW (113 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 20.11.2026 - 22.01.2027",
-    "price": "499",
-    "price_basis": "netto",
-    "range_km": "384",
-    "consumption": "16.7 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
   "65ce36093b5018d0": {
     "id": "65ce36093b5018d0",
     "model_name": "Citroen ë-C3 Aircross",
@@ -92,6 +76,22 @@
     "price_basis": "netto",
     "range_km": "386",
     "consumption": "16.6 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+  },
+  "b86f8aa5c0994b7d": {
+    "id": "b86f8aa5c0994b7d",
+    "model_name": "Citroen ë-C3 Aircross",
+    "model_url": "https://www.finn.com/de-DE/models/citroen/e-c3-aircross",
+    "trim": "Elektromotor 113 Extended-Range MAX",
+    "fuel": "Elektro",
+    "power": "83 kW (113 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 20.11.2026 - 22.01.2027",
+    "price": "499",
+    "price_basis": "netto",
+    "range_km": "384",
+    "consumption": "16.7 kWh/100km",
     "drive": null,
     "hitch": "Nein"
   },
