@@ -1,7 +1,7 @@
 {
  "version": 2,
  "start": "2026-09-14",
- "last_update": "2026-10-14T15:03:20+00:00",
+ "last_update": "2026-10-14T16:03:13+00:00",
  "cars": {
   "0ca2e5e5ec5222f9": {
    "meta": {
@@ -3000,7 +3000,7 @@
    "present": true,
    "price": 534,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 22.10.2026 - 05.11.2026",
+   "avail": "Vsl. Übergabe 21.10.2026 - 28.10.2026",
    "events": [
     {
      "t": "2026-09-14T06:03:16+00:00",
@@ -3199,6 +3199,12 @@
      "e": "verf",
      "p": 534,
      "a": "Vsl. Übergabe 22.10.2026 - 05.11.2026"
+    },
+    {
+     "t": "2026-10-14T16:03:13+00:00",
+     "e": "verf",
+     "p": 534,
+     "a": "Vsl. Übergabe 21.10.2026 - 28.10.2026"
     }
    ]
   },
@@ -4244,7 +4250,7 @@
     "drive": null,
     "hitch": "Nein"
    },
-   "present": true,
+   "present": false,
    "price": 552,
    "basis": "netto",
    "avail": "Vsl. Übergabe 04.11.2026 - 02.12.2026",
@@ -4368,6 +4374,12 @@
      "e": "wieder",
      "p": 552,
      "a": "Vsl. Übergabe 04.11.2026 - 02.12.2026"
+    },
+    {
+     "t": "2026-10-14T16:03:13+00:00",
+     "e": "weg",
+     "p": 552,
+     "a": null
     }
    ]
   },
@@ -9770,7 +9782,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": false,
+   "present": true,
    "price": 835,
    "basis": "netto",
    "avail": "Vsl. Übergabe 19.10.2026 - 26.10.2026",
@@ -9924,6 +9936,12 @@
      "e": "weg",
      "p": 835,
      "a": null
+    },
+    {
+     "t": "2026-10-14T16:03:13+00:00",
+     "e": "wieder",
+     "p": 835,
+     "a": "Vsl. Übergabe 19.10.2026 - 26.10.2026"
     }
    ]
   },
@@ -11275,7 +11293,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": false,
+   "present": true,
    "price": 852,
    "basis": "netto",
    "avail": "Vsl. Übergabe 30.10.2026 - 13.11.2026",
@@ -11405,6 +11423,12 @@
      "e": "weg",
      "p": 852,
      "a": null
+    },
+    {
+     "t": "2026-10-14T16:03:13+00:00",
+     "e": "wieder",
+     "p": 852,
+     "a": "Vsl. Übergabe 30.10.2026 - 13.11.2026"
     }
    ]
   },
