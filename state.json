@@ -447,22 +447,6 @@
     "drive": null,
     "hitch": "Nein"
   },
-  "995c4b7121fc3c58": {
-    "id": "995c4b7121fc3c58",
-    "model_name": "Ford Capri",
-    "model_url": "https://www.finn.com/de-DE/models/ford/capri",
-    "trim": "Extended Range 79kWh RWD Premium",
-    "fuel": "Elektro",
-    "power": "210 kW (286 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 30.10.2026 - 13.11.2026",
-    "price": "759",
-    "price_basis": "netto",
-    "range_km": "595",
-    "consumption": "14.8 kWh/100km",
-    "drive": "Heckantrieb (RWD)",
-    "hitch": "Nein"
-  },
   "1e1318e3ca7f6969": {
     "id": "1e1318e3ca7f6969",
     "model_name": "Skoda Elroq",
@@ -668,6 +652,22 @@
     "price_basis": "netto",
     "range_km": "534",
     "consumption": "16.3 kWh/100km",
+    "drive": null,
+    "hitch": "Ja"
+  },
+  "0729b662a73387be": {
+    "id": "0729b662a73387be",
+    "model_name": "BMW iX1",
+    "model_url": "https://www.finn.com/de-DE/models/bmw/ix1",
+    "trim": "eDrive20 M Sportpaket Pro",
+    "fuel": "Elektro",
+    "power": "150 kW (204 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 28.01.2027 - 22.04.2027",
+    "price": "999",
+    "price_basis": "netto",
+    "range_km": "479",
+    "consumption": "15.3 kWh/100km",
     "drive": null,
     "hitch": "Ja"
   }
