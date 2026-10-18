@@ -31,22 +31,6 @@
     "drive": null,
     "hitch": "Nein"
   },
-  "057149e8f7330589": {
-    "id": "057149e8f7330589",
-    "model_name": "MG 4 Urban",
-    "model_url": "https://www.finn.com/de-DE/models/mg/4-urban",
-    "trim": "54kWh Premium",
-    "fuel": "Elektro",
-    "power": "118 kW (160 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 16.11.2026 - 14.12.2026",
-    "price": "425",
-    "price_basis": "netto",
-    "range_km": "404",
-    "consumption": "15.5 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
   "2c12e189d71d0450": {
     "id": "2c12e189d71d0450",
     "model_name": "Hyundai Inster",
@@ -79,19 +63,19 @@
     "drive": null,
     "hitch": "Nein"
   },
-  "b86f8aa5c0994b7d": {
-    "id": "b86f8aa5c0994b7d",
-    "model_name": "Citroen ë-C3 Aircross",
-    "model_url": "https://www.finn.com/de-DE/models/citroen/e-c3-aircross",
-    "trim": "Elektromotor 113 Extended-Range MAX",
+  "057149e8f7330589": {
+    "id": "057149e8f7330589",
+    "model_name": "MG 4 Urban",
+    "model_url": "https://www.finn.com/de-DE/models/mg/4-urban",
+    "trim": "54kWh Premium",
     "fuel": "Elektro",
-    "power": "83 kW (113 PS)",
+    "power": "118 kW (160 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 20.11.2026 - 22.01.2027",
-    "price": "499",
+    "availability": "Vsl. Übergabe 16.11.2026 - 14.12.2026",
+    "price": "425",
     "price_basis": "netto",
-    "range_km": "384",
-    "consumption": "16.7 kWh/100km",
+    "range_km": "404",
+    "consumption": "15.5 kWh/100km",
     "drive": null,
     "hitch": "Nein"
   },
@@ -108,6 +92,22 @@
     "price_basis": "netto",
     "range_km": "386",
     "consumption": "16.6 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+  },
+  "b86f8aa5c0994b7d": {
+    "id": "b86f8aa5c0994b7d",
+    "model_name": "Citroen ë-C3 Aircross",
+    "model_url": "https://www.finn.com/de-DE/models/citroen/e-c3-aircross",
+    "trim": "Elektromotor 113 Extended-Range MAX",
+    "fuel": "Elektro",
+    "power": "83 kW (113 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 20.11.2026 - 22.01.2027",
+    "price": "499",
+    "price_basis": "netto",
+    "range_km": "384",
+    "consumption": "16.7 kWh/100km",
     "drive": null,
     "hitch": "Nein"
   },
@@ -477,7 +477,7 @@
     "range_km": "571",
     "consumption": "15.2 kWh/100km",
     "drive": null,
-    "hitch": "Ja"
+    "hitch": "Nein"
   },
   "b4c77c625ee6b6dd": {
     "id": "b4c77c625ee6b6dd",
@@ -620,6 +620,22 @@
     "price_basis": "netto",
     "range_km": "570",
     "consumption": "15.7 kWh/100km",
+    "drive": null,
+    "hitch": "Ja"
+  },
+  "dd1416a878a786a9": {
+    "id": "dd1416a878a786a9",
+    "model_name": "Skoda Enyaq",
+    "model_url": "https://www.finn.com/de-DE/models/skoda/enyaq",
+    "trim": "Sportline 85",
+    "fuel": "Elektro",
+    "power": "210 kW (286 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 21.10.2026 - 28.10.2026",
+    "price": "911",
+    "price_basis": "netto",
+    "range_km": "566",
+    "consumption": "15.6 kWh/100km",
     "drive": null,
     "hitch": "Ja"
   },
