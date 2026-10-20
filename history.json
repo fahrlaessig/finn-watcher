@@ -1,7 +1,7 @@
 {
  "version": 2,
  "start": "2026-09-14",
- "last_update": "2026-10-20T12:03:18+00:00",
+ "last_update": "2026-10-20T13:03:16+00:00",
  "cars": {
   "0ca2e5e5ec5222f9": {
    "meta": {
@@ -5394,15 +5394,15 @@
     "power": "168 kW (228 PS)",
     "transmission": "Automatik",
     "price_basis": "netto",
-    "range_km": "570",
-    "consumption": "17 kWh/100km",
+    "range_km": "546",
+    "consumption": "16.8 kWh/100km",
     "drive": null,
     "hitch": "Nein"
    },
    "present": true,
-   "price": 821,
+   "price": 829,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 05.11.2026 - 19.11.2026",
+   "avail": "Vsl. Übergabe 24.11.2026 - 22.12.2026",
    "events": [
     {
      "t": "2026-09-14T06:03:16+00:00",
@@ -5631,6 +5631,12 @@
      "e": "verf",
      "p": 821,
      "a": "Vsl. Übergabe 05.11.2026 - 19.11.2026"
+    },
+    {
+     "t": "2026-10-20T13:03:16+00:00",
+     "e": "preis",
+     "p": 829,
+     "a": "Vsl. Übergabe 24.11.2026 - 22.12.2026"
     }
    ]
   },
@@ -6091,7 +6097,7 @@
    "present": true,
    "price": 818,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 05.11.2026 - 19.11.2026",
+   "avail": "Vsl. Übergabe 01.12.2026 - 26.01.2027",
    "events": [
     {
      "t": "2026-09-14T06:03:16+00:00",
@@ -6452,6 +6458,12 @@
      "e": "verf",
      "p": 818,
      "a": "Vsl. Übergabe 05.11.2026 - 19.11.2026"
+    },
+    {
+     "t": "2026-10-20T13:03:16+00:00",
+     "e": "verf",
+     "p": 818,
+     "a": "Vsl. Übergabe 01.12.2026 - 26.01.2027"
     }
    ]
   },
