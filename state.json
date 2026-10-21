@@ -31,22 +31,6 @@
     "drive": null,
     "hitch": "Nein"
   },
-  "057149e8f7330589": {
-    "id": "057149e8f7330589",
-    "model_name": "MG 4 Urban",
-    "model_url": "https://www.finn.com/de-DE/models/mg/4-urban",
-    "trim": "54kWh Premium",
-    "fuel": "Elektro",
-    "power": "118 kW (160 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 16.11.2026 - 14.12.2026",
-    "price": "425",
-    "price_basis": "netto",
-    "range_km": "404",
-    "consumption": "15.5 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
   "2c12e189d71d0450": {
     "id": "2c12e189d71d0450",
     "model_name": "Hyundai Inster",
@@ -76,6 +60,22 @@
     "price_basis": "netto",
     "range_km": "360",
     "consumption": "15.1 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+  },
+  "057149e8f7330589": {
+    "id": "057149e8f7330589",
+    "model_name": "MG 4 Urban",
+    "model_url": "https://www.finn.com/de-DE/models/mg/4-urban",
+    "trim": "54kWh Premium",
+    "fuel": "Elektro",
+    "power": "118 kW (160 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 16.11.2026 - 14.12.2026",
+    "price": "425",
+    "price_basis": "netto",
+    "range_km": "404",
+    "consumption": "15.5 kWh/100km",
     "drive": null,
     "hitch": "Nein"
   },
