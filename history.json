@@ -1,7 +1,7 @@
 {
  "version": 2,
  "start": "2026-09-14",
- "last_update": "2026-10-22T09:03:12+00:00",
+ "last_update": "2026-10-22T10:05:01+00:00",
  "cars": {
   "0ca2e5e5ec5222f9": {
    "meta": {
@@ -1839,7 +1839,7 @@
    "present": true,
    "price": 417,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 03.12.2026 - 04.02.2027",
+   "avail": "Vsl. Übergabe 08.12.2026 - 09.02.2027",
    "events": [
     {
      "t": "2026-09-14T06:03:16+00:00",
@@ -2104,6 +2104,12 @@
      "e": "verf",
      "p": 417,
      "a": "Vsl. Übergabe 03.12.2026 - 04.02.2027"
+    },
+    {
+     "t": "2026-10-22T10:05:01+00:00",
+     "e": "verf",
+     "p": 417,
+     "a": "Vsl. Übergabe 08.12.2026 - 09.02.2027"
     }
    ]
   },
@@ -9365,7 +9371,7 @@
    "present": true,
    "price": 759,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 04.11.2026 - 18.11.2026",
+   "avail": "Vsl. Übergabe 09.11.2026 - 23.11.2026",
    "events": [
     {
      "t": "2026-09-14T06:03:16+00:00",
@@ -9630,6 +9636,12 @@
      "e": "verf",
      "p": 759,
      "a": "Vsl. Übergabe 04.11.2026 - 18.11.2026"
+    },
+    {
+     "t": "2026-10-22T10:05:01+00:00",
+     "e": "verf",
+     "p": 759,
+     "a": "Vsl. Übergabe 09.11.2026 - 23.11.2026"
     }
    ]
   },
@@ -14391,6 +14403,34 @@
      "e": "weg",
      "p": 684,
      "a": null
+    }
+   ]
+  },
+  "8568463de58cc672": {
+   "meta": {
+    "id": "8568463de58cc672",
+    "model_name": "Kia EV6",
+    "model_url": "https://www.finn.com/de-DE/models/kia/ev6",
+    "trim": "84 kWh 239 kW Allradantrieb Earth",
+    "fuel": "Elektro",
+    "power": "239 kW (325 PS)",
+    "transmission": "Automatik",
+    "price_basis": "netto",
+    "range_km": "546",
+    "consumption": "17 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+   },
+   "present": true,
+   "price": 776,
+   "basis": "netto",
+   "avail": "Vsl. Übergabe 09.11.2026 - 23.11.2026",
+   "events": [
+    {
+     "t": "2026-10-22T10:05:01+00:00",
+     "e": "neu",
+     "p": 776,
+     "a": "Vsl. Übergabe 09.11.2026 - 23.11.2026"
     }
    ]
   }
