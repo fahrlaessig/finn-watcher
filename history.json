@@ -1,7 +1,7 @@
 {
  "version": 2,
  "start": "2026-09-14",
- "last_update": "2026-10-22T10:05:01+00:00",
+ "last_update": "2026-10-22T11:05:15+00:00",
  "cars": {
   "0ca2e5e5ec5222f9": {
    "meta": {
@@ -2131,7 +2131,7 @@
    "present": true,
    "price": 473,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 27.11.2026 - 05.02.2027",
+   "avail": "Vsl. Übergabe 20.11.2026 - 22.01.2027",
    "events": [
     {
      "t": "2026-09-14T06:03:16+00:00",
@@ -2258,6 +2258,12 @@
      "e": "verf",
      "p": 473,
      "a": "Vsl. Übergabe 27.11.2026 - 05.02.2027"
+    },
+    {
+     "t": "2026-10-22T11:05:15+00:00",
+     "e": "verf",
+     "p": 473,
+     "a": "Vsl. Übergabe 20.11.2026 - 22.01.2027"
     }
    ]
   },
@@ -11559,7 +11565,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": true,
+   "present": false,
    "price": 902,
    "basis": "netto",
    "avail": "Vsl. Übergabe 27.10.2026 - 03.11.2026",
@@ -11809,6 +11815,12 @@
      "e": "verf",
      "p": 902,
      "a": "Vsl. Übergabe 27.10.2026 - 03.11.2026"
+    },
+    {
+     "t": "2026-10-22T11:05:15+00:00",
+     "e": "weg",
+     "p": 902,
+     "a": null
     }
    ]
   },
@@ -11827,7 +11839,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": true,
+   "present": false,
    "price": 894,
    "basis": "netto",
    "avail": "Vsl. Übergabe 27.10.2026 - 03.11.2026",
@@ -12119,6 +12131,12 @@
      "e": "verf",
      "p": 894,
      "a": "Vsl. Übergabe 27.10.2026 - 03.11.2026"
+    },
+    {
+     "t": "2026-10-22T11:05:15+00:00",
+     "e": "weg",
+     "p": 894,
+     "a": null
     }
    ]
   },
@@ -12137,7 +12155,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": true,
+   "present": false,
    "price": 978,
    "basis": "netto",
    "avail": "Vsl. Übergabe 27.10.2026 - 03.11.2026",
@@ -12351,6 +12369,12 @@
      "e": "verf",
      "p": 978,
      "a": "Vsl. Übergabe 27.10.2026 - 03.11.2026"
+    },
+    {
+     "t": "2026-10-22T11:05:15+00:00",
+     "e": "weg",
+     "p": 978,
+     "a": null
     }
    ]
   },
@@ -12369,7 +12393,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": true,
+   "present": false,
    "price": 911,
    "basis": "netto",
    "avail": "Vsl. Übergabe 27.10.2026 - 03.11.2026",
@@ -12625,6 +12649,12 @@
      "e": "verf",
      "p": 911,
      "a": "Vsl. Übergabe 27.10.2026 - 03.11.2026"
+    },
+    {
+     "t": "2026-10-22T11:05:15+00:00",
+     "e": "weg",
+     "p": 911,
+     "a": null
     }
    ]
   },
@@ -12643,7 +12673,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": true,
+   "present": false,
    "price": 1037,
    "basis": "netto",
    "avail": "Vsl. Übergabe 27.10.2026 - 03.11.2026",
@@ -12881,6 +12911,12 @@
      "e": "verf",
      "p": 1037,
      "a": "Vsl. Übergabe 27.10.2026 - 03.11.2026"
+    },
+    {
+     "t": "2026-10-22T11:05:15+00:00",
+     "e": "weg",
+     "p": 1037,
+     "a": null
     }
    ]
   },
@@ -14266,9 +14302,9 @@
     "hitch": "Nein"
    },
    "present": true,
-   "price": 635,
+   "price": 627,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 28.10.2026 - 04.11.2026",
+   "avail": "Vsl. Übergabe 12.11.2026 - 31.12.2026",
    "events": [
     {
      "t": "2026-10-15T13:03:32+00:00",
@@ -14323,6 +14359,12 @@
      "e": "verf",
      "p": 635,
      "a": "Vsl. Übergabe 28.10.2026 - 04.11.2026"
+    },
+    {
+     "t": "2026-10-22T11:05:15+00:00",
+     "e": "preis",
+     "p": 627,
+     "a": "Vsl. Übergabe 12.11.2026 - 31.12.2026"
     }
    ]
   },
@@ -14341,10 +14383,10 @@
     "drive": null,
     "hitch": "Nein"
    },
-   "present": false,
+   "present": true,
    "price": 552,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 30.10.2026 - 13.11.2026",
+   "avail": "Vsl. Übergabe 12.11.2026 - 31.12.2026",
    "events": [
     {
      "t": "2026-10-19T10:03:24+00:00",
@@ -14369,6 +14411,12 @@
      "e": "weg",
      "p": 552,
      "a": null
+    },
+    {
+     "t": "2026-10-22T11:05:15+00:00",
+     "e": "wieder",
+     "p": 552,
+     "a": "Vsl. Übergabe 12.11.2026 - 31.12.2026"
     }
    ]
   },
@@ -14431,6 +14479,34 @@
      "e": "neu",
      "p": 776,
      "a": "Vsl. Übergabe 09.11.2026 - 23.11.2026"
+    }
+   ]
+  },
+  "24ee2e3bcae9b9fd": {
+   "meta": {
+    "id": "24ee2e3bcae9b9fd",
+    "model_name": "MG S6",
+    "model_url": "https://www.finn.com/de-DE/models/mg/s6",
+    "trim": "77 kWh Luxury",
+    "fuel": "Elektro",
+    "power": "180 kW (245 PS)",
+    "transmission": "Automatik",
+    "price_basis": "netto",
+    "range_km": "530",
+    "consumption": "16.6 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+   },
+   "present": true,
+   "price": 484,
+   "basis": "netto",
+   "avail": "Vsl. Übergabe 12.11.2026 - 31.12.2026",
+   "events": [
+    {
+     "t": "2026-10-22T11:05:15+00:00",
+     "e": "neu",
+     "p": 484,
+     "a": "Vsl. Übergabe 12.11.2026 - 31.12.2026"
     }
    ]
   }
