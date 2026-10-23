@@ -1,20 +1,4 @@
 {
-  "e41a21c38e6fef42": {
-    "id": "e41a21c38e6fef42",
-    "model_name": "BYD Dolphin Surf",
-    "model_url": "https://www.finn.com/de-DE/models/byd/dolphin-surf",
-    "trim": "Comfort",
-    "fuel": "Elektro",
-    "power": "115 kW (156 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 29.10.2026 - 05.11.2026",
-    "price": "484",
-    "price_basis": "netto",
-    "range_km": "310",
-    "consumption": "16 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
   "0ca2e5e5ec5222f9": {
     "id": "0ca2e5e5ec5222f9",
     "model_name": "BYD Dolphin Surf",
@@ -31,19 +15,19 @@
     "drive": null,
     "hitch": "Nein"
   },
-  "057149e8f7330589": {
-    "id": "057149e8f7330589",
-    "model_name": "MG 4 Urban",
-    "model_url": "https://www.finn.com/de-DE/models/mg/4-urban",
-    "trim": "54kWh Premium",
+  "e41a21c38e6fef42": {
+    "id": "e41a21c38e6fef42",
+    "model_name": "BYD Dolphin Surf",
+    "model_url": "https://www.finn.com/de-DE/models/byd/dolphin-surf",
+    "trim": "Comfort",
     "fuel": "Elektro",
-    "power": "118 kW (160 PS)",
+    "power": "115 kW (156 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 16.11.2026 - 14.12.2026",
-    "price": "425",
+    "availability": "Vsl. Übergabe 29.10.2026 - 05.11.2026",
+    "price": "484",
     "price_basis": "netto",
-    "range_km": "404",
-    "consumption": "15.5 kWh/100km",
+    "range_km": "310",
+    "consumption": "16 kWh/100km",
     "drive": null,
     "hitch": "Nein"
   },
@@ -76,6 +60,22 @@
     "price_basis": "netto",
     "range_km": "360",
     "consumption": "15.1 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+  },
+  "057149e8f7330589": {
+    "id": "057149e8f7330589",
+    "model_name": "MG 4 Urban",
+    "model_url": "https://www.finn.com/de-DE/models/mg/4-urban",
+    "trim": "54kWh Premium",
+    "fuel": "Elektro",
+    "power": "118 kW (160 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 16.11.2026 - 14.12.2026",
+    "price": "425",
+    "price_basis": "netto",
+    "range_km": "404",
+    "consumption": "15.5 kWh/100km",
     "drive": null,
     "hitch": "Nein"
   },
