@@ -79,22 +79,6 @@
     "drive": null,
     "hitch": "Nein"
   },
-  "65ce36093b5018d0": {
-    "id": "65ce36093b5018d0",
-    "model_name": "Citroen ë-C3 Aircross",
-    "model_url": "https://www.finn.com/de-DE/models/citroen/e-c3-aircross",
-    "trim": "Elektromotor 113 Extended-Range PLUS",
-    "fuel": "Elektro",
-    "power": "83 kW (113 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 04.01.2027 - 15.03.2027",
-    "price": "473",
-    "price_basis": "netto",
-    "range_km": "386",
-    "consumption": "16.6 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
   "b86f8aa5c0994b7d": {
     "id": "b86f8aa5c0994b7d",
     "model_name": "Citroen ë-C3 Aircross",
@@ -108,6 +92,22 @@
     "price_basis": "netto",
     "range_km": "384",
     "consumption": "16.7 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+  },
+  "65ce36093b5018d0": {
+    "id": "65ce36093b5018d0",
+    "model_name": "Citroen ë-C3 Aircross",
+    "model_url": "https://www.finn.com/de-DE/models/citroen/e-c3-aircross",
+    "trim": "Elektromotor 113 Extended-Range PLUS",
+    "fuel": "Elektro",
+    "power": "83 kW (113 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 04.01.2027 - 15.03.2027",
+    "price": "473",
+    "price_basis": "netto",
+    "range_km": "386",
+    "consumption": "16.6 kWh/100km",
     "drive": null,
     "hitch": "Nein"
   },
@@ -511,22 +511,6 @@
     "drive": null,
     "hitch": "Ja"
   },
-  "5e380babc2929b75": {
-    "id": "5e380babc2929b75",
-    "model_name": "Skoda Enyaq",
-    "model_url": "https://www.finn.com/de-DE/models/skoda/enyaq",
-    "trim": "85 Sportline",
-    "fuel": "Elektro",
-    "power": "210 kW (286 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 30.10.2026 - 06.11.2026",
-    "price": "1045",
-    "price_basis": "netto",
-    "range_km": "566",
-    "consumption": "15.6 kWh/100km",
-    "drive": null,
-    "hitch": "Ja"
-  },
   "f15f6c03695ba913": {
     "id": "f15f6c03695ba913",
     "model_name": "Skoda Enyaq",
@@ -540,6 +524,22 @@
     "price_basis": "netto",
     "range_km": "570",
     "consumption": "15.7 kWh/100km",
+    "drive": null,
+    "hitch": "Ja"
+  },
+  "5e380babc2929b75": {
+    "id": "5e380babc2929b75",
+    "model_name": "Skoda Enyaq",
+    "model_url": "https://www.finn.com/de-DE/models/skoda/enyaq",
+    "trim": "85 Sportline",
+    "fuel": "Elektro",
+    "power": "210 kW (286 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 30.10.2026 - 06.11.2026",
+    "price": "1045",
+    "price_basis": "netto",
+    "range_km": "566",
+    "consumption": "15.6 kWh/100km",
     "drive": null,
     "hitch": "Ja"
   },
