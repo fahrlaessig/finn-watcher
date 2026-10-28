@@ -1,7 +1,7 @@
 {
  "version": 2,
  "start": "2026-09-14",
- "last_update": "2026-10-28T12:03:08+00:00",
+ "last_update": "2026-10-28T13:03:43+00:00",
  "cars": {
   "0ca2e5e5ec5222f9": {
    "meta": {
@@ -5653,7 +5653,7 @@
    "present": true,
    "price": 703,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 04.11.2026 - 11.11.2026",
+   "avail": "Vsl. Übergabe 11.11.2026 - 25.11.2026",
    "events": [
     {
      "t": "2026-09-14T06:03:16+00:00",
@@ -5918,6 +5918,12 @@
      "e": "verf",
      "p": 703,
      "a": "Vsl. Übergabe 04.11.2026 - 11.11.2026"
+    },
+    {
+     "t": "2026-10-28T13:03:43+00:00",
+     "e": "verf",
+     "p": 703,
+     "a": "Vsl. Übergabe 11.11.2026 - 25.11.2026"
     }
    ]
   },
@@ -9324,7 +9330,7 @@
    "present": true,
    "price": 701,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 13.11.2026 - 27.11.2026",
+   "avail": "Vsl. Übergabe 11.11.2026 - 25.11.2026",
    "events": [
     {
      "t": "2026-09-14T06:03:16+00:00",
@@ -9577,6 +9583,12 @@
      "e": "preis",
      "p": 701,
      "a": "Vsl. Übergabe 13.11.2026 - 27.11.2026"
+    },
+    {
+     "t": "2026-10-28T13:03:43+00:00",
+     "e": "verf",
+     "p": 701,
+     "a": "Vsl. Übergabe 11.11.2026 - 25.11.2026"
     }
    ]
   },
@@ -15916,6 +15928,34 @@
      "e": "weg",
      "p": 348,
      "a": null
+    }
+   ]
+  },
+  "d69605e34406e918": {
+   "meta": {
+    "id": "d69605e34406e918",
+    "model_name": "BYD Sealion 7",
+    "model_url": "https://www.finn.com/de-DE/models/byd/sealion-7",
+    "trim": "Design",
+    "fuel": "Elektro",
+    "power": "390 kW (530 PS)",
+    "transmission": "Automatik",
+    "price_basis": "netto",
+    "range_km": "456",
+    "consumption": "21.4 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+   },
+   "present": true,
+   "price": 846,
+   "basis": "netto",
+   "avail": "Vsl. Übergabe 05.11.2026 - 19.11.2026",
+   "events": [
+    {
+     "t": "2026-10-28T13:03:43+00:00",
+     "e": "neu",
+     "p": 846,
+     "a": "Vsl. Übergabe 05.11.2026 - 19.11.2026"
     }
    ]
   }
