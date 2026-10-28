@@ -303,6 +303,22 @@
     "drive": "Heckantrieb (RWD)",
     "hitch": "Nein"
   },
+  "1a9e34d3ab055033": {
+    "id": "1a9e34d3ab055033",
+    "model_name": "Mazda Mazda6e",
+    "model_url": "https://www.finn.com/de-DE/models/mazda/mazda6e",
+    "trim": "EV Elektro Heckantrieb Takumi Plus",
+    "fuel": "Elektro",
+    "power": "190 kW (258 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 16.12.2026 - 30.12.2026",
+    "price": "919",
+    "price_basis": "netto",
+    "range_km": "479",
+    "consumption": "16.6 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+  },
   "97b9e565bcd895eb": {
     "id": "97b9e565bcd895eb",
     "model_name": "MG S6",
