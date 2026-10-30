@@ -1,7 +1,7 @@
 {
  "version": 2,
  "start": "2026-09-14",
- "last_update": "2026-10-30T09:03:07+00:00",
+ "last_update": "2026-10-30T10:03:13+00:00",
  "cars": {
   "0ca2e5e5ec5222f9": {
    "meta": {
@@ -10136,7 +10136,7 @@
    "present": true,
    "price": 795,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 05.11.2026 - 12.11.2026",
+   "avail": "Vsl. Übergabe 09.11.2026 - 23.11.2026",
    "events": [
     {
      "t": "2026-09-14T06:03:16+00:00",
@@ -10611,6 +10611,12 @@
      "e": "verf",
      "p": 795,
      "a": "Vsl. Übergabe 05.11.2026 - 12.11.2026"
+    },
+    {
+     "t": "2026-10-30T10:03:13+00:00",
+     "e": "verf",
+     "p": 795,
+     "a": "Vsl. Übergabe 09.11.2026 - 23.11.2026"
     }
    ]
   },
@@ -15858,7 +15864,7 @@
     "drive": "Allradantrieb (AWD)",
     "hitch": "Nein"
    },
-   "present": true,
+   "present": false,
    "price": 768,
    "basis": "netto",
    "avail": "Vsl. Übergabe 20.11.2026 - 18.12.2026",
@@ -15916,6 +15922,12 @@
      "e": "verf",
      "p": 768,
      "a": "Vsl. Übergabe 20.11.2026 - 18.12.2026"
+    },
+    {
+     "t": "2026-10-30T10:03:13+00:00",
+     "e": "weg",
+     "p": 768,
+     "a": null
     }
    ]
   },
@@ -16421,15 +16433,15 @@
     "power": "239 kW (325 PS)",
     "transmission": "Automatik",
     "price_basis": "netto",
-    "range_km": "546",
-    "consumption": "17 kWh/100km",
+    "range_km": "522",
+    "consumption": "17.7 kWh/100km",
     "drive": null,
     "hitch": "Nein"
    },
-   "present": false,
-   "price": 776,
+   "present": true,
+   "price": 767,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 10.11.2026 - 24.11.2026",
+   "avail": "Vsl. Übergabe 13.11.2026 - 27.11.2026",
    "events": [
     {
      "t": "2026-10-22T10:05:01+00:00",
@@ -16448,6 +16460,12 @@
      "e": "weg",
      "p": 776,
      "a": null
+    },
+    {
+     "t": "2026-10-30T10:03:13+00:00",
+     "e": "wieder",
+     "p": 767,
+     "a": "Vsl. Übergabe 13.11.2026 - 27.11.2026"
     }
    ]
   },
