@@ -1,7 +1,7 @@
 {
  "version": 2,
  "start": "2026-09-14",
- "last_update": "2026-10-31T10:03:07+00:00",
+ "last_update": "2026-10-31T11:03:25+00:00",
  "cars": {
   "0ca2e5e5ec5222f9": {
    "meta": {
@@ -19,7 +19,7 @@
     "hitch": "Nein"
    },
    "present": true,
-   "price": 417,
+   "price": 400,
    "basis": "netto",
    "avail": "Vsl. Übergabe 05.11.2026 - 12.11.2026",
    "events": [
@@ -352,6 +352,12 @@
      "e": "verf",
      "p": 417,
      "a": "Vsl. Übergabe 05.11.2026 - 12.11.2026"
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "preis",
+     "p": 400,
+     "a": "Vsl. Übergabe 05.11.2026 - 12.11.2026"
     }
    ]
   },
@@ -371,9 +377,9 @@
     "hitch": "Nein"
    },
    "present": true,
-   "price": 509,
+   "price": 484,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 05.11.2026 - 12.11.2026",
+   "avail": "Vsl. Übergabe 09.11.2026 - 23.11.2026",
    "events": [
     {
      "t": "2026-09-14T06:03:16+00:00",
@@ -674,6 +680,12 @@
      "e": "verf",
      "p": 509,
      "a": "Vsl. Übergabe 05.11.2026 - 12.11.2026"
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "preis",
+     "p": 484,
+     "a": "Vsl. Übergabe 09.11.2026 - 23.11.2026"
     }
    ]
   },
@@ -693,7 +705,7 @@
     "hitch": "Nein"
    },
    "present": true,
-   "price": 449,
+   "price": 465,
    "basis": "netto",
    "avail": "Vsl. Übergabe 11.11.2026 - 25.11.2026",
    "events": [
@@ -1055,6 +1067,12 @@
      "t": "2026-10-30T07:03:14+00:00",
      "e": "verf",
      "p": 449,
+     "a": "Vsl. Übergabe 11.11.2026 - 25.11.2026"
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "preis",
+     "p": 465,
      "a": "Vsl. Übergabe 11.11.2026 - 25.11.2026"
     }
    ]
@@ -1779,7 +1797,7 @@
     "hitch": "Nein"
    },
    "present": true,
-   "price": 476,
+   "price": 484,
    "basis": "netto",
    "avail": "Vsl. Übergabe 17.11.2026 - 01.12.2026",
    "events": [
@@ -2124,6 +2142,12 @@
      "e": "verf",
      "p": 476,
      "a": "Vsl. Übergabe 17.11.2026 - 01.12.2026"
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "preis",
+     "p": 484,
+     "a": "Vsl. Übergabe 17.11.2026 - 01.12.2026"
     }
    ]
   },
@@ -2143,7 +2167,7 @@
     "hitch": "Nein"
    },
    "present": true,
-   "price": 417,
+   "price": 425,
    "basis": "netto",
    "avail": "Vsl. Übergabe 14.12.2026 - 15.02.2027",
    "events": [
@@ -2469,6 +2493,12 @@
      "t": "2026-10-31T07:03:08+00:00",
      "e": "verf",
      "p": 417,
+     "a": "Vsl. Übergabe 14.12.2026 - 15.02.2027"
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "preis",
+     "p": 425,
      "a": "Vsl. Übergabe 14.12.2026 - 15.02.2027"
     }
    ]
@@ -2926,7 +2956,7 @@
     "hitch": "Nein"
    },
    "present": true,
-   "price": 484,
+   "price": 476,
    "basis": "netto",
    "avail": "Vsl. Übergabe 09.11.2026 - 23.11.2026",
    "events": [
@@ -3234,6 +3264,12 @@
      "t": "2026-10-30T07:03:14+00:00",
      "e": "verf",
      "p": 484,
+     "a": "Vsl. Übergabe 09.11.2026 - 23.11.2026"
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "preis",
+     "p": 476,
      "a": "Vsl. Übergabe 09.11.2026 - 23.11.2026"
     }
    ]
@@ -3952,7 +3988,7 @@
     "hitch": "Nein"
    },
    "present": true,
-   "price": 576,
+   "price": 635,
    "basis": "netto",
    "avail": "Vsl. Übergabe 09.11.2026 - 23.11.2026",
    "events": [
@@ -4236,6 +4272,12 @@
      "t": "2026-10-30T07:03:14+00:00",
      "e": "verf",
      "p": 576,
+     "a": "Vsl. Übergabe 09.11.2026 - 23.11.2026"
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "preis",
+     "p": 635,
      "a": "Vsl. Übergabe 09.11.2026 - 23.11.2026"
     }
    ]
@@ -5897,7 +5939,7 @@
     "hitch": "Nein"
    },
    "present": true,
-   "price": 703,
+   "price": 669,
    "basis": "netto",
    "avail": "Vsl. Übergabe 17.11.2026 - 01.12.2026",
    "events": [
@@ -6193,6 +6235,12 @@
      "t": "2026-10-30T07:03:14+00:00",
      "e": "verf",
      "p": 703,
+     "a": "Vsl. Übergabe 17.11.2026 - 01.12.2026"
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "preis",
+     "p": 669,
      "a": "Vsl. Übergabe 17.11.2026 - 01.12.2026"
     }
    ]
@@ -6919,7 +6967,7 @@
     "drive": null,
     "hitch": "Nein"
    },
-   "present": false,
+   "present": true,
    "price": 852,
    "basis": "netto",
    "avail": "Vsl. Übergabe 04.11.2026 - 11.11.2026",
@@ -7325,6 +7373,12 @@
      "e": "weg",
      "p": 852,
      "a": null
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "wieder",
+     "p": 852,
+     "a": "Vsl. Übergabe 04.11.2026 - 11.11.2026"
     }
    ]
   },
@@ -7343,7 +7397,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": false,
+   "present": true,
    "price": 843,
    "basis": "netto",
    "avail": "Vsl. Übergabe 04.11.2026 - 11.11.2026",
@@ -7773,6 +7827,12 @@
      "e": "weg",
      "p": 843,
      "a": null
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "wieder",
+     "p": 843,
+     "a": "Vsl. Übergabe 04.11.2026 - 11.11.2026"
     }
    ]
   },
@@ -7791,7 +7851,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": false,
+   "present": true,
    "price": 877,
    "basis": "netto",
    "avail": "Vsl. Übergabe 04.11.2026 - 11.11.2026",
@@ -8095,6 +8155,12 @@
      "e": "weg",
      "p": 877,
      "a": null
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "wieder",
+     "p": 877,
+     "a": "Vsl. Übergabe 04.11.2026 - 11.11.2026"
     }
    ]
   },
@@ -8113,7 +8179,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": false,
+   "present": true,
    "price": 935,
    "basis": "netto",
    "avail": "Vsl. Übergabe 04.11.2026 - 11.11.2026",
@@ -8465,6 +8531,12 @@
      "e": "weg",
      "p": 935,
      "a": null
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "wieder",
+     "p": 935,
+     "a": "Vsl. Übergabe 04.11.2026 - 11.11.2026"
     }
    ]
   },
@@ -8483,7 +8555,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": false,
+   "present": true,
    "price": 911,
    "basis": "netto",
    "avail": "Vsl. Übergabe 04.11.2026 - 11.11.2026",
@@ -8835,6 +8907,12 @@
      "e": "weg",
      "p": 911,
      "a": null
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "wieder",
+     "p": 911,
+     "a": "Vsl. Übergabe 04.11.2026 - 11.11.2026"
     }
    ]
   },
@@ -8854,7 +8932,7 @@
     "hitch": "Nein"
    },
    "present": true,
-   "price": 801,
+   "price": 843,
    "basis": "netto",
    "avail": "Vsl. Übergabe 04.11.2026 - 11.11.2026",
    "events": [
@@ -9211,6 +9289,12 @@
      "e": "verf",
      "p": 801,
      "a": "Vsl. Übergabe 04.11.2026 - 11.11.2026"
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "preis",
+     "p": 843,
+     "a": "Vsl. Übergabe 04.11.2026 - 11.11.2026"
     }
    ]
   },
@@ -9230,7 +9314,7 @@
     "hitch": "Nein"
    },
    "present": true,
-   "price": 810,
+   "price": 860,
    "basis": "netto",
    "avail": "Vsl. Übergabe 04.11.2026 - 11.11.2026",
    "events": [
@@ -9533,6 +9617,12 @@
      "e": "verf",
      "p": 810,
      "a": "Vsl. Übergabe 04.11.2026 - 11.11.2026"
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "preis",
+     "p": 860,
+     "a": "Vsl. Übergabe 04.11.2026 - 11.11.2026"
     }
    ]
   },
@@ -9766,7 +9856,7 @@
     "hitch": "Nein"
    },
    "present": true,
-   "price": 700,
+   "price": 692,
    "basis": "netto",
    "avail": "Vsl. Übergabe 23.11.2026 - 21.12.2026",
    "events": [
@@ -10057,6 +10147,12 @@
      "e": "verf",
      "p": 700,
      "a": "Vsl. Übergabe 23.11.2026 - 21.12.2026"
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "preis",
+     "p": 692,
+     "a": "Vsl. Übergabe 23.11.2026 - 21.12.2026"
     }
    ]
   },
@@ -10224,7 +10320,7 @@
     "hitch": "Nein"
    },
    "present": true,
-   "price": 795,
+   "price": 837,
    "basis": "netto",
    "avail": "Vsl. Übergabe 05.11.2026 - 12.11.2026",
    "events": [
@@ -10712,6 +10808,12 @@
      "t": "2026-10-31T07:03:08+00:00",
      "e": "verf",
      "p": 795,
+     "a": "Vsl. Übergabe 05.11.2026 - 12.11.2026"
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "preis",
+     "p": 837,
      "a": "Vsl. Übergabe 05.11.2026 - 12.11.2026"
     }
    ]
@@ -11316,7 +11418,7 @@
     "hitch": "Nein"
    },
    "present": true,
-   "price": 819,
+   "price": 869,
    "basis": "netto",
    "avail": "Vsl. Übergabe 06.11.2026 - 13.11.2026",
    "events": [
@@ -11643,6 +11745,12 @@
      "e": "verf",
      "p": 819,
      "a": "Vsl. Übergabe 06.11.2026 - 13.11.2026"
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "preis",
+     "p": 869,
+     "a": "Vsl. Übergabe 06.11.2026 - 13.11.2026"
     }
    ]
   },
@@ -11662,7 +11770,7 @@
     "hitch": "Nein"
    },
    "present": true,
-   "price": 717,
+   "price": 742,
    "basis": "netto",
    "avail": "Vsl. Übergabe 12.01.2027 - 09.02.2027",
    "events": [
@@ -11772,6 +11880,12 @@
      "t": "2026-10-30T07:03:14+00:00",
      "e": "preis",
      "p": 717,
+     "a": "Vsl. Übergabe 12.01.2027 - 09.02.2027"
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "preis",
+     "p": 742,
      "a": "Vsl. Übergabe 12.01.2027 - 09.02.2027"
     }
    ]
@@ -12446,7 +12560,7 @@
     "hitch": "Nein"
    },
    "present": true,
-   "price": 416,
+   "price": 425,
    "basis": "netto",
    "avail": "Vsl. Übergabe 16.11.2026 - 30.11.2026",
    "events": [
@@ -12826,6 +12940,12 @@
      "t": "2026-10-26T19:03:15+00:00",
      "e": "verf",
      "p": 416,
+     "a": "Vsl. Übergabe 16.11.2026 - 30.11.2026"
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "preis",
+     "p": 425,
      "a": "Vsl. Übergabe 16.11.2026 - 30.11.2026"
     }
    ]
@@ -13228,7 +13348,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": true,
+   "present": false,
    "price": 902,
    "basis": "netto",
    "avail": "Vsl. Übergabe 04.11.2026 - 11.11.2026",
@@ -13514,6 +13634,12 @@
      "e": "verf",
      "p": 902,
      "a": "Vsl. Übergabe 04.11.2026 - 11.11.2026"
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "weg",
+     "p": 902,
+     "a": null
     }
    ]
   },
@@ -13532,7 +13658,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": true,
+   "present": false,
    "price": 894,
    "basis": "netto",
    "avail": "Vsl. Übergabe 04.11.2026 - 11.11.2026",
@@ -13860,6 +13986,12 @@
      "e": "verf",
      "p": 894,
      "a": "Vsl. Übergabe 04.11.2026 - 11.11.2026"
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "weg",
+     "p": 894,
+     "a": null
     }
    ]
   },
@@ -13878,7 +14010,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": true,
+   "present": false,
    "price": 1045,
    "basis": "netto",
    "avail": "Vsl. Übergabe 04.11.2026 - 11.11.2026",
@@ -14128,6 +14260,12 @@
      "e": "verf",
      "p": 1045,
      "a": "Vsl. Übergabe 04.11.2026 - 11.11.2026"
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "weg",
+     "p": 1045,
+     "a": null
     }
    ]
   },
@@ -14146,7 +14284,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": true,
+   "present": false,
    "price": 911,
    "basis": "netto",
    "avail": "Vsl. Übergabe 04.11.2026 - 11.11.2026",
@@ -14438,6 +14576,12 @@
      "e": "verf",
      "p": 911,
      "a": "Vsl. Übergabe 04.11.2026 - 11.11.2026"
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "weg",
+     "p": 911,
+     "a": null
     }
    ]
   },
@@ -14456,7 +14600,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": true,
+   "present": false,
    "price": 1037,
    "basis": "netto",
    "avail": "Vsl. Übergabe 04.11.2026 - 11.11.2026",
@@ -14730,6 +14874,12 @@
      "e": "verf",
      "p": 1037,
      "a": "Vsl. Übergabe 04.11.2026 - 11.11.2026"
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "weg",
+     "p": 1037,
+     "a": null
     }
    ]
   },
@@ -14867,7 +15017,7 @@
     "hitch": "Nein"
    },
    "present": true,
-   "price": 633,
+   "price": 658,
    "basis": "netto",
    "avail": "Vsl. Übergabe 14.12.2026 - 11.01.2027",
    "events": [
@@ -15013,6 +15163,12 @@
      "t": "2026-10-26T14:03:18+00:00",
      "e": "verf",
      "p": 633,
+     "a": "Vsl. Übergabe 14.12.2026 - 11.01.2027"
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "preis",
+     "p": 658,
      "a": "Vsl. Übergabe 14.12.2026 - 11.01.2027"
     }
    ]
@@ -15532,7 +15688,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": false,
+   "present": true,
    "price": 911,
    "basis": "netto",
    "avail": "Vsl. Übergabe 04.11.2026 - 11.11.2026",
@@ -15782,6 +15938,12 @@
      "e": "weg",
      "p": 911,
      "a": null
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "wieder",
+     "p": 911,
+     "a": "Vsl. Übergabe 04.11.2026 - 11.11.2026"
     }
    ]
   },
@@ -16241,7 +16403,7 @@
     "hitch": "Nein"
    },
    "present": true,
-   "price": 610,
+   "price": 602,
    "basis": "netto",
    "avail": "Vsl. Übergabe 23.11.2026 - 21.12.2026",
    "events": [
@@ -16363,6 +16525,12 @@
      "t": "2026-10-31T07:03:08+00:00",
      "e": "verf",
      "p": 610,
+     "a": "Vsl. Übergabe 23.11.2026 - 21.12.2026"
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "preis",
+     "p": 602,
      "a": "Vsl. Übergabe 23.11.2026 - 21.12.2026"
     }
    ]
@@ -16827,7 +16995,7 @@
     "hitch": "Nein"
    },
    "present": true,
-   "price": 649,
+   "price": 675,
    "basis": "netto",
    "avail": "Vsl. Übergabe 30.11.2026 - 28.12.2026",
    "events": [
@@ -16835,6 +17003,12 @@
      "t": "2026-10-31T07:03:08+00:00",
      "e": "neu",
      "p": 649,
+     "a": "Vsl. Übergabe 30.11.2026 - 28.12.2026"
+    },
+    {
+     "t": "2026-10-31T11:03:25+00:00",
+     "e": "preis",
+     "p": 675,
      "a": "Vsl. Übergabe 30.11.2026 - 28.12.2026"
     }
    ]
