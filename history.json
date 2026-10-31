@@ -1,7 +1,7 @@
 {
  "version": 2,
  "start": "2026-09-14",
- "last_update": "2026-10-31T13:03:06+00:00",
+ "last_update": "2026-10-31T14:03:07+00:00",
  "cars": {
   "0ca2e5e5ec5222f9": {
    "meta": {
@@ -379,7 +379,7 @@
    "present": true,
    "price": 484,
    "basis": "netto",
-   "avail": "Schnell verfügbar",
+   "avail": "Vsl. Übergabe 05.11.2026 - 12.11.2026",
    "events": [
     {
      "t": "2026-09-14T06:03:16+00:00",
@@ -692,6 +692,12 @@
      "e": "verf",
      "p": 484,
      "a": "Schnell verfügbar"
+    },
+    {
+     "t": "2026-10-31T14:03:07+00:00",
+     "e": "verf",
+     "p": 484,
+     "a": "Vsl. Übergabe 05.11.2026 - 12.11.2026"
     }
    ]
   },
