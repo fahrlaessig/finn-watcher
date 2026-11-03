@@ -1,7 +1,7 @@
 {
  "version": 2,
  "start": "2026-09-14",
- "last_update": "2026-11-03T12:03:28+00:00",
+ "last_update": "2026-11-03T13:03:09+00:00",
  "cars": {
   "0ca2e5e5ec5222f9": {
    "meta": {
@@ -2629,7 +2629,7 @@
    "present": true,
    "price": 473,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 28.12.2026 - 08.03.2027",
+   "avail": "Vsl. Übergabe 04.01.2027 - 15.03.2027",
    "events": [
     {
      "t": "2026-09-14T06:03:16+00:00",
@@ -2798,6 +2798,12 @@
      "e": "verf",
      "p": 473,
      "a": "Vsl. Übergabe 28.12.2026 - 08.03.2027"
+    },
+    {
+     "t": "2026-11-03T13:03:09+00:00",
+     "e": "verf",
+     "p": 473,
+     "a": "Vsl. Übergabe 04.01.2027 - 15.03.2027"
     }
    ]
   },
@@ -11826,13 +11832,13 @@
     "power": "150 kW (204 PS)",
     "transmission": "Automatik",
     "price_basis": "netto",
-    "range_km": "594",
-    "consumption": "15.5 kWh/100km",
+    "range_km": "625",
+    "consumption": "14.6 kWh/100km",
     "drive": null,
     "hitch": "Nein"
    },
    "present": true,
-   "price": 827,
+   "price": 869,
    "basis": "netto",
    "avail": "Vsl. Übergabe 10.11.2026 - 17.11.2026",
    "events": [
@@ -12176,6 +12182,12 @@
      "t": "2026-11-03T07:03:12+00:00",
      "e": "preis",
      "p": 827,
+     "a": "Vsl. Übergabe 10.11.2026 - 17.11.2026"
+    },
+    {
+     "t": "2026-11-03T13:03:09+00:00",
+     "e": "preis",
+     "p": 869,
      "a": "Vsl. Übergabe 10.11.2026 - 17.11.2026"
     }
    ]
@@ -15803,7 +15815,7 @@
    "present": true,
    "price": 986,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 17.11.2026 - 01.12.2026",
+   "avail": "Vsl. Übergabe 06.11.2026 - 13.11.2026",
    "events": [
     {
      "t": "2026-09-29T08:00:05+00:00",
@@ -16008,6 +16020,12 @@
      "e": "verf",
      "p": 986,
      "a": "Vsl. Übergabe 17.11.2026 - 01.12.2026"
+    },
+    {
+     "t": "2026-11-03T13:03:09+00:00",
+     "e": "verf",
+     "p": 986,
+     "a": "Vsl. Übergabe 06.11.2026 - 13.11.2026"
     }
    ]
   },
@@ -17702,7 +17720,7 @@
     "drive": null,
     "hitch": "Nein"
    },
-   "present": true,
+   "present": false,
    "price": 675,
    "basis": "netto",
    "avail": "Vsl. Übergabe 14.12.2026 - 11.01.2027",
@@ -17724,6 +17742,12 @@
      "e": "verf",
      "p": 675,
      "a": "Vsl. Übergabe 14.12.2026 - 11.01.2027"
+    },
+    {
+     "t": "2026-11-03T13:03:09+00:00",
+     "e": "weg",
+     "p": 675,
+     "a": null
     }
    ]
   }
