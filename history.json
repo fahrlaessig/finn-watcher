@@ -1,7 +1,7 @@
 {
  "version": 2,
  "start": "2026-09-14",
- "last_update": "2026-11-03T10:03:17+00:00",
+ "last_update": "2026-11-03T11:03:31+00:00",
  "cars": {
   "0ca2e5e5ec5222f9": {
    "meta": {
@@ -2629,7 +2629,7 @@
    "present": true,
    "price": 473,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 04.01.2027 - 15.03.2027",
+   "avail": "Vsl. Übergabe 28.12.2026 - 08.03.2027",
    "events": [
     {
      "t": "2026-09-14T06:03:16+00:00",
@@ -2792,6 +2792,12 @@
      "e": "verf",
      "p": 473,
      "a": "Vsl. Übergabe 04.01.2027 - 15.03.2027"
+    },
+    {
+     "t": "2026-11-03T11:03:31+00:00",
+     "e": "verf",
+     "p": 473,
+     "a": "Vsl. Übergabe 28.12.2026 - 08.03.2027"
     }
    ]
   },
@@ -7199,7 +7205,7 @@
     "range_km": "571",
     "consumption": "15.2 kWh/100km",
     "drive": null,
-    "hitch": "Nein"
+    "hitch": "Ja"
    },
    "present": true,
    "price": 852,
@@ -13527,7 +13533,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": true,
+   "present": false,
    "price": 961,
    "basis": "netto",
    "avail": "Vsl. Übergabe 06.11.2026 - 13.11.2026",
@@ -13747,6 +13753,12 @@
      "e": "wieder",
      "p": 961,
      "a": "Vsl. Übergabe 06.11.2026 - 13.11.2026"
+    },
+    {
+     "t": "2026-11-03T11:03:31+00:00",
+     "e": "weg",
+     "p": 961,
+     "a": null
     }
    ]
   },
