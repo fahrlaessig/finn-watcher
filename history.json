@@ -1,7 +1,7 @@
 {
  "version": 2,
  "start": "2026-09-14",
- "last_update": "2026-11-03T11:03:31+00:00",
+ "last_update": "2026-11-03T12:03:28+00:00",
  "cars": {
   "0ca2e5e5ec5222f9": {
    "meta": {
@@ -7205,7 +7205,7 @@
     "range_km": "571",
     "consumption": "15.2 kWh/100km",
     "drive": null,
-    "hitch": "Ja"
+    "hitch": "Nein"
    },
    "present": true,
    "price": 852,
@@ -15803,7 +15803,7 @@
    "present": true,
    "price": 986,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 06.11.2026 - 13.11.2026",
+   "avail": "Vsl. Übergabe 17.11.2026 - 01.12.2026",
    "events": [
     {
      "t": "2026-09-29T08:00:05+00:00",
@@ -16002,6 +16002,12 @@
      "e": "verf",
      "p": 986,
      "a": "Vsl. Übergabe 06.11.2026 - 13.11.2026"
+    },
+    {
+     "t": "2026-11-03T12:03:28+00:00",
+     "e": "verf",
+     "p": 986,
+     "a": "Vsl. Übergabe 17.11.2026 - 01.12.2026"
     }
    ]
   },

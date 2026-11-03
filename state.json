@@ -573,7 +573,7 @@
     "range_km": "571",
     "consumption": "15.2 kWh/100km",
     "drive": null,
-    "hitch": "Ja"
+    "hitch": "Nein"
   },
   "dc3209a8b0eb0425": {
     "id": "dc3209a8b0eb0425",
@@ -679,7 +679,7 @@
     "fuel": "Elektro",
     "power": "210 kW (286 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 06.11.2026 - 13.11.2026",
+    "availability": "Vsl. Übergabe 17.11.2026 - 01.12.2026",
     "price": "986",
     "price_basis": "netto",
     "range_km": "570",
