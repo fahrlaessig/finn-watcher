@@ -1,7 +1,7 @@
 {
  "version": 2,
  "start": "2026-09-14",
- "last_update": "2026-11-04T10:02:58+00:00",
+ "last_update": "2026-11-04T12:02:52+00:00",
  "cars": {
   "0ca2e5e5ec5222f9": {
    "meta": {
@@ -779,7 +779,7 @@
    "present": true,
    "price": 465,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 11.11.2026 - 18.11.2026",
+   "avail": "Vsl. Übergabe 16.11.2026 - 30.11.2026",
    "events": [
     {
      "t": "2026-09-14T06:03:16+00:00",
@@ -1164,6 +1164,12 @@
      "e": "verf",
      "p": 465,
      "a": "Vsl. Übergabe 11.11.2026 - 18.11.2026"
+    },
+    {
+     "t": "2026-11-04T12:02:52+00:00",
+     "e": "verf",
+     "p": 465,
+     "a": "Vsl. Übergabe 16.11.2026 - 30.11.2026"
     }
    ]
   },
@@ -5680,7 +5686,7 @@
     "drive": null,
     "hitch": "Nein"
    },
-   "present": true,
+   "present": false,
    "price": 499,
    "basis": "netto",
    "avail": "Vsl. Übergabe 20.11.2026 - 04.12.2026",
@@ -5924,6 +5930,12 @@
      "e": "wieder",
      "p": 499,
      "a": "Vsl. Übergabe 20.11.2026 - 04.12.2026"
+    },
+    {
+     "t": "2026-11-04T12:02:52+00:00",
+     "e": "weg",
+     "p": 499,
+     "a": null
     }
    ]
   },
@@ -15028,7 +15040,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": true,
+   "present": false,
    "price": 970,
    "basis": "netto",
    "avail": "Vsl. Übergabe 09.11.2026 - 16.11.2026",
@@ -15380,6 +15392,12 @@
      "e": "verf",
      "p": 970,
      "a": "Vsl. Übergabe 09.11.2026 - 16.11.2026"
+    },
+    {
+     "t": "2026-11-04T12:02:52+00:00",
+     "e": "weg",
+     "p": 970,
+     "a": null
     }
    ]
   },
@@ -16022,10 +16040,10 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": false,
+   "present": true,
    "price": 986,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 06.11.2026 - 13.11.2026",
+   "avail": "Vsl. Übergabe 09.11.2026 - 16.11.2026",
    "events": [
     {
      "t": "2026-09-29T08:00:05+00:00",
@@ -16242,6 +16260,12 @@
      "e": "weg",
      "p": 986,
      "a": null
+    },
+    {
+     "t": "2026-11-04T12:02:52+00:00",
+     "e": "wieder",
+     "p": 986,
+     "a": "Vsl. Übergabe 09.11.2026 - 16.11.2026"
     }
    ]
   },
