@@ -495,22 +495,6 @@
     "drive": null,
     "hitch": "Ja"
   },
-  "1e1318e3ca7f6969": {
-    "id": "1e1318e3ca7f6969",
-    "model_name": "Skoda Elroq",
-    "model_url": "https://www.finn.com/de-DE/models/skoda/elroq",
-    "trim": "85 Select",
-    "fuel": "Elektro",
-    "power": "210 kW (286 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 11.11.2026 - 18.11.2026",
-    "price": "852",
-    "price_basis": "netto",
-    "range_km": "571",
-    "consumption": "15.2 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
   "1e6aaf89f4ac0927": {
     "id": "1e6aaf89f4ac0927",
     "model_name": "Skoda Elroq",
@@ -526,6 +510,22 @@
     "consumption": "16.7 kWh/100km",
     "drive": null,
     "hitch": "Ja"
+  },
+  "1e1318e3ca7f6969": {
+    "id": "1e1318e3ca7f6969",
+    "model_name": "Skoda Elroq",
+    "model_url": "https://www.finn.com/de-DE/models/skoda/elroq",
+    "trim": "85 Select",
+    "fuel": "Elektro",
+    "power": "210 kW (286 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 11.11.2026 - 18.11.2026",
+    "price": "852",
+    "price_basis": "netto",
+    "range_km": "571",
+    "consumption": "15.2 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
   },
   "fa874f3b23b070b7": {
     "id": "fa874f3b23b070b7",
