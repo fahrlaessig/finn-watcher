@@ -1,7 +1,7 @@
 {
  "version": 2,
  "start": "2026-09-14",
- "last_update": "2026-11-06T12:03:01+00:00",
+ "last_update": "2026-11-06T13:03:05+00:00",
  "cars": {
   "0ca2e5e5ec5222f9": {
    "meta": {
@@ -11745,7 +11745,7 @@
     "drive": "Heckantrieb (RWD)",
     "hitch": "Nein"
    },
-   "present": true,
+   "present": false,
    "price": 759,
    "basis": "netto",
    "avail": "Vsl. Übergabe 11.11.2026 - 18.11.2026",
@@ -12103,6 +12103,12 @@
      "e": "wieder",
      "p": 759,
      "a": "Vsl. Übergabe 11.11.2026 - 18.11.2026"
+    },
+    {
+     "t": "2026-11-06T13:03:05+00:00",
+     "e": "weg",
+     "p": 759,
+     "a": null
     }
    ]
   },
@@ -16514,10 +16520,10 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": false,
+   "present": true,
    "price": 986,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 10.11.2026 - 17.11.2026",
+   "avail": "Vsl. Übergabe 11.11.2026 - 18.11.2026",
    "events": [
     {
      "t": "2026-09-29T08:00:05+00:00",
@@ -16752,6 +16758,12 @@
      "e": "weg",
      "p": 986,
      "a": null
+    },
+    {
+     "t": "2026-11-06T13:03:05+00:00",
+     "e": "wieder",
+     "p": 986,
+     "a": "Vsl. Übergabe 11.11.2026 - 18.11.2026"
     }
    ]
   },
@@ -17845,7 +17857,7 @@
    "present": true,
    "price": 602,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 14.12.2026 - 28.12.2026",
+   "avail": "Vsl. Übergabe 16.11.2026 - 30.11.2026",
    "events": [
     {
      "t": "2026-10-15T13:03:32+00:00",
@@ -18014,6 +18026,12 @@
      "e": "verf",
      "p": 602,
      "a": "Vsl. Übergabe 14.12.2026 - 28.12.2026"
+    },
+    {
+     "t": "2026-11-06T13:03:05+00:00",
+     "e": "verf",
+     "p": 602,
+     "a": "Vsl. Übergabe 16.11.2026 - 30.11.2026"
     }
    ]
   },
