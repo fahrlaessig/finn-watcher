@@ -1,4 +1,20 @@
 {
+  "0ca2e5e5ec5222f9": {
+    "id": "0ca2e5e5ec5222f9",
+    "model_name": "BYD Dolphin Surf",
+    "model_url": "https://www.finn.com/de-DE/models/byd/dolphin-surf",
+    "trim": "Boost",
+    "fuel": "Elektro",
+    "power": "65 kW (88 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 12.11.2026 - 19.11.2026",
+    "price": "383",
+    "price_basis": "netto",
+    "range_km": "322",
+    "consumption": "16 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+  },
   "e41a21c38e6fef42": {
     "id": "e41a21c38e6fef42",
     "model_name": "BYD Dolphin Surf",
@@ -11,22 +27,6 @@
     "price": "458",
     "price_basis": "netto",
     "range_km": "310",
-    "consumption": "16 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
-  "0ca2e5e5ec5222f9": {
-    "id": "0ca2e5e5ec5222f9",
-    "model_name": "BYD Dolphin Surf",
-    "model_url": "https://www.finn.com/de-DE/models/byd/dolphin-surf",
-    "trim": "Boost",
-    "fuel": "Elektro",
-    "power": "65 kW (88 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 16.11.2026 - 30.11.2026",
-    "price": "383",
-    "price_basis": "netto",
-    "range_km": "322",
     "consumption": "16 kWh/100km",
     "drive": null,
     "hitch": "Nein"
@@ -247,7 +247,7 @@
     "fuel": "Elektro",
     "power": "170 kW (231 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 12.11.2026 - 19.11.2026",
+    "availability": "Vsl. Übergabe 30.11.2026 - 28.12.2026",
     "price": "585",
     "price_basis": "netto",
     "range_km": "530",
