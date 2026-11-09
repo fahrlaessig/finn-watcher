@@ -1,7 +1,7 @@
 {
  "version": 2,
  "start": "2026-09-14",
- "last_update": "2026-11-09T18:02:57+00:00",
+ "last_update": "2026-11-09T19:02:57+00:00",
  "cars": {
   "0ca2e5e5ec5222f9": {
    "meta": {
@@ -7811,7 +7811,7 @@
     "range_km": "571",
     "consumption": "15.2 kWh/100km",
     "drive": null,
-    "hitch": "Nein"
+    "hitch": "Ja"
    },
    "present": true,
    "price": 852,
@@ -12660,8 +12660,8 @@
     "power": "150 kW (204 PS)",
     "transmission": "Automatik",
     "price_basis": "netto",
-    "range_km": "594",
-    "consumption": "15.5 kWh/100km",
+    "range_km": "625",
+    "consumption": "14.6 kWh/100km",
     "drive": null,
     "hitch": "Nein"
    },
