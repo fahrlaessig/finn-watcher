@@ -1,7 +1,7 @@
 {
  "version": 2,
  "start": "2026-09-14",
- "last_update": "2026-11-09T15:03:28+00:00",
+ "last_update": "2026-11-09T16:03:15+00:00",
  "cars": {
   "0ca2e5e5ec5222f9": {
    "meta": {
@@ -3372,7 +3372,7 @@
    "present": true,
    "price": 476,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 17.11.2026 - 24.11.2026",
+   "avail": "Vsl. Übergabe 17.11.2026 - 01.12.2026",
    "events": [
     {
      "t": "2026-09-14T06:03:16+00:00",
@@ -3727,6 +3727,12 @@
      "e": "verf",
      "p": 476,
      "a": "Vsl. Übergabe 17.11.2026 - 24.11.2026"
+    },
+    {
+     "t": "2026-11-09T16:03:15+00:00",
+     "e": "verf",
+     "p": 476,
+     "a": "Vsl. Übergabe 17.11.2026 - 01.12.2026"
     }
    ]
   },
@@ -13522,7 +13528,7 @@
     "hitch": "Nein"
    },
    "present": true,
-   "price": 827,
+   "price": 810,
    "basis": "netto",
    "avail": "Vsl. Übergabe 16.11.2026 - 23.11.2026",
    "events": [
@@ -13878,6 +13884,12 @@
      "t": "2026-11-09T14:03:18+00:00",
      "e": "preis",
      "p": 827,
+     "a": "Vsl. Übergabe 16.11.2026 - 23.11.2026"
+    },
+    {
+     "t": "2026-11-09T16:03:15+00:00",
+     "e": "preis",
+     "p": 810,
      "a": "Vsl. Übergabe 16.11.2026 - 23.11.2026"
     }
    ]
@@ -14463,7 +14475,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": true,
+   "present": false,
    "price": 961,
    "basis": "netto",
    "avail": "Vsl. Übergabe 12.11.2026 - 19.11.2026",
@@ -14713,6 +14725,12 @@
      "e": "wieder",
      "p": 961,
      "a": "Vsl. Übergabe 12.11.2026 - 19.11.2026"
+    },
+    {
+     "t": "2026-11-09T16:03:15+00:00",
+     "e": "weg",
+     "p": 961,
+     "a": null
     }
    ]
   },
@@ -14764,7 +14782,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": true,
+   "present": false,
    "price": 961,
    "basis": "netto",
    "avail": "Vsl. Übergabe 12.11.2026 - 19.11.2026",
@@ -15116,6 +15134,12 @@
      "e": "verf",
      "p": 961,
      "a": "Vsl. Übergabe 12.11.2026 - 19.11.2026"
+    },
+    {
+     "t": "2026-11-09T16:03:15+00:00",
+     "e": "weg",
+     "p": 961,
+     "a": null
     }
    ]
   },
@@ -15134,7 +15158,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": true,
+   "present": false,
    "price": 953,
    "basis": "netto",
    "avail": "Vsl. Übergabe 12.11.2026 - 19.11.2026",
@@ -15528,6 +15552,12 @@
      "e": "verf",
      "p": 953,
      "a": "Vsl. Übergabe 12.11.2026 - 19.11.2026"
+    },
+    {
+     "t": "2026-11-09T16:03:15+00:00",
+     "e": "weg",
+     "p": 953,
+     "a": null
     }
    ]
   },
@@ -15546,7 +15576,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": true,
+   "present": false,
    "price": 1037,
    "basis": "netto",
    "avail": "Vsl. Übergabe 12.11.2026 - 19.11.2026",
@@ -15868,6 +15898,12 @@
      "e": "verf",
      "p": 1037,
      "a": "Vsl. Übergabe 12.11.2026 - 19.11.2026"
+    },
+    {
+     "t": "2026-11-09T16:03:15+00:00",
+     "e": "weg",
+     "p": 1037,
+     "a": null
     }
    ]
   },
@@ -16262,7 +16298,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": true,
+   "present": false,
    "price": 1104,
    "basis": "netto",
    "avail": "Vsl. Übergabe 12.11.2026 - 19.11.2026",
@@ -16602,6 +16638,12 @@
      "e": "verf",
      "p": 1104,
      "a": "Vsl. Übergabe 12.11.2026 - 19.11.2026"
+    },
+    {
+     "t": "2026-11-09T16:03:15+00:00",
+     "e": "weg",
+     "p": 1104,
+     "a": null
     }
    ]
   },
@@ -16910,7 +16952,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": true,
+   "present": false,
    "price": 986,
    "basis": "netto",
    "avail": "Vsl. Übergabe 12.11.2026 - 19.11.2026",
@@ -17172,6 +17214,12 @@
      "e": "verf",
      "p": 986,
      "a": "Vsl. Übergabe 12.11.2026 - 19.11.2026"
+    },
+    {
+     "t": "2026-11-09T16:03:15+00:00",
+     "e": "weg",
+     "p": 986,
+     "a": null
     }
    ]
   },
@@ -19156,6 +19204,62 @@
      "e": "weg",
      "p": 705,
      "a": null
+    }
+   ]
+  },
+  "f77ab9f86dc9f4d3": {
+   "meta": {
+    "id": "f77ab9f86dc9f4d3",
+    "model_name": "Toyota C-HR+",
+    "model_url": "https://www.finn.com/de-DE/models/toyota/c-hr+",
+    "trim": "77 kWh TEAMPLAYER",
+    "fuel": "Elektro",
+    "power": "165 kW (224 PS)",
+    "transmission": "Automatik",
+    "price_basis": "netto",
+    "range_km": "607",
+    "consumption": "13.4 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+   },
+   "present": true,
+   "price": 541,
+   "basis": "netto",
+   "avail": "Vsl. Übergabe 30.11.2026 - 28.12.2026",
+   "events": [
+    {
+     "t": "2026-11-09T16:03:15+00:00",
+     "e": "neu",
+     "p": 541,
+     "a": "Vsl. Übergabe 30.11.2026 - 28.12.2026"
+    }
+   ]
+  },
+  "20ead9d634f4c6bb": {
+   "meta": {
+    "id": "20ead9d634f4c6bb",
+    "model_name": "Toyota bZ4X Touring",
+    "model_url": "https://www.finn.com/de-DE/models/toyota/bz4x-touring",
+    "trim": "75 kWh Teamplayer",
+    "fuel": "Elektro",
+    "power": "165 kW (224 PS)",
+    "transmission": "Automatik",
+    "price_basis": "netto",
+    "range_km": "591",
+    "consumption": "14 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+   },
+   "present": true,
+   "price": 616,
+   "basis": "netto",
+   "avail": "Vsl. Übergabe 30.11.2026 - 28.12.2026",
+   "events": [
+    {
+     "t": "2026-11-09T16:03:15+00:00",
+     "e": "neu",
+     "p": 616,
+     "a": "Vsl. Übergabe 30.11.2026 - 28.12.2026"
     }
    ]
   }
