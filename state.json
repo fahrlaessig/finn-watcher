@@ -127,6 +127,22 @@
     "drive": null,
     "hitch": "Nein"
   },
+  "2e9e6c725500fa60": {
+    "id": "2e9e6c725500fa60",
+    "model_name": "BYD Dolphin",
+    "model_url": "https://www.finn.com/de-DE/models/byd/dolphin",
+    "trim": "Comfort",
+    "fuel": "Elektro",
+    "power": "150 kW (204 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 18.11.2026 - 02.12.2026",
+    "price": "476",
+    "price_basis": "netto",
+    "range_km": "427",
+    "consumption": "15.9 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+  },
   "8d49ad9b642d2725": {
     "id": "8d49ad9b642d2725",
     "model_name": "Opel Frontera",
@@ -135,10 +151,10 @@
     "fuel": "Elektro",
     "power": "83 kW (113 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 08.12.2026 - 16.02.2027",
-    "price": "549",
+    "availability": "Vsl. Übergabe 20.11.2026 - 04.12.2026",
+    "price": "599",
     "price_basis": "netto",
-    "range_km": "390",
+    "range_km": "408",
     "consumption": "158 kWh/100km",
     "drive": null,
     "hitch": "Nein"
@@ -156,22 +172,6 @@
     "price_basis": "netto",
     "range_km": "305",
     "consumption": "16.4 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
-  "2e9e6c725500fa60": {
-    "id": "2e9e6c725500fa60",
-    "model_name": "BYD Dolphin",
-    "model_url": "https://www.finn.com/de-DE/models/byd/dolphin",
-    "trim": "Comfort",
-    "fuel": "Elektro",
-    "power": "150 kW (204 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 18.11.2026 - 25.11.2026",
-    "price": "476",
-    "price_basis": "netto",
-    "range_km": "427",
-    "consumption": "15.9 kWh/100km",
     "drive": null,
     "hitch": "Nein"
   },
@@ -271,13 +271,13 @@
     "drive": null,
     "hitch": "Nein"
   },
-  "97b9e565bcd895eb": {
-    "id": "97b9e565bcd895eb",
+  "24ee2e3bcae9b9fd": {
+    "id": "24ee2e3bcae9b9fd",
     "model_name": "MG S6",
     "model_url": "https://www.finn.com/de-DE/models/mg/s6",
-    "trim": "77 kWh Luxury Long Range",
+    "trim": "77 kWh Luxury",
     "fuel": "Elektro",
-    "power": "170 kW (231 PS)",
+    "power": "180 kW (245 PS)",
     "transmission": "Automatik",
     "availability": "Vsl. Übergabe 01.12.2026 - 29.12.2026",
     "price": "585",
