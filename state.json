@@ -39,7 +39,7 @@
     "fuel": "Elektro",
     "power": "118 kW (160 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 17.11.2026 - 24.11.2026",
+    "availability": "Vsl. Übergabe 19.11.2026 - 03.12.2026",
     "price": "425",
     "price_basis": "netto",
     "range_km": "404",
@@ -637,6 +637,6 @@
     "range_km": "571",
     "consumption": "15.2 kWh/100km",
     "drive": null,
-    "hitch": "Nein"
+    "hitch": "Ja"
   }
 }
