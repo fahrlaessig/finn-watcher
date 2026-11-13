@@ -511,22 +511,6 @@
     "drive": null,
     "hitch": "Nein"
   },
-  "b346eb7b02dfa57c": {
-    "id": "b346eb7b02dfa57c",
-    "model_name": "Tesla Model Y",
-    "model_url": "https://www.finn.com/de-DE/models/tesla/model-y",
-    "trim": "Standard Range",
-    "fuel": "Elektro",
-    "power": "188 kW (256 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 21.12.2026 - 22.02.2027",
-    "price": "751",
-    "price_basis": "netto",
-    "range_km": "525",
-    "consumption": "13.4 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
   "d7f9202f3d801bab": {
     "id": "d7f9202f3d801bab",
     "model_name": "Tesla Model Y",
@@ -542,6 +526,22 @@
     "consumption": "15.1 kWh/100km",
     "drive": null,
     "hitch": "Ja"
+  },
+  "b346eb7b02dfa57c": {
+    "id": "b346eb7b02dfa57c",
+    "model_name": "Tesla Model Y",
+    "model_url": "https://www.finn.com/de-DE/models/tesla/model-y",
+    "trim": "Standard Range",
+    "fuel": "Elektro",
+    "power": "188 kW (256 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 21.12.2026 - 22.02.2027",
+    "price": "751",
+    "price_basis": "netto",
+    "range_km": "525",
+    "consumption": "13.4 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
   },
   "a7a53d349d67b3f1": {
     "id": "a7a53d349d67b3f1",
