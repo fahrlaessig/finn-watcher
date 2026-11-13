@@ -1,7 +1,7 @@
 {
  "version": 2,
  "start": "2026-09-14",
- "last_update": "2026-11-13T15:02:51+00:00",
+ "last_update": "2026-11-13T16:03:24+00:00",
  "cars": {
   "0ca2e5e5ec5222f9": {
    "meta": {
@@ -8323,7 +8323,7 @@
     "drive": null,
     "hitch": "Nein"
    },
-   "present": true,
+   "present": false,
    "price": 932,
    "basis": "netto",
    "avail": "Vsl. Übergabe 23.12.2026 - 06.01.2027",
@@ -8825,6 +8825,12 @@
      "e": "preis",
      "p": 932,
      "a": "Vsl. Übergabe 23.12.2026 - 06.01.2027"
+    },
+    {
+     "t": "2026-11-13T16:03:24+00:00",
+     "e": "weg",
+     "p": 932,
+     "a": null
     }
    ]
   },
@@ -8843,7 +8849,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": true,
+   "present": false,
    "price": 860,
    "basis": "netto",
    "avail": "Vsl. Übergabe 18.11.2026 - 25.11.2026",
@@ -9363,6 +9369,12 @@
      "e": "verf",
      "p": 860,
      "a": "Vsl. Übergabe 18.11.2026 - 25.11.2026"
+    },
+    {
+     "t": "2026-11-13T16:03:24+00:00",
+     "e": "weg",
+     "p": 860,
+     "a": null
     }
    ]
   },
@@ -9751,7 +9763,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": true,
+   "present": false,
    "price": 935,
    "basis": "netto",
    "avail": "Vsl. Übergabe 18.11.2026 - 25.11.2026",
@@ -10187,6 +10199,12 @@
      "e": "verf",
      "p": 935,
      "a": "Vsl. Übergabe 18.11.2026 - 25.11.2026"
+    },
+    {
+     "t": "2026-11-13T16:03:24+00:00",
+     "e": "weg",
+     "p": 935,
+     "a": null
     }
    ]
   },
@@ -10205,7 +10223,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": true,
+   "present": false,
    "price": 911,
    "basis": "netto",
    "avail": "Vsl. Übergabe 18.11.2026 - 25.11.2026",
@@ -10641,6 +10659,12 @@
      "e": "verf",
      "p": 911,
      "a": "Vsl. Übergabe 18.11.2026 - 25.11.2026"
+    },
+    {
+     "t": "2026-11-13T16:03:24+00:00",
+     "e": "weg",
+     "p": 911,
+     "a": null
     }
    ]
   },
@@ -14344,7 +14368,7 @@
     "drive": null,
     "hitch": "Nein"
    },
-   "present": true,
+   "present": false,
    "price": 793,
    "basis": "netto",
    "avail": "Vsl. Übergabe 01.12.2026 - 15.12.2026",
@@ -14750,6 +14774,12 @@
      "e": "verf",
      "p": 793,
      "a": "Vsl. Übergabe 01.12.2026 - 15.12.2026"
+    },
+    {
+     "t": "2026-11-13T16:03:24+00:00",
+     "e": "weg",
+     "p": 793,
+     "a": null
     }
    ]
   },
@@ -18467,7 +18497,7 @@
     "drive": null,
     "hitch": "Ja"
    },
-   "present": true,
+   "present": false,
    "price": 911,
    "basis": "netto",
    "avail": "Vsl. Übergabe 18.11.2026 - 25.11.2026",
@@ -18825,6 +18855,12 @@
      "e": "verf",
      "p": 911,
      "a": "Vsl. Übergabe 18.11.2026 - 25.11.2026"
+    },
+    {
+     "t": "2026-11-13T16:03:24+00:00",
+     "e": "weg",
+     "p": 911,
+     "a": null
     }
    ]
   },
@@ -19859,7 +19895,7 @@
     "drive": null,
     "hitch": "Nein"
    },
-   "present": true,
+   "present": false,
    "price": 860,
    "basis": "netto",
    "avail": "Vsl. Übergabe 01.12.2026 - 15.12.2026",
@@ -19923,6 +19959,12 @@
      "e": "verf",
      "p": 860,
      "a": "Vsl. Übergabe 01.12.2026 - 15.12.2026"
+    },
+    {
+     "t": "2026-11-13T16:03:24+00:00",
+     "e": "weg",
+     "p": 860,
+     "a": null
     }
    ]
   },
@@ -20398,9 +20440,9 @@
     "hitch": "Nein"
    },
    "present": true,
-   "price": 608,
+   "price": 616,
    "basis": "netto",
-   "avail": "Vsl. Übergabe 01.12.2026 - 15.12.2026",
+   "avail": "Vsl. Übergabe 11.12.2026 - 12.02.2027",
    "events": [
     {
      "t": "2026-11-09T16:03:15+00:00",
@@ -20437,6 +20479,152 @@
      "e": "verf",
      "p": 608,
      "a": "Vsl. Übergabe 01.12.2026 - 15.12.2026"
+    },
+    {
+     "t": "2026-11-13T16:03:24+00:00",
+     "e": "preis",
+     "p": 616,
+     "a": "Vsl. Übergabe 11.12.2026 - 12.02.2027"
+    }
+   ]
+  },
+  "d942d06c454ac05a": {
+   "meta": {
+    "id": "d942d06c454ac05a",
+    "model_name": "Tesla Model 3",
+    "model_url": "https://www.finn.com/de-DE/models/tesla/model-3",
+    "trim": "Standard Range",
+    "fuel": "Elektro",
+    "power": "205 kW (279 PS)",
+    "transmission": "Automatik",
+    "price_basis": "netto",
+    "range_km": "572",
+    "consumption": "12.2 kWh/100km",
+    "drive": null,
+    "hitch": "Ja"
+   },
+   "present": true,
+   "price": 717,
+   "basis": "netto",
+   "avail": "Vsl. Übergabe 21.12.2026 - 22.02.2027",
+   "events": [
+    {
+     "t": "2026-11-13T16:03:24+00:00",
+     "e": "neu",
+     "p": 717,
+     "a": "Vsl. Übergabe 21.12.2026 - 22.02.2027"
+    }
+   ]
+  },
+  "3ab11eb54c9380b0": {
+   "meta": {
+    "id": "3ab11eb54c9380b0",
+    "model_name": "Tesla Model 3",
+    "model_url": "https://www.finn.com/de-DE/models/tesla/model-3",
+    "trim": "Premium",
+    "fuel": "Elektro",
+    "power": "224 kW (305 PS)",
+    "transmission": "Automatik",
+    "price_basis": "netto",
+    "range_km": "750",
+    "consumption": "12.5 kWh/100km",
+    "drive": null,
+    "hitch": "Ja"
+   },
+   "present": true,
+   "price": 868,
+   "basis": "netto",
+   "avail": "Vsl. Übergabe 21.12.2026 - 22.02.2027",
+   "events": [
+    {
+     "t": "2026-11-13T16:03:24+00:00",
+     "e": "neu",
+     "p": 868,
+     "a": "Vsl. Übergabe 21.12.2026 - 22.02.2027"
+    }
+   ]
+  },
+  "79655f0d3079c1dd": {
+   "meta": {
+    "id": "79655f0d3079c1dd",
+    "model_name": "Tesla Model 3",
+    "model_url": "https://www.finn.com/de-DE/models/tesla/model-3",
+    "trim": "Premium",
+    "fuel": "Elektro",
+    "power": "288 kW (392 PS)",
+    "transmission": "Automatik",
+    "price_basis": "netto",
+    "range_km": "660",
+    "consumption": "14.3 kWh/100km",
+    "drive": null,
+    "hitch": "Ja"
+   },
+   "present": true,
+   "price": 952,
+   "basis": "netto",
+   "avail": "Vsl. Übergabe 21.12.2026 - 22.02.2027",
+   "events": [
+    {
+     "t": "2026-11-13T16:03:24+00:00",
+     "e": "neu",
+     "p": 952,
+     "a": "Vsl. Übergabe 21.12.2026 - 22.02.2027"
+    }
+   ]
+  },
+  "b346eb7b02dfa57c": {
+   "meta": {
+    "id": "b346eb7b02dfa57c",
+    "model_name": "Tesla Model Y",
+    "model_url": "https://www.finn.com/de-DE/models/tesla/model-y",
+    "trim": "Standard Range",
+    "fuel": "Elektro",
+    "power": "188 kW (256 PS)",
+    "transmission": "Automatik",
+    "price_basis": "netto",
+    "range_km": "525",
+    "consumption": "13.4 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+   },
+   "present": true,
+   "price": 751,
+   "basis": "netto",
+   "avail": "Vsl. Übergabe 21.12.2026 - 22.02.2027",
+   "events": [
+    {
+     "t": "2026-11-13T16:03:24+00:00",
+     "e": "neu",
+     "p": 751,
+     "a": "Vsl. Übergabe 21.12.2026 - 22.02.2027"
+    }
+   ]
+  },
+  "d7f9202f3d801bab": {
+   "meta": {
+    "id": "d7f9202f3d801bab",
+    "model_name": "Tesla Model Y",
+    "model_url": "https://www.finn.com/de-DE/models/tesla/model-y",
+    "trim": "Premium",
+    "fuel": "Elektro",
+    "power": "274 kW (373 PS)",
+    "transmission": "Automatik",
+    "price_basis": "netto",
+    "range_km": "622",
+    "consumption": "15.1 kWh/100km",
+    "drive": null,
+    "hitch": "Ja"
+   },
+   "present": true,
+   "price": 1029,
+   "basis": "netto",
+   "avail": "Vsl. Übergabe 21.12.2026 - 22.02.2027",
+   "events": [
+    {
+     "t": "2026-11-13T16:03:24+00:00",
+     "e": "neu",
+     "p": 1029,
+     "a": "Vsl. Übergabe 21.12.2026 - 22.02.2027"
     }
    ]
   }
