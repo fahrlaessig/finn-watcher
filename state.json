@@ -103,8 +103,8 @@
     "fuel": "Elektro",
     "power": "83 kW (113 PS)",
     "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 14.01.2027 - 25.03.2027",
-    "price": "499",
+    "availability": "Vsl. Übergabe 15.02.2027 - 26.04.2027",
+    "price": "482",
     "price_basis": "netto",
     "range_km": "384",
     "consumption": "16.7 kWh/100km",
@@ -383,22 +383,6 @@
     "drive": "Heckantrieb (RWD)",
     "hitch": "Nein"
   },
-  "57c37d277438d561": {
-    "id": "57c37d277438d561",
-    "model_name": "Kia EV3",
-    "model_url": "https://www.finn.com/de-DE/models/kia/ev3",
-    "trim": "81 kWh 150 kW Earth Frontantrieb",
-    "fuel": "Elektro",
-    "power": "150 kW (204 PS)",
-    "transmission": "Automatik",
-    "availability": "Vsl. Übergabe 20.11.2026 - 27.11.2026",
-    "price": "692",
-    "price_basis": "netto",
-    "range_km": "608",
-    "consumption": "14.9 kWh/100km",
-    "drive": null,
-    "hitch": "Nein"
-  },
   "89d27db3bdaaf059": {
     "id": "89d27db3bdaaf059",
     "model_name": "Mazda CX-6e",
@@ -589,6 +573,38 @@
     "range_km": "568",
     "consumption": "15.6 kWh/100km",
     "drive": "Heckantrieb (RWD)",
+    "hitch": "Nein"
+  },
+  "610c1b024eda7e8d": {
+    "id": "610c1b024eda7e8d",
+    "model_name": "Kia EV6",
+    "model_url": "https://www.finn.com/de-DE/models/kia/ev6",
+    "trim": "84 kWh 168 kW Heckantrieb Earth",
+    "fuel": "Elektro",
+    "power": "168 kW (228 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 20.11.2026 - 27.11.2026",
+    "price": "810",
+    "price_basis": "netto",
+    "range_km": "560",
+    "consumption": "16.9 kWh/100km",
+    "drive": null,
+    "hitch": "Nein"
+  },
+  "8568463de58cc672": {
+    "id": "8568463de58cc672",
+    "model_name": "Kia EV6",
+    "model_url": "https://www.finn.com/de-DE/models/kia/ev6",
+    "trim": "84 kWh 239 kW Allradantrieb Earth",
+    "fuel": "Elektro",
+    "power": "239 kW (325 PS)",
+    "transmission": "Automatik",
+    "availability": "Vsl. Übergabe 01.12.2026 - 15.12.2026",
+    "price": "860",
+    "price_basis": "netto",
+    "range_km": "522",
+    "consumption": "17.7 kWh/100km",
+    "drive": null,
     "hitch": "Nein"
   }
 }
