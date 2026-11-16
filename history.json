@@ -1,7 +1,7 @@
 {
  "version": 2,
  "start": "2026-09-14",
- "last_update": "2026-11-16T12:03:02+00:00",
+ "last_update": "2026-11-16T13:03:15+00:00",
  "cars": {
   "0ca2e5e5ec5222f9": {
    "meta": {
@@ -9018,13 +9018,13 @@
     "power": "210 kW (286 PS)",
     "transmission": "Automatik",
     "price_basis": "netto",
-    "range_km": "563",
-    "consumption": "15.5 kWh/100km",
+    "range_km": "571",
+    "consumption": "15.2 kWh/100km",
     "drive": null,
     "hitch": "Ja"
    },
    "present": true,
-   "price": 826,
+   "price": 810,
    "basis": "netto",
    "avail": "Vsl. Übergabe 19.11.2026 - 26.11.2026",
    "events": [
@@ -9554,6 +9554,12 @@
      "t": "2026-11-16T11:03:14+00:00",
      "e": "wieder",
      "p": 826,
+     "a": "Vsl. Übergabe 19.11.2026 - 26.11.2026"
+    },
+    {
+     "t": "2026-11-16T13:03:15+00:00",
+     "e": "preis",
+     "p": 810,
      "a": "Vsl. Übergabe 19.11.2026 - 26.11.2026"
     }
    ]
@@ -20822,7 +20828,7 @@
     "hitch": "Ja"
    },
    "present": true,
-   "price": 751,
+   "price": 717,
    "basis": "netto",
    "avail": "Vsl. Übergabe 05.01.2027 - 02.03.2027",
    "events": [
@@ -20842,6 +20848,12 @@
      "t": "2026-11-16T08:40:06+00:00",
      "e": "preis",
      "p": 751,
+     "a": "Vsl. Übergabe 05.01.2027 - 02.03.2027"
+    },
+    {
+     "t": "2026-11-16T13:03:15+00:00",
+     "e": "preis",
+     "p": 717,
      "a": "Vsl. Übergabe 05.01.2027 - 02.03.2027"
     }
    ]
@@ -20862,7 +20874,7 @@
     "hitch": "Ja"
    },
    "present": true,
-   "price": 910,
+   "price": 868,
    "basis": "netto",
    "avail": "Vsl. Übergabe 05.01.2027 - 02.03.2027",
    "events": [
@@ -20883,6 +20895,12 @@
      "e": "preis",
      "p": 910,
      "a": "Vsl. Übergabe 05.01.2027 - 02.03.2027"
+    },
+    {
+     "t": "2026-11-16T13:03:15+00:00",
+     "e": "preis",
+     "p": 868,
+     "a": "Vsl. Übergabe 05.01.2027 - 02.03.2027"
     }
    ]
   },
@@ -20902,7 +20920,7 @@
     "hitch": "Ja"
    },
    "present": true,
-   "price": 994,
+   "price": 952,
    "basis": "netto",
    "avail": "Vsl. Übergabe 05.01.2027 - 02.03.2027",
    "events": [
@@ -20923,6 +20941,12 @@
      "e": "preis",
      "p": 994,
      "a": "Vsl. Übergabe 05.01.2027 - 02.03.2027"
+    },
+    {
+     "t": "2026-11-16T13:03:15+00:00",
+     "e": "preis",
+     "p": 952,
+     "a": "Vsl. Übergabe 05.01.2027 - 02.03.2027"
     }
    ]
   },
@@ -20942,7 +20966,7 @@
     "hitch": "Nein"
    },
    "present": true,
-   "price": 785,
+   "price": 751,
    "basis": "netto",
    "avail": "Vsl. Übergabe 05.01.2027 - 02.03.2027",
    "events": [
@@ -20963,6 +20987,12 @@
      "e": "preis",
      "p": 785,
      "a": "Vsl. Übergabe 05.01.2027 - 02.03.2027"
+    },
+    {
+     "t": "2026-11-16T13:03:15+00:00",
+     "e": "preis",
+     "p": 751,
+     "a": "Vsl. Übergabe 05.01.2027 - 02.03.2027"
     }
    ]
   },
@@ -20982,7 +21012,7 @@
     "hitch": "Ja"
    },
    "present": true,
-   "price": 1079,
+   "price": 1029,
    "basis": "netto",
    "avail": "Vsl. Übergabe 05.01.2027 - 02.03.2027",
    "events": [
@@ -21002,6 +21032,12 @@
      "t": "2026-11-16T12:03:02+00:00",
      "e": "preis",
      "p": 1079,
+     "a": "Vsl. Übergabe 05.01.2027 - 02.03.2027"
+    },
+    {
+     "t": "2026-11-16T13:03:15+00:00",
+     "e": "preis",
+     "p": 1029,
      "a": "Vsl. Übergabe 05.01.2027 - 02.03.2027"
     }
    ]
